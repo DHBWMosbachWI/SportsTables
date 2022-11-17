@@ -1,0 +1,244 @@
+{
+    "player_defense_stats": {
+        "textual_cols": {
+            "Player": "football.player.name",
+            "Tm": "football.team.name",
+            "Pos": "football.player.position"
+        },
+        "numerical_cols": {
+            "Comb": "football.player.tackles_combined",
+            "QBHits": "football.player.tackles_qb_hits",
+            "Sfty": "football.player.tackles_safeties",
+            "Ast": "football.player.tackles_assists",
+            "Solo": "football.player.tackles_solo",
+            "TFL": "football.player.tackles_for_loss",
+            "Rk": "rank",
+            "Yds": "football.player.interception_yards",
+            "GS": "football.player.games_started",
+            "G": "football.player.games_played",
+            "Age": "football.player.age",
+            "FR": "football.player.fumbles_recovered",
+            "PD": "football.player.passes_defended",
+            "FF": "football.player.fumbles_forced",
+            "Fmb": "football.player.fumbles",
+            "Lng": "football.player.interception_yards_longest",
+            "TD": "football.player.interception_touchdowns",
+            "Sk": "football.player.sacks",
+            "Int": "football.player.interceptions",
+            "Yds.1": "football.player.fumbles_recovered_yards",
+            "TD.1": "football.player.fumbles_recovered_touchdowns"
+        }
+    },
+    "all_teams": {
+        "textual_cols": {
+            "Coaching": "football.coach.name",
+            "Passer": "football.player.name",
+            "AV": "football.player.name",
+            "Rusher": "football.player.name",
+            "Receiver": "football.player.name",
+            "Tm": "football.team.name"
+        },
+        "numerical_cols": {
+            "T": "football.team.total_ties",
+            "To": "year",
+            "From": "year",
+            "W": "football.team.total_wins",
+            "L": "football.team.total_losses",
+            "W-L%": "football.team.win_loss_percentage",
+            "Chmp": "football.team.championship_wins",
+            "Div": "football.team.division_championship_wins",
+            "Yrplyf": "football.team.playoffs_paricipations",
+            "Wplyf": "football.team.playoffs_total_wins",
+            "SBwl": "football.team.super_bowl_wins",
+            "Conf": "football.team.conference_championship_wins",
+            "W-L%.1": "football.team.playoffs_win_loss_percentage",
+            "Lplyf": "football.team.playoffs_total_losses"
+        }
+    },
+    "all_stadiums": {
+        "textual_cols": {
+            "PrimaryTeam(s)": "football.team.name",
+            "StadiumName": "football.stadium.name",
+            "City": "city",
+            "State": "state"
+        },
+        "numerical_cols": {
+            "To": "year",
+            "From": "year",
+            "G": "football.stadium.games_played"
+        }
+    },
+    "player_passing_stats": {
+        "textual_cols": {
+            "Player": "football.player.name",
+            "Tm": "football.team.name",
+            "Pos": "football.player.position"
+        },
+        "numerical_cols": {
+            "1D": "football.player.first_down_passings",
+            "Rate": "football.player.qb_rating",
+            "QBR": "football.player.qb_rating_old",
+            "Yds": "football.player.passing_yards",
+            "Rk": "rank",
+            "Y/G": "football.player.passing_yards_per_game",
+            "Age": "football.player.age",
+            "G": "football.player.games_played",
+            "GS": "football.player.games_started",
+            "Att": "football.player.passes_attempted",
+            "Cmp": "football.player.passes_completed",
+            "Cmp%": "football.player.passes_completed_percentage",
+            "QBrec": "football.player.qb_record",
+            "Int%": "football.player.interception_percentage",
+            "GWD": "football.player.game_winning_drives",
+            "NY/A": "football.player.net_yards_per_pass_attempt",
+            "AY/A": "football.player.adj_yards_per_pass_attempt",
+            "Lng": "football.player.longest_pass_yards",
+            "Sk%": "football.player.gets_sacked_percentage",
+            "TD": "football.player.passing_touchdowns",
+            "4QC": "football.player.comebacks_led",
+            "Y/A": "football.player.yards_per_pass_attempt",
+            "Sk": "football.player.gets_sacked",
+            "Y/C": "football.player.yards_per_pass_completion",
+            "Int": "football.player.interceptions_thrown",
+            "Yds.1": "football.player.yards_lost_due_to_sack",
+            "ANY/A": "football.player.adj_net_yards_per_pass_attempt",
+            "TD%": "football.player.passing_touchdowns_percentage"
+        }
+    },
+    "player_receiving_stats": {
+        "textual_cols": {
+            "Player": "football.player.name",
+            "Pos": "football.player.position",
+            "Tm": "football.team.name"
+        },
+        "numerical_cols": {
+            "Age": "football.player.age",
+            "G": "football.player.games_played",
+            "GS": "football.player.games_started",
+            "Tgt": "football.player.pass_targets",
+            "Rec": "football.player.receptions",
+            "Ctch%": "football.player.catch_percentage",
+            "Yds": "football.player.receiving_yards",
+            "Y/R": "football.player.receiving_yards_per_reception",
+            "TD": "football.player.receiving_touchdowns",
+            "1D": "football.player.first_down_receiving",
+            "Rk": "rank",
+            "Y/Tgt": "football.player.receiving_yards_per_target",
+            "Lng": "football.player.longest_reception",
+            "Y/G": "football.player.receiving_yards_per_game",
+            "Fmb": "football.player.fumbles",
+            "R/G": "football.player.reception_per_game"
+        }
+    },
+    "player_rushing_stats": {
+        "textual_cols": {
+            "Player": "football.player.name",
+            "Tm": "football.team.name",
+            "Pos": "football.player.position"
+        },
+        "numerical_cols": {
+            "Att": "football.player.rushing_attempted",
+            "1D": "football.player.first_down_rushing",
+            "Yds": "football.player.rushing_yards",
+            "G": "football.player.games_played",
+            "Lng": "football.player.longest_rush_yards",
+            "Y/A": "football.player.yards_per_rush_attempt",
+            "Rk": "rank",
+            "Y/G": "football.player.rushing_yards_per_game",
+            "Age": "football.player.age",
+            "GS": "football.player.games_started",
+            "TD": "football.player.rushing_touchdowns",
+            "Fmb": "football.player.fumbles"
+        }
+    },
+    "player_scrimmage_stats": {
+        "textual_cols": {
+            "Player": "football.player.name",
+            "Tm": "football.team.name",
+            "Pos": "football.player.position"
+        },
+        "numerical_cols": {
+            "1D": "football.player.first_down_receiving",
+            "Yds": "football.player.receiving_yards",
+            "1D.1": "football.player.first_down_rushing",
+            "Rk": "rank",
+            "Y/G": "football.player.receiving_yards_per_game",
+            "A/G": "football.player.rushing_attempted_per_game",
+            "Fmb": "football.player.fumbles",
+            "Rec": "football.player.receptions",
+            "Age": "football.player.age",
+            "Touch": "football.player.touches",
+            "Ctch%": "football.player.catch_percentage",
+            "Att": "football.player.rushing_attempted",
+            "YScm": "football.player.scrimmage_yards",
+            "Tgt": "football.player.pass_targets",
+            "Lng": "football.player.longest_reception",
+            "Y/G.1": "football.player.rushing_yards_per_game",
+            "GS": "football.player.games_started",
+            "R/G": "football.player.reception_per_game",
+            "Lng.1": "football.player.longest_rush_yards",
+            "TD": "football.player.receiving_touchdowns",
+            "Y/R": "football.player.receiving_yards_per_reception",
+            "G": "football.player.games_played",
+            "Y/Tgt": "football.player.receiving_yards_per_target",
+            "Y/A": "football.player.yards_per_rush_attempt",
+            "RRTD": "football.player.scrimmage_touchdowns",
+            "Yds.1": "football.player.rushing_yards",
+            "TD.1": "football.player.rushing_touchdowns",
+            "Y/Tch": "football.player.scrimmage_yards_per_touch"
+        }
+    },
+    "season_standings": {
+        "textual_cols": {
+            "Tm": "football.team.name"
+        },
+        "numerical_cols": {
+            "SRS": "football.team.simple_rating_system",
+            "PA": "football.team.points_opponent",
+            "SoS": "football.team.strength_of_schedule",
+            "PF": "football.team.points_scored",
+            "L": "football.team.losses",
+            "PD": "football.team.points_diff",
+            "W": "football.team.wins",
+            "T": "football.team.ties",
+            "OSRS": "football.team.offensive_srs",
+            "MoV": "football.team.margin_of_victory",
+            "DSRS": "football.team.defensive_srs",
+            "W-L%": "football.team.win_loss_percentage"
+        }
+    },
+    "team_defense_stats": {
+        "textual_cols": {
+            "Tm": "football.team.name"
+        },
+        "numerical_cols": {
+            "PA": "football.team.points_opponent",
+            "Yds": "football.team.yards",
+            "Rk": "rank",
+            "1stD.2": "football.team.first_down_rushing",
+            "Ply": "football.team.offensive_plays",
+            "Sc%": "football.team.scoring_drives_percentage",
+            "Yds.2": "football.team.rushing_yards",
+            "NY/A": "football.team.net_yards_per_pass_attempt",
+            "FL": "football.team.fumbles_lost",
+            "1stPy": "football.team.first_down_penalties",
+            "Att": "football.team.passes_attempted",
+            "TO": "football.team.takeaways",
+            "Cmp": "football.team.passes_completed",
+            "Yds.3": "football.team.penalty_yards",
+            "Y/P": "football.team.yards_per_play",
+            "TD": "football.team.passing_touchdowns",
+            "Att.1": "football.team.rushing_attempted",
+            "Pen": "football.team.penalties",
+            "G": "football.team.games_played",
+            "1stD": "football.team.first_down",
+            "Y/A": "football.team.yards_per_rush_attempt",
+            "EXP": "football.team.expected_points_by_defense",
+            "Int": "football.team.interceptions_thrown",
+            "Yds.1": "football.team.passing_yards",
+            "1stD.1": "football.team.first_down_passings",
+            "TO%": "football.team.turnover_drives_percentage",
+            "TD.1": "football.team.rushing_touchdowns"
+        }
+    }
+}

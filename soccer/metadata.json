@@ -1,0 +1,64 @@
+{
+    "player_stats": {
+        "textual_cols":{
+            "Pos": "soccer.player.position",
+            "Nation": "country",
+            "Player": "soocer.player.name",
+            "Matches": "soccer.player.matches"
+        },
+        "numerical_cols": {
+            "npxG": "soccer.player.expected_non_penalty_goals",
+            "PK": "soccer.player.penalty_kicks_made",
+            "xG.1": "soccer.player.expected_goals_per_90_min",
+            "xAG": "soccer.player.expected_assists",
+            "npxG.1": "soccer.player.expected_non_penalty_goals_per_90_min",
+            "xG+xAG": "soccer.player.expected_goals_+assists_per_90_min",
+            "90s": "soccer.player.90s",
+            "G+A-PK": "soccer.player.goals_+assists_-penalties_per_90_min",
+            "npxG+xAG.1": "soccer.player.expected_non_penalty_goals_+assists_per_90_min",
+            "CrdY": "soccer.player.yellow_cards",
+            "PKatt": "soccer.player.penalties_attemted",
+            "Gls": "soccer.player.goals",
+            "Gls.1": "soccer.player.goals_per_90_min",
+            "npxG+xAG": "soccer.player.expected_non_penalty_goals_+assists",
+            "xAG.1": "soccer.player.expected_assists_per_90_min",
+            "Age": "soccer.player.age",
+            "Starts": "soccer.player.games_started",
+            "Min": "soccer.player.minutes_played",
+            "xG": "soccer.player.expected_goals",
+            "G-PK.1": "soccer.player.non_penalty_goals_per_90_min",
+            "G+A": "soccer.player.goals_+assists_per_90_min",
+            "G-PK": "soccer.player.non_penalty_goals",
+            "CrdR": "soccer.player.red_cards",
+            "MP": "soccer.player.games_played",
+            "Ast.1": "soccer.player.assists_per_90_min",
+            "Ast": "soccer.player.assists"
+        }
+    },
+    "season_standings": {
+        "textual_cols":{
+            "Squad": "soccer.team.name",
+            "TopTeamScorer": "soccer.player.name",
+            "Goalkeeper": "soccer.player.name",
+            "Last5": "soccer.team.last5_game_results",
+            "Notes": "notes"
+        },
+        "numerical_cols": {
+            "Rk": "rank",
+            "Pts/MP": "soccer.team.points_per_game",
+            "Attendance": "soccer.attendance_per_game",
+            "L": "soccer.team.losses",
+            "xGD/90": "soccer.team.expected_goals_difference_per_90_min",
+            "W": "soccer.team.wins",
+            "GF": "soccer.team.goals",
+            "GA": "soccer.team.goals",
+            "xGD": "soccer.team.expected_goals_difference",
+            "GD": "soccer.team.goals_difference",
+            "xG": "soccer.team.expected_goals",
+            "D": "soccer.team.draws",
+            "xGA": "soccer.team.expected_goals_allowed",
+            "Pts": "soccer.team.points",
+            "MP": "soccer.team.games_played"
+        }
+    }
+}
