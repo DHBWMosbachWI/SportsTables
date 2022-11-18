@@ -1,31 +1,37 @@
 {
     "all_managers": {
-        "Ties": null,
-        "W": null,
-        "Lpost": null,
-        "PlyofApp": null,
-        "WSwon": null,
-        "W-L%post": null,
-        "To": null,
-        "AvRk": null,
-        "Rk": null,
-        "G>.500": null,
-        "Mgr": null,
-        "Yrs": null,
-        "Ejections": null,
-        "L": null,
-        "Unnamed: 22": null,
-        "PennWon": null,
-        "BestFin": null,
-        "Wpost": null,
-        "WrstFin": null,
-        "ASG": null,
-        "From": null,
-        "W-L%": null,
-        "Player/Manager": null,
-        "G": null
+        "textual_cols":{
+            "Mgr": "baseball.manager.name",
+            "Player/Manager": "note",
+            "Unnamed: 22": null
+        },
+        "numerical_cols":{
+            "Ties": "baseball.manager.total_ties",
+            "W": "baseball.manager.total_wins",
+            "Lpost": "baseball.manager.playoff_total_losses",
+            "PlyofApp": "baseball.manager.playoff_appearances",
+            "WSwon": "baseball.manager.championship_wins",
+            "W-L%post": "baseball.manager.playoff_win_loss_percentage",
+            "To": "year",
+            "AvRk": "baseball.manager.teams_avg_finish",
+            "Rk": "rank",
+            "G>.500": "baseball.manager.games_over_.5",
+            "Yrs": "baseball.experience_years",
+            "Ejections": "baseball.manager.ejections",
+            "L": "baseball.manager.total_losses",
+            "PennWon": "baseball.manager.pennant_wins",
+            "BestFin": "baseball.manager.teams_best_finish",
+            "Wpost": "baseball.manager.playoff_total_wins",
+            "WrstFin": "baseball.manager.teams_worst_finish",
+            "ASG": "baseball.manager.all_star_games_managed",
+            "From": "year",
+            "W-L%": "baseball.manager.win_loss_percentage",
+            "G": "baseball.manager.games_managed"
+        }
     },
     "all_teams": {
+        "textual_cols":{},
+        "numerical_cols":{},
         "Playoffs": null,
         "W": null,
         "Divs": null,
@@ -50,6 +56,8 @@
         "RA": null
     },
     "team_batting_stats": {
+        "textual_cols":{},
+        "numerical_cols":{},
         "R/G": null,
         "SO": null,
         "GDP": null,
@@ -81,6 +89,8 @@
         "HBP": null
     },
     "team_pitching_stats": {
+        "textual_cols":{},
+        "numerical_cols":{},
         "SV": null,
         "cSho": null,
         "W": null,
@@ -119,6 +129,8 @@
         "HBP": null
     },
     "season_standings": {
+        "textual_cols":{},
+        "numerical_cols":{},
         "W-L%": null,
         "Tm": null,
         "W": null,
@@ -126,6 +138,8 @@
         "GB": null
     },
     "draft_player_bios": {
+        "textual_cols":{},
+        "numerical_cols":{},
         "Birthplace": null,
         "Rk": null,
         "Wt": null,
