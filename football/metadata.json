@@ -47,7 +47,7 @@
             "W-L%": "football.team.win_loss_percentage",
             "Chmp": "football.team.championship_wins",
             "Div": "football.team.division_championship_wins",
-            "Yrplyf": "football.team.playoffs_paricipations",
+            "Yrplyf": "football.team.playoffs_participations",
             "Wplyf": "football.team.playoffs_total_wins",
             "SBwl": "football.team.super_bowl_wins",
             "Conf": "football.team.conference_championship_wins",
