@@ -16,7 +16,7 @@ Contains the main python functions to scrape HTML tables from different specifie
 Jupyter-Notebook containing a cell, which uses the python functions from `web_scraping.py` and stores the returned Pandas-Dataframes to CSV-Files. Since the most sport data tables in the web are for a specific year(sport season), there is a `for year in range()` loop which iterates over all given years and scrape the HTML table for the respective year.
 
 ## Settings
-In the `.env` file you have to set the `SportTables` environment variable, which defines the directory for storing the scraped HTML tables as CSV-Files. Since the necessary folder structure in the `SportTabled` directory is not yet created automatically during the scrape process, the folders for each sport must be created manually before executing the scrape scripts.
+In the `.env` file you have to set the `SportTables` environment variable, which defines the directory for storing the scraped HTML tables as CSV-Files. Since the necessary folder structure in the `SportTables` directory is not yet created automatically during the scrape process, the folders for each sport must be created manually before executing the scrape scripts.
 
 
 
