@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-import time
+from selenium.webdriver.common.by import By
 import pandas as pd
 
 def web_table_to_dataframe(web_table):
@@ -37,11 +37,31 @@ def web_table_to_dataframe(web_table):
     df = pd.DataFrame(content_data, columns=table_header)
     return df
 
-def get_player_passing_stats(year:int):
+def get_player_passing_stats(year:int, driver):
+    '''
     response = requests.get(f"https://www.pro-football-reference.com/years/{year}/passing.htm")
     soup = BeautifulSoup(response.content, "html.parser")
     df = web_table_to_dataframe(soup("table")[0])
     return df
+    '''
+
+    result = None
+    driver.get(f"https://www.pro-football-reference.com/years/{year}/passing.htm")
+    # Code von Jule
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result # gibt ein dataframe zurück da nur eine Tabelle auf Seite
 
 def get_player_rushing_stats(year:int):
     response = requests.get(f"https://www.pro-football-reference.com/years/{year}/rushing.htm")
@@ -67,11 +87,31 @@ def get_player_defense_stats(year:int):
     df = web_table_to_dataframe(soup("table")[0])
     return df
 
-def get_all_nfl_teams():
+def get_all_nfl_teams(driver):
+    '''
     response = requests.get(f"https://www.pro-football-reference.com/teams/")
     soup = BeautifulSoup(response.content, "html.parser")
     df = web_table_to_dataframe(soup("table")[0])
     return df
+    '''
+
+    result = None
+    driver.get(f"https://www.pro-football-reference.com/teams/")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+
+        dfs = []
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+            dfs.append(df)
+
+        result = dfs
+    except:
+        print("not possible")
+        pass
+
+    return result # gibt Liste mit allen dataframes zurück, da mehrere Tabellen auf Seite
 
 def get_all_stadiums():
     response = requests.get(f"https://www.pro-football-reference.com/stadiums/")
