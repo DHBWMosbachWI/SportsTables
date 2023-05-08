@@ -71,6 +71,7 @@ def get_mlb_season_standings(year:int):
     return pd.concat(dataframes, ignore_index=True)
 #Added new function. The last one was only for 2022 which results in 20 identical csv files.
 #From 1994 until 1999 there are 6 charts to put together. Before there are only 4.
+
 def get_mlb_season_standing(year:int):
     response = requests.get(f"https://www.baseball-reference.com/leagues/majors/{year}-standings.shtml")
     soup = BeautifulSoup(response.content, "html.parser")
