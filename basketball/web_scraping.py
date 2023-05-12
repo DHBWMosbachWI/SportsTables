@@ -87,13 +87,6 @@ def get_nba_season_standings(year:int, driver):
 
         result = df
 
-        # western conference table
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df2 = pd.read_html(html)[1]
-            df2.columns = ["Team"] + list(df.columns)[1:]
-
-        result = df
     except:
         print("not possible")
         pass
