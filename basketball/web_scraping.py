@@ -47,12 +47,10 @@ def get_nba_season_team_stats(year:int, driver):
     driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}.html")
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
-        df = None
-
+        df = []
         for table in tables:
             html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[5]
-
+            df.append(pd.read_html(html)[0])
         result = df
     except:
         print("not possible")
@@ -77,15 +75,21 @@ def get_nba_season_standings(year:int, driver):
     driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}_standings.html")
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
-        df = None
+        df = []
 
         # Eastern conference table
         for table in tables:
+            run1 = None
             html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-            df.columns = ["Team"] + list(df.columns)[1:]
-
+            run1 = pd.read_html(html)[0]
+            run1.columns = ["Team"] + list(run1.columns)[1:]
+            # western conference table
+            run2 = None
+            run2 = pd.read_html(html)[1]
+            run2.columns = ["Team"] + list(run2.columns)[1:]
+            df.append(pd.concat([run1, run2], ignore_index=True))
         result = df
+
 
     except:
         print("not possible")
@@ -137,5 +141,9 @@ def get_nba_coaches_stats(year:int, driver):
         pass
 
     return result
+
+#%%
+
+#%%
 
 #%%
