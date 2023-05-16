@@ -127,6 +127,78 @@ def get_player_defense_stats(year:int, driver):
 
     return result
 
+def get_player_kicking_stats(year:int, driver):
+    result = None
+    driver.get(f"https://www.pro-football-reference.com/years/{year}/kicking.htm")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result
+
+def get_player_punting_stats(year:int, driver):
+    result = None
+    driver.get(f"https://www.pro-football-reference.com/years/{year}/punting.htm")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result
+
+def get_player_return_stats(year:int, driver):
+    result = None
+    driver.get(f"https://www.pro-football-reference.com/years/{year}/returns.htm")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result
+
+def get_player_scoring_stats(year:int, driver):
+    result = None
+    driver.get(f"https://www.pro-football-reference.com/years/{year}/scoring.htm")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result
+
 def get_all_nfl_teams(driver):
     result = None
     driver.get(f"https://www.pro-football-reference.com/teams/")
