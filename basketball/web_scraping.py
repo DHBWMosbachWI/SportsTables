@@ -38,10 +38,6 @@ def web_table_to_dataframe(web_table):
     return df
 
 def get_nba_season_team_stats(year:int, driver):
-    '''response = requests.get(f"https://www.basketball-reference.com/leagues/NBA_{year}.html")
-    soup = BeautifulSoup(response.content, "html.parser")
-    df = web_table_to_dataframe(soup("table")[5])
-    return df'''
 
     result = None
     driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}.html")
@@ -57,7 +53,6 @@ def get_nba_season_team_stats(year:int, driver):
         pass
 
     return result
-    # returns dataframe
 
 
 def get_nba_season_standing(year:int, driver):
@@ -99,10 +94,7 @@ def get_nba_season_standings(year:int, driver):
     return result
 
 def get_nba_player_stats(year:int, driver):
-    '''response = requests.get(f"https://www.basketball-reference.com/leagues/NBA_{year}_per_game.html")
-    soup = BeautifulSoup(response.content, "html.parser")
-    df = web_table_to_dataframe(soup("table")[0])
-    return df'''
+
     result = None
     driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}_per_game.html")
     try:
@@ -122,10 +114,7 @@ def get_nba_player_stats(year:int, driver):
 
 
 def get_nba_coaches_stats(year:int, driver):
-    '''response = requests.get(f"https://www.basketball-reference.com/leagues/NBA_{year}_coaches.html")
-    soup = BeautifulSoup(response.content, "html.parser")
-    df = web_table_to_dataframe(soup("table")[0])
-    return df'''
+
     result = None
     driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}_coaches.html")
     try:
@@ -143,6 +132,149 @@ def get_nba_coaches_stats(year:int, driver):
 
     return result
 
+#zusätzliche Tabellen
+
+def get_nba_player_Per_36_Minutes(year:int, driver):
+    result = None
+    driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}_per_minute.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result
+def get_nba_player_Per_100_Poss(year:int, driver):
+    result = None
+    driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}_per_poss.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result
+
+def get_nba_Advanced(year:int, driver):
+    result = None
+    driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}_advanced.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result
+
+def get_nba_Adjusted_Shooting(year:int, driver):
+    result = None
+    driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}_adj_shooting.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result
+
+def get_nba_Rookies(year:int, driver):
+    result = None
+    driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}_rookies.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result
+
+def get_nba_62_Players(year:int, driver):
+    result = None
+    driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}_final.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result
+
+def get_nba_team_rating(year:int, driver):
+    result = None
+    driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}_ratings.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result
+
+def get_nba_Eastern_Conference(year:int, driver):
+
+    result = None
+    driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}_standings_by_date_eastern_conference.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = []
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df.append(pd.read_html(html)[0])
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result
 
 #%%
 
