@@ -54,7 +54,66 @@ def get_nba_season_team_stats(year:int, driver):
 
     return result
 
+def get_nba_season_all_nba(year:int, driver):
 
+    result = None
+    driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = []
+        dataframes =[]
+
+        for i in range (72,74):
+            html = tables[i].get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+            dataframes.append(df)
+        result = pd.concat(dataframes, ignore_index=True)
+    except:
+        print("not possible")
+        pass
+
+    return result
+
+def get_nba_season_all_defensive(year:int, driver):
+
+    result = None
+    driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = []
+        dataframes =[]
+
+        for i in range (74,76):
+            html = tables[i].get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+            dataframes.append(df)
+        result = pd.concat(dataframes, ignore_index=True)
+    except:
+        print("not possible")
+        pass
+
+    return result
+
+
+def get_nba_season_all_star_game_rosters(year:int, driver):
+
+    result = None
+    driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = []
+        dataframes =[]
+
+        for i in range (77,79):
+            html = tables[i].get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+            dataframes.append(df)
+        result = pd.concat(dataframes, ignore_index=True)
+    except:
+        print("not possible")
+        pass
+
+    return result
 def get_nba_season_standing(year:int, driver):
     result = None
     driver.get(f"https://www.basketball-reference.com/leagues/NBA_{year}_standings.html")
