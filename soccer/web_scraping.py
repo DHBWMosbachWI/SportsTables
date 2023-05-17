@@ -2,16 +2,13 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import pandas as pd
-from selenium.webdriver.common.by import By
 from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 
 options = webdriver.ChromeOptions()
 options.add_argument('headless')
 
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(options=options)
 
 
 def web_table_to_dataframe(web_table):
@@ -95,7 +92,6 @@ def get_soccer_league_season_standings(season:int, current_season:int, league_id
     soup = BeautifulSoup(html, "html.parser")
     tables = soup.find_all('table')
     for table in tables:
-        # extract the table id
         table_id = table.get('id')
         if table_id is not None:
             df = pd.read_html(str(table))[0]
@@ -112,7 +108,7 @@ def get_player_season_stats(season:int, current_season:int, league_id:int=20, le
     for team_url in teams_urls:
         url = f"https://fbref.com{list(team_url.values())[0]}"
         driver.get(url)
-        print(url)
+        #print(url)
         time.sleep(5) ## wait 5 seconds until the next request to avoid getting blocked by the website
         html = driver.page_source
         soup = BeautifulSoup(html, "html.parser")
@@ -142,7 +138,7 @@ def get_player_season_stats2(season:int, current_season:int, league_id:int=20, l
     dataframes = []
     for team_url in teams_urls:
         url = f"https://fbref.com{list(team_url.values())[0]}"
-        print(url)
+        #print(url)
         time.sleep(3) ## wait 3 seconds until the next request to avoid getting blocked by the website
         driver.get(url)
         response = requests.get(url)
