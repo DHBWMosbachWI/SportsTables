@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-import time
+from selenium.webdriver.common.by import By
 import pandas as pd
 
 def web_table_to_dataframe(web_table):
@@ -37,48 +37,181 @@ def web_table_to_dataframe(web_table):
     df = pd.DataFrame(content_data, columns=table_header)
     return df
 
-def get_nhl_season_standings(year:int):
-    response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}.html")
+def get_nhl_season_standings(year:int, driver):
+
+    '''response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}.html")
     soup = BeautifulSoup(response.content, "html.parser")
     df = web_table_to_dataframe(soup("table")[0])
     df2 = web_table_to_dataframe(soup("table")[1])
-    return pd.concat([df, df2], ignore_index=True)
+    return pd.concat([df, df2], ignore_index=True)'''
 
-def get_all_nhl_teams():
-    response = requests.get(f"https://www.hockey-reference.com/teams/")
+    result = None
+    driver.get(f"https://www.hockey-reference.com/leagues/NHL_{year}.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = []
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+            df2 = pd.read_html(html)[1]
+        result = pd.append([df, df2])
+
+    except:
+            print("not possible")
+            pass
+
+    return pd.concat([result], ignore_index=True) # returns dataframe
+
+
+def get_all_nhl_teams(driver):
+
+    '''response = requests.get(f"https://www.hockey-reference.com/teams/")
     soup = BeautifulSoup(response.content, "html.parser")
     df = web_table_to_dataframe(soup("table")[0])
-    return df
+    return df'''
 
-def get_nhl_player_stats(year:int):
-    response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
+    result = None
+    driver.get(f"https://www.hockey-reference.com/teams/")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        dfs = []
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+            dfs.append(df)
+
+        result = dfs
+    except:
+        print("not possible")
+        pass
+
+    return result # returns dataframe
+
+def get_nhl_player_stats(year:int, driver):
+    ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
+      soup = BeautifulSoup(response.content, "html.parser")
+      df = web_table_to_dataframe(soup("table")[0])
+      return df
+    '''
+
+    result = None
+    driver.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
+    try:
+      tables = driver.find_elements(By.TAG_NAME, "table")
+      df = None
+
+      for table in tables:
+          html = table.get_attribute("outerHTML")
+          df = pd.read_html(html)[0]
+
+      result = df
+    except:
+      print("not possible")
+      pass
+
+    return result # returns dataframe
+
+
+def get_nhl_player_goalie_stats(year:int, driver):
+    '''response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_goalies.html")
     soup = BeautifulSoup(response.content, "html.parser")
     df = web_table_to_dataframe(soup("table")[0])
-    return df
+    return df'''
 
-def get_nhl_player_goalie_stats(year:int):
-    response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_goalies.html")
-    soup = BeautifulSoup(response.content, "html.parser")
-    df = web_table_to_dataframe(soup("table")[0])
-    return df
+    result = None
+    driver.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
 
-def get_nhl_playoff_standings(year:int):
-    response = requests.get(f"https://www.hockey-reference.com/playoffs/NHL_{year}.html")
-    soup = BeautifulSoup(response.content, "html.parser")
-    if year == 2020:
-        df = web_table_to_dataframe(soup("table")[25])
-    else:
-        df = web_table_to_dataframe(soup("table")[16])
-    return df
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
 
-def get_nhl_playoff_player_stats(year:int):
-    response = requests.get(f"https://www.hockey-reference.com/playoffs/NHL_{year}_skaters.html")
-    soup = BeautifulSoup(response.content, "html.parser")
-    df = web_table_to_dataframe(soup("table")[0])
-    return df
+        result = df
+    except:
+        print("not possible")
+        pass
 
-def get_nhl_playoff_player_goalies_stats(year:int):
-    response = requests.get(f"https://www.hockey-reference.com/playoffs/NHL_{year}_goalies.html")
-    soup = BeautifulSoup(response.content, "html.parser")
-    df = web_table_to_dataframe(soup("table")[0])
-    return df
+    return result
+
+def get_nhl_playoff_standings(year:int, driver):
+    '''response = requests.get(f"https://www.hockey-reference.com/playoffs/NHL_{year}.html")
+      soup = BeautifulSoup(response.content, "html.parser")
+      if year == 2020:
+          df = web_table_to_dataframe(soup("table")[25])
+      else:
+          df = web_table_to_dataframe(soup("table")[16])
+      return df'''
+    result = None
+    driver.get(f"https://www.hockey-reference.com/playoffs/NHL_{year}.html")
+
+    tables = driver.find_elements(By.TAG_NAME, "table")
+    dfs = []
+
+    for table in tables:
+        html = table.get_attribute("outerHTML")
+        if year == 2020:
+            df = pd.read_html(html)
+            dfs.append(df[0])
+        else:
+            df = pd.read_html(html)
+            print(df)
+            dfs.append(df[0])
+    result = dfs
+
+
+    return result
+
+def get_nhl_playoff_player_stats(year:int, driver):
+    '''response = requests.get(f"https://www.hockey-reference.com/playoffs/NHL_{year}_skaters.html")
+      soup = BeautifulSoup(response.content, "html.parser")
+      df = web_table_to_dataframe(soup("table")[0])
+      return df
+    '''
+
+    result = None
+    driver.get(f"https://www.hockey-reference.com/playoffs/NHL_{year}_skaters.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result
+def get_nhl_playoff_player_goalies_stats(year:int, driver):
+    '''response = requests.get(f"https://www.hockey-reference.com/playoffs/NHL_{year}_goalies.html")
+      soup = BeautifulSoup(response.content, "html.parser")
+      df = web_table_to_dataframe(soup("table")[0])
+      return df
+    '''
+    result = None
+    driver.get(f"https://www.hockey-reference.com/playoffs/NHL_{year}_goalies.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result
+
+  #%%
+
+#%%
+
+#%%
