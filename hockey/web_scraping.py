@@ -37,32 +37,47 @@ def web_table_to_dataframe(web_table):
     df = pd.DataFrame(content_data, columns=table_header)
     return df
 
-def get_nhl_season_standings(year:int, driver):
-
-    '''response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}.html")
-    soup = BeautifulSoup(response.content, "html.parser")
-    df = web_table_to_dataframe(soup("table")[0])
-    df2 = web_table_to_dataframe(soup("table")[1])
-    return pd.concat([df, df2], ignore_index=True)'''
+def get_nhl_season_standings(year:int, driver): #zwei ersten tabellen zusammengefügt
 
     result = None
     driver.get(f"https://www.hockey-reference.com/leagues/NHL_{year}.html")
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
         df = []
+        dataframes =[]
 
-        for table in tables:
-            html = table.get_attribute("outerHTML")
+        for i in range (0,2):
+            html = tables[i].get_attribute("outerHTML")
             df = pd.read_html(html)[0]
-            df2 = pd.read_html(html)[1]
-        result = pd.append([df, df2])
+            dataframes.append(df)
+        result = pd.concat(dataframes, ignore_index=True)
 
     except:
-            print("not possible")
-            pass
+        print("not possible")
+        pass
 
-    return pd.concat([result], ignore_index=True) # returns dataframe
+    return result
 
+def get_nhl_season_standings_zusatz(year:int, driver): # die restliche minitabellen erstellen
+
+    result = None
+    driver.get(f"https://www.hockey-reference.com/leagues/NHL_{year}.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = []
+        dataframes =[]
+
+        for i in range (2, 58):
+            html = tables[i].get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+            dataframes.append(df)
+        result = dataframes
+
+    except:
+        print("not possible")
+        pass
+
+    return result
 
 def get_all_nhl_teams(driver):
 
@@ -100,7 +115,6 @@ def get_nhl_player_stats(year:int, driver):
     try:
       tables = driver.find_elements(By.TAG_NAME, "table")
       df = None
-
       for table in tables:
           html = table.get_attribute("outerHTML")
           df = pd.read_html(html)[0]
@@ -157,11 +171,8 @@ def get_nhl_playoff_standings(year:int, driver):
             dfs.append(df[0])
         else:
             df = pd.read_html(html)
-            print(df)
             dfs.append(df[0])
     result = dfs
-
-
     return result
 
 def get_nhl_playoff_player_stats(year:int, driver):
@@ -211,6 +222,8 @@ def get_nhl_playoff_player_goalies_stats(year:int, driver):
     return result
 
   #%%
+
+#%%
 
 #%%
 

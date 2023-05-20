@@ -102,6 +102,7 @@ def get_mlb_season_team_batting_stats(year:int, driver):
             dfs.append(df)
 
         result = dfs
+        print(dfs)
     except:
         print("not possible")
         pass
@@ -144,18 +145,20 @@ def get_mlb_season_standings(year:int, driver):
     driver.get(f"https://www.baseball-reference.com/leagues/majors/{year}-standings.shtml")
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
-        df = None
-
-        for i in range(0,6):
-            html = i.get_attribute("outerHTML")
+        dfs = []
+        for table in tables:
+            html = table.get_attribute("outerHTML")
             df = pd.read_html(html)[0]
+            dfs.append(df)
+        result = dfs
 
-        result = df
     except:
         print("not possible")
         pass
 
     return result # returns dataframe
+
+
 
 #Added new function. The last one was only for 2022 which results in 20 identical csv files.
 #From 1994 until 1999 there are 6 charts to put together. Before there are only 4.
@@ -173,13 +176,13 @@ def get_mlb_season_standing(year:int, driver):
     try:
         tables = driver.find_elements(By.TAG_NAME, "table") # 4 tabellen nehmen und zu einer hinzufügen; for table in tables
         df = None
-        dataframes = []
-        for i in range(0,4):
-            for table in tables:
-                html = tables[i].get_attribute("outerHTML")
-                df = pd.read_html(html)[0]
-        dataframes.append(df[0])
-        result = pd.concat(dataframes, ignore_index=True)
+        dfs = []
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+            dfs.append(df)
+        result = dfs
 
     except:
         print("not possible")
