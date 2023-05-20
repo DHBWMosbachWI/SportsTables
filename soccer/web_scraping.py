@@ -3,12 +3,13 @@ from bs4 import BeautifulSoup
 import time
 import pandas as pd
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 options = webdriver.ChromeOptions()
 options.add_argument('headless')
 
-driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome(ChromeDriverManager().install(), options= options)
 
 
 def web_table_to_dataframe(web_table):
