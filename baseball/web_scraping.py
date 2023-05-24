@@ -158,8 +158,6 @@ def get_mlb_season_standings(year:int, driver):
 
     return result # returns dataframe
 
-
-
 #Added new function. The last one was only for 2022 which results in 20 identical csv files.
 #From 1994 until 1999 there are 6 charts to put together. Before there are only 4.
 def get_mlb_season_standing(year:int, driver):
@@ -190,6 +188,55 @@ def get_mlb_season_standing(year:int, driver):
 
     return result # returns dataframe
 
+
+def get_mlb_season_standing_RANGE_4(year:int, driver):
+    '''response = requests.get(f"https://www.baseball-reference.com/leagues/majors/{year}-standings.shtml")
+    soup = BeautifulSoup(response.content, "html.parser")
+    dataframes = []
+    for i in range(0,4):
+        dataframes.append(web_table_to_dataframe(soup("table")[i]))
+
+    return pd.concat(dataframes, ignore_index=True)'''
+
+    result = None
+    driver.get(f"https://www.baseball-reference.com/leagues/majors/{year}-standings.shtml")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+        dfs = []
+
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+            dfs.append(df)
+        result = dfs
+
+    except:
+        print("not possible")
+        pass
+
+    return result # returns dataframe
+
+def get_mlb_season_standings_RANGE_6(year:int, driver):
+    result = None
+    driver.get(f"https://www.baseball-reference.com/leagues/majors/{year}-standings.shtml")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        dfs = []
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+            dfs.append(df)
+
+        result = dfs
+    except:
+        print("not possible")
+        pass
+
+    return result # returns dataframe
+
+
+
 def get_mlb_draft_player_bio(year:int, driver):
     '''response = requests.get(f"https://www.baseball-reference.com/leagues/majors/{year}-debuts.shtml")
     soup = BeautifulSoup(response.content, "html.parser")
@@ -212,6 +259,7 @@ def get_mlb_draft_player_bio(year:int, driver):
         pass
 
     return result # returns dataframe
+
 #%%
 
 #%%

@@ -46,7 +46,7 @@ def get_nhl_season_standings(year:int, driver): #zwei ersten tabellen zusammenge
         df = []
         dataframes =[]
 
-        for i in range (0,2):
+        for i in range(0,2):
             html = tables[i].get_attribute("outerHTML")
             df = pd.read_html(html)[0]
             dataframes.append(df)
@@ -67,7 +67,7 @@ def get_nhl_season_standings_zusatz(year:int, driver): # die restliche minitabel
         df = []
         dataframes =[]
 
-        for i in range (2, 58):
+        for i in range(2, 60):
             html = tables[i].get_attribute("outerHTML")
             df = pd.read_html(html)[0]
             dataframes.append(df)
@@ -79,6 +79,150 @@ def get_nhl_season_standings_zusatz(year:int, driver): # die restliche minitabel
 
     return result
 
+#added 24.5
+
+
+def get_nhl_hat_tricks (year:int, driver):
+    ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
+      soup = BeautifulSoup(response.content, "html.parser")
+      df = web_table_to_dataframe(soup("table")[0])
+      return df
+    '''
+
+    result = None
+    driver.get(f"hockey-reference.com/leagues/NHL_{year}_hat-tricks.html")
+
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result # returns dataframe
+def get_nhl_penalty_shots(year:int, driver):
+    ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
+      soup = BeautifulSoup(response.content, "html.parser")
+      df = web_table_to_dataframe(soup("table")[0])
+      return df
+    '''
+
+    result = None
+    driver.get(f"www.hockey-reference.com/leagues/NHL_{year}_penalty-shots.html")
+
+
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result # returns dataframe
+
+def get_nhl_debuts (year:int, driver):
+    ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
+      soup = BeautifulSoup(response.content, "html.parser")
+      df = web_table_to_dataframe(soup("table")[0])
+      return df
+    '''
+
+    result = None
+    driver.get(f"hockey-reference.com/leagues/NHL_{year}_debut.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result # returns dataframe
+
+def get_nhl_final_season (year:int, driver):
+    ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
+      soup = BeautifulSoup(response.content, "html.parser")
+      df = web_table_to_dataframe(soup("table")[0])
+      return df
+    '''
+
+    result = None
+    driver.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_final.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result # returns dataframe
+
+def get_nhl_births (year:int, driver):
+    ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
+      soup = BeautifulSoup(response.content, "html.parser")
+      df = web_table_to_dataframe(soup("table")[0])
+      return df
+    '''
+
+    result = None
+    driver.get(f"www.hockey-reference.com/leagues/NHL_{year}_births.html")
+
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result # returns dataframe
+
+def get_nhl_deaths (year:int, driver):
+    ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
+      soup = BeautifulSoup(response.content, "html.parser")
+      df = web_table_to_dataframe(soup("table")[0])
+      return df
+    '''
+
+    result = None
+    driver.get(f"www.hockey-reference.com/leagues/NHL_{year}_deaths.html")
+    try:
+        tables = driver.find_elements(By.TAG_NAME, "table")
+        df = None
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
+
+        result = df
+    except:
+        print("not possible")
+        pass
+
+    return result # returns dataframe
+#added
 def get_all_nhl_teams(driver):
 
     '''response = requests.get(f"https://www.hockey-reference.com/teams/")
