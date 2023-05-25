@@ -79,9 +79,7 @@ def get_nhl_season_standings_zusatz(year:int, driver): # die restliche minitabel
 
     return result
 
-#added 24.5
-
-
+#FEHLENDE LINKS TABELLEN
 def get_nhl_hat_tricks (year:int, driver):
     ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
       soup = BeautifulSoup(response.content, "html.parser")
