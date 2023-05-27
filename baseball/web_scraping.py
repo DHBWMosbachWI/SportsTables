@@ -325,7 +325,7 @@ def get_mlb_season_team_laegue_batting_splits (year:int, driver):
         df = []
         dataframes =[]
 
-        for i in range(1,24 ):
+        for i in range(1,24):
             html = tables[i].get_attribute("outerHTML")
             df = pd.read_html(html)[0]
             dataframes.append(df)

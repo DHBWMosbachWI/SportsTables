@@ -67,7 +67,7 @@ def get_nhl_season_standings_zusatz(year:int, driver): # die restliche minitabel
         df = []
         dataframes =[]
 
-        for i in range(2, 60):
+        for i in range(2, 58):
             html = tables[i].get_attribute("outerHTML")
             df = pd.read_html(html)[0]
             dataframes.append(df)
@@ -80,7 +80,7 @@ def get_nhl_season_standings_zusatz(year:int, driver): # die restliche minitabel
     return result
 
 #FEHLENDE LINKS TABELLEN
-def get_nhl_hat_tricks (year:int, driver):
+def get_nhl_hat_tricks(year:int, driver):
     ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
       soup = BeautifulSoup(response.content, "html.parser")
       df = web_table_to_dataframe(soup("table")[0])
@@ -88,7 +88,7 @@ def get_nhl_hat_tricks (year:int, driver):
     '''
 
     result = None
-    driver.get(f"hockey-reference.com/leagues/NHL_{year}_hat-tricks.html")
+    driver.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_hat-tricks.html")
 
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
@@ -111,7 +111,7 @@ def get_nhl_penalty_shots(year:int, driver):
     '''
 
     result = None
-    driver.get(f"www.hockey-reference.com/leagues/NHL_{year}_penalty-shots.html")
+    driver.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_penalty-shots.html")
 
 
     try:
@@ -128,7 +128,7 @@ def get_nhl_penalty_shots(year:int, driver):
 
     return result # returns dataframe
 
-def get_nhl_debuts (year:int, driver):
+def get_nhl_debuts(year:int, driver):
     ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
       soup = BeautifulSoup(response.content, "html.parser")
       df = web_table_to_dataframe(soup("table")[0])
@@ -136,7 +136,7 @@ def get_nhl_debuts (year:int, driver):
     '''
 
     result = None
-    driver.get(f"hockey-reference.com/leagues/NHL_{year}_debut.html")
+    driver.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_debut.html")
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
         df = None
@@ -151,7 +151,7 @@ def get_nhl_debuts (year:int, driver):
 
     return result # returns dataframe
 
-def get_nhl_final_season (year:int, driver):
+def get_nhl_final_season(year:int, driver):
     ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
       soup = BeautifulSoup(response.content, "html.parser")
       df = web_table_to_dataframe(soup("table")[0])
@@ -174,7 +174,7 @@ def get_nhl_final_season (year:int, driver):
 
     return result # returns dataframe
 
-def get_nhl_births (year:int, driver):
+def get_nhl_births(year:int, driver):
     ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
       soup = BeautifulSoup(response.content, "html.parser")
       df = web_table_to_dataframe(soup("table")[0])
@@ -182,7 +182,7 @@ def get_nhl_births (year:int, driver):
     '''
 
     result = None
-    driver.get(f"www.hockey-reference.com/leagues/NHL_{year}_births.html")
+    driver.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_births.html")
 
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
@@ -198,7 +198,7 @@ def get_nhl_births (year:int, driver):
 
     return result # returns dataframe
 
-def get_nhl_deaths (year:int, driver):
+def get_nhl_deaths(year:int, driver):
     ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
       soup = BeautifulSoup(response.content, "html.parser")
       df = web_table_to_dataframe(soup("table")[0])
@@ -206,7 +206,7 @@ def get_nhl_deaths (year:int, driver):
     '''
 
     result = None
-    driver.get(f"www.hockey-reference.com/leagues/NHL_{year}_deaths.html")
+    driver.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_deaths.html")
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
         df = None
