@@ -141,68 +141,6 @@ def get_mlb_season_team_batting_value (year:int, driver):
 
     return result # returns dataframe
 
-def get_mlb_season_team_batting_situational_batting (year:int, driver):
-
-
-    result = None
-    driver.get(f"https://www.baseball-reference.com/leagues/majors/{year}-situational-batting.shtml")
-    try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        dfs = []
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-            dfs.append(df)
-
-        result = dfs
-        print(dfs)
-    except:
-        print("not possible")
-        pass
-
-    return result # returns dataframe
-
-def get_mlb_season_team_batting_advanced_batting (year:int, driver):
-
-
-    result = None
-    driver.get(f"https://www.baseball-reference.com/leagues/majors/{year}-advanced-batting.shtml")
-    try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        dfs = []
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-            dfs.append(df)
-
-        result = dfs
-        print(dfs)
-    except:
-        print("not possible")
-        pass
-
-    return result # returns dataframe
-def get_mlb_season_team_batting_sabermetric_batting (year:int, driver):
-
-
-    result = None
-    driver.get(f"https://www.baseball-reference.com/leagues/majors/{year}-sabermetric-batting.shtml")
-
-    try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        dfs = []
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-            dfs.append(df)
-
-        result = dfs
-        print(dfs)
-    except:
-        print("not possible")
-        pass
-
-    return result # returns dataframe
 
 def get_mlb_season_team_cumulative_batting (year:int, driver):
 
@@ -248,27 +186,6 @@ def get_mlb_season_team_probabaility_batting (year:int, driver):
 
     return result # returns dataframe
 
-def get_mlb_season_team_laegue_neutr_batting (year:int, driver):
-
-
-    result = None
-    driver.get(f"https://www.baseball-reference.com/leagues/majors/{year}-neutral-batting")
-
-    try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        dfs = []
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-            dfs.append(df)
-
-        result = dfs
-        print(dfs)
-    except:
-        print("not possible")
-        pass
-
-    return result # returns dataframe
 
 def get_mlb_season_team_laegue_ratio_batting (year:int, driver):
 
@@ -315,32 +232,7 @@ def get_mlb_season_team_compare (year:int, driver):
 
     return result # returns dataframe
 
-def get_mlb_season_team_laegue_batting_splits (year:int, driver):
-
-
-    result = None
-    driver.get(f"https://www.baseball-reference.com/leagues/split.cgi?t=b&lg=MLB&year={year}")
-    try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        df = []
-        dataframes =[]
-
-        for i in range(1,24):
-            html = tables[i].get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-            dataframes.append(df)
-        result = dataframes
-
-    except:
-        print("not possible")
-        pass
-
-    return result
-
-
 def get_mlb_season_team_pitching_stats(year:int, driver):
-
-
 
     result = None
     driver.get(f"https://www.baseball-reference.com/leagues/majors/{year}-standard-pitching.shtml")
@@ -421,112 +313,7 @@ def get_mlb_season_team_value_pitching(year:int, driver):
 
     return result # returns dataframe
 
-def get_mlb_season_team_reliever_pitching(year:int, driver):
-
-
-
-    result = None
-    driver.get(f"https://www.baseball-reference.com/leagues/majors/{year}-reliever-pitching.shtml")
-    try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        dfs = []
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-            dfs.append(df)
-
-        result = dfs
-    except:
-        print("not possible")
-        pass
-
-    return result # returns dataframe
-
-def get_mlb_season_team_advanced_pitching(year:int, driver):
-
-
-
-    result = None
-    driver.get(f"https://www.baseball-reference.com/leagues/majors/{year}-advanced-pitching.shtml")
-    try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        dfs = []
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-            dfs.append(df)
-
-        result = dfs
-    except:
-        print("not possible")
-        pass
-
-    return result # returns dataframe
-
-def get_mlb_season_team_pitches_pitching(year:int, driver):
-
-
-    result = None
-    driver.get(f"https://www.baseball-reference.com/leagues/majors/{year}-pitches-pitching.shtml")
-    try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        dfs = []
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-            dfs.append(df)
-
-        result = dfs
-    except:
-        print("not possible")
-        pass
-
-    return result # returns dataframe
-
-def get_mlb_season_win_probab_pitching(year:int, driver):
-
-
-
-    result = None
-    driver.get(f"https://www.baseball-reference.com/leagues/majors/{year}-win_probability-pitching.shtml")
-    try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        dfs = []
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-            dfs.append(df)
-
-        result = dfs
-    except:
-        print("not possible")
-        pass
-
-    return result # returns dataframe
-
-def get_mlb_season_win_batting_pitching(year:int, driver):
-
-
-
-    result = None
-    driver.get(f"https://www.baseball-reference.com/leagues/majors/{year}-batting-pitching.shtml")
-    try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        dfs = []
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-            dfs.append(df)
-
-        result = dfs
-    except:
-        print("not possible")
-        pass
-
-    return result # returns dataframe
-
 def get_mlb_season_cumulutive_pitching(year:int, driver):
-
 
 
     result = None
@@ -604,27 +391,6 @@ def get_mlb_season_basesituation_pitching (year:int, driver):
         pass
 
     return result # returns dataframe
-
-def get_mlb_season_SPLITS_pitching (year:int, driver):
-
-    result = None
-    driver.get(f"https://www.baseball-reference.com/leagues/split.cgi?t=p&lg=MLB&year={year}")
-    try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        df = []
-        dataframes =[]
-
-        for i in range(1,43 ):
-            html = tables[i].get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-            dataframes.append(df)
-        result = dataframes
-
-    except:
-        print("not possible")
-        pass
-
-    return result
 
 def get_mlb_season_standings(year:int, driver):
     '''response = requests.get(f"https://www.baseball-reference.com/leagues/majors/{year}-standings.shtml")
