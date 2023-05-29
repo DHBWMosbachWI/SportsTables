@@ -1,216 +1,1017 @@
 {
-    "coaches_stats": {
-        "textual_cols":{
-            "Coach": "basketball.coach.name",
-            "Tm": "basketball.team.name"
-        },
+    "playoff_series_overall": {
         "numerical_cols":{
-            "W.5": "basketball.coach.playoff_total_wins",
-            "G.2": "basketball.coach.total_games_coached",
-            "W.3": "basketball.coach.playoffs_wins",
-            "W.4": "basketball.coach.playoff_franchise_wins",
-            "L.2": "basketball.coach.total_losses",
-            "G.5": "basketball.coach.playoff_total_games_coached",
-            "#.1": "basketball.coach.total_seasons",
-            "G.4": "basketball.coach.playoff_franchise_games_coached",
-            "#": "basketball.coach.franchise_sesaons",
-            "G.1": "basketball.coach.franchise_games_coached",
-            "G.3": "basketball.coach.playoffs_games_coached",
-            "W%": "basketball.coach.total_wins_percentage",
-            "\u00a0.1": null,
-            "\u00a0": null,
-            "W.2": "basketball.coach.total_wins",
-            "L.4": "basketball.coach.playoff_franchise_losses",
-            "\u00a0.2": null,
-            "L.5": "basketball.coach.playoff_total_losses",
-            "W": "basketball.coach.season_wins",
-            "G": "basketball.coach.season_games_coached",
-            "L.3": "basketball.coach.playoffs_losses",
-            "W.1": "basketball.coach.franchise_wins",
-            "L.1": "basketball.coach.franchise_losses",
-            "L": "basketball.coach.season_losses"
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "0": null,
+            "1": null
         }
     },
-    "player_stats": {
-        "textual_cols":{
-            "Player": "basketball.player.name",
-            "Pos": "basketball.player.position",
-            "Tm": "basketball.team.name"
-        },
+    "playoff_series_finals": {
         "numerical_cols":{
-            "AST": "basketball.player.assists_per_game",
-            "GS": "basketball.player.games_started",
-            "2PA": "basketball.player.2-point_field_goals_attempts_per_game",
-            "3PA": "basketball.player.3-point_field_goals_attempts_per_game",
-            "2P": "basketball.player.2-point_field_goals_per_game",
-            "TOV": "basketball.player.turnovers_per_game",
-            "MP": "basketball.player.minutes_per_game",
-            "PF": "basketball.player.fouls_per_game",
-            "FGA": "basketball.player.field_goals_attempts_per_game",
-            "Rk": "rank",
-            "STL": "basketball.player.steals_per_game",
-            "PTS": "basketball.player.points_per_game",
-            "3P%": "basketball.player.3-point_field_goals_percentage",
-            "FG%": "basketball.player.field_goals_percentage",
-            "FTA": "basketball.player.three_throw_attempts_per_game",
-            "G": "basketball.player.games_played",
-            "2P%": "basketball.player.2-point_field_goals_percentage",
-            "eFG%": "basketball.player.effective_field_goals_percentage",
-            "FG": "basketball.player.field_goals_per_game",
-            "TRB": "basketball.player.rebounds_per_game",
-            "FT": "basketball.player.free_throws_per_game",
-            "ORB": "basketball.player.offensive_rebounds_per_game",
-            "DRB": "basketball.player.defensive_rebounds_per_game",
-            "BLK": "basketball.player.blocks_per_game",
-            "3P": "basketball.player.3-point_field_goals_per_game",
-            "Age": "basketball.player.age",
-            "FT%": "basketball.player.free_throws_percentage"
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "0": null,
+            "1": null
         }
     },
-    "season_standings": {
-        "textual_cols":{
-            "Team": "basketball.team.name"
-        },
+    "playoff_series_eastern_conference_finals": {
         "numerical_cols":{
-            "W/L%": "basketball.team.win_loss_percentage",
-            "GB": "basketball.team.games_behind",
-            "SRS": "basketball.team.simple_rating_system",
-            "W": "basketball.team.wins",
-            "PS/G": "basketball.team.points_per_game",
-            "PA/G": "basketball.team.points_opponent_per_game",
-            "L": "basketball.team.losses"
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "0": null,
+            "1": null
         }
     },
-    "team_stats": {
-        "textual_cols":{
-            "Team": "basketball.team.name"
-        },
-        "numerical_cols":{
-            "AST": "basketball.team.assists_per_game",
-            "2PA": "basketball.team.2-point_field_goals_attempts_per_game",
-            "3PA": "basketball.team.3-point_field_goals_attempts_per_game",
-            "2P": "basketball.team.2-point_field_goals_per_game",
-            "TOV": "basketball.team.turnovers_per_game",
-            "MP": "basketball.team.minutes_per_game",
-            "PF": "basketball.team.fouls_per_game",
-            "FGA": "basketball.team.field_goals_attempts_per_game",
-            "Rk": "rank",
-            "STL": "basketball.team.steals_per_game",
-            "PTS": "basketball.team.points_per_game",
-            "3P%": "basketball.team.3-point_field_goals_percentage",
-            "FG%": "basketball.team.field_goals_percentage",
-            "FTA": "basketball.team.three_throw_attempts_per_game",
-            "G": "basketball.team.games_played",
-            "2P%": "basketball.team.2-point_field_goals_percentage",
-            "FG": "basketball.team.field_goals_per_game",
-            "TRB": "basketball.team.rebounds_per_game",
-            "FT": "basketball.team.free_throws_per_game",
-            "ORB": "basketball.team.offensive_rebounds_per_game",
-            "DRB": "basketball.team.defensive_rebounds_per_game",
-            "BLK": "basketball.team.blocks_per_game",
-            "3P": "basketball.team.3-point_field_goals_per_game",
-            "FT%": "basketball.team.free_throws_percentage"
-        }
-    },
-    "all_teams": {
-        "textual_cols":{
-            "Active": "basketball.team.active",
-            "Name": "basketball.team.name",
-            "City": "city",
-            "Key": "city_short_name",
-            "WikipediaWordMarkUrl": "url",
-            "Conference": "basketball.nba.conference",
-            "SecondaryColor": "color_code",
-            "QuaternaryColor": "color_code",
-            "TertiaryColor": "color_code",
-            "WikipediaLogoUrl": "url",
-            "Division": "basketball.nba.division",
-            "PrimaryColor": "color_code"
-        },
-        "numerical_cols":{
-            "LeagueID": "basketball.league.id",        
-            "NbaDotComTeamID": "basketball.team.nba_id",
-            "GlobalTeamID": "basketball.team.global_id",
-            "TeamID": "basketball.team.id",
-            "StadiumID": "basketball.stadium.id"
-        }
-    },
-    "all_players": {
-        "textual_cols":{},
-        "numerical_cols":{},
-        "UsaTodayPlayerID": null,
-        "UsaTodayHeadshotNoBackgroundUpdated": null,
-        "DraftKingsName": null,
-        "DepthChartPosition": null,
-        "TeamID": null,
-        "UsaTodayHeadshotUrl": null,
-        "SportRadarPlayerID": null,
-        "StatsPlayerID": null,
-        "BirthDate": null,
-        "FantasyDraftPlayerID": null,
-        "FanDuelPlayerID": null,
-        "LastName": null,
-        "Jersey": null,
-        "SportsDataID": null,
-        "Experience": null,
-        "DraftKingsPlayerID": null,
-        "YahooPlayerID": null,
-        "FirstName": null,
-        "XmlTeamPlayerID": null,
-        "BirthCountry": null,
-        "BirthCity": null,
-        "PhotoUrl": null,
-        "Weight": null,
-        "Status": null,
-        "Position": null,
-        "UsaTodayHeadshotUpdated": null,
-        "InjuryBodyPart": null,
-        "InjuryStartDate": null,
-        "InjuryStatus": null,
-        "UsaTodayHeadshotNoBackgroundUrl": null,
-        "SportsDirectPlayerID": null,
-        "BirthState": null,
-        "Height": null,
-        "GlobalTeamID": null,
-        "FantasyAlarmPlayerID": null,
-        "Team": null,
-        "Salary": null,
-        "RotoworldPlayerID": null,
-        "RotoWirePlayerID": null,
-        "NbaDotComPlayerID": null,
-        "HighSchool": null,
-        "PlayerID": null,
-        "PositionCategory": null,
-        "FantasyDraftName": null,
-        "College": null,
-        "DepthChartOrder": null,
-        "YahooName": null,
-        "InjuryNotes": null,
-        "FanDuelName": null
-    },
-    "all_referees": {
-        "textual_cols":{},
-        "numerical_cols":{},
-        "Position": null,
-        "Experience": null,
-        "Name": null,
-        "Number": null,
-        "RefereeID": null,
-        "College": null
-    },
-    "all_stadiums": {
-        "textual_cols":{},
-        "numerical_cols":{},
-        "State": null,
-        "Active": null,
-        "GeoLat": null,
-        "Address": null,
-        "Country": null,
-        "Name": null,
-        "GeoLong": null,
-        "Zip": null,
-        "Capacity": null,
-        "City": null,
-        "StadiumID": null
+  "playoff_series_western_conference_finals": {
+      "numerical_cols":{
+          "2": null,
+          "3": null,
+          "4": null,
+          "5": null,
+          "0": null,
+          "1": null
+      }
+  },
+  "series_eastern_conference_semifinals1": {
+      "numerical_cols":{
+          "2": null,
+          "3": null,
+          "4": null,
+          "5": null,
+          "0": null,
+          "1": null
+      }
+  },
+  "series_eastern_conference_semifinals2": {
+      "numerical_cols":{
+          "2": null,
+          "3": null,
+          "4": null,
+          "5": null,
+          "0": null,
+          "1": null
+      }
+  },
+  "playoff_series_western_conference_semifinals1": {
+      "numerical_cols":{
+          "2": null,
+          "3": null,
+          "4": null,
+          "5": null,
+          "0": null,
+          "1": null
+      }
+  },
+  "playoff_series_western_conference_semifinals2": {
+      "numerical_cols":{
+          "2": null,
+          "3": null,
+          "4": null,
+          "5": null,
+          "0": null,
+          "1": null
+      }
+  },
+  "playoff_series_eastern_conference_first_round1": {
+      "numerical_cols":{
+          "2": null,
+          "3": null,
+          "4": null,
+          "5": null,
+          "0": null,
+          "1": null
+      }
+  },
+  "playoff_series_eastern_conference_first_round2": {
+      "numerical_cols":{
+          "2": null,
+          "3": null,
+          "4": null,
+          "5": null,
+          "0": null,
+          "1": null
+      }
+  },
+  "playoff_series_western_conference_first_round1": {
+      "numerical_cols":{
+          "2": null,
+          "3": null,
+          "4": null,
+          "5": null,
+          "0": null,
+          "1": null
+      }
+  },
+  "playoff_series_western_conference_first_round2": {
+      "numerical_cols":{
+          "2": null,
+          "3": null,
+          "4": null,
+          "5": null,
+          "0": null,
+          "1": null
+      }
+  },
+  "per_game_stats_team": {
+      "textual_cols":{
+          "Team": null
+      },
+      "numerical_cols":{
+          "2P%": "basketball.2Point_Field_Goal_Percentage",
+          "MP": "basketball.player.minutes_per_game",
+          "STL": "basketball.player.steals_per_game",
+          "TOV": "basketball.player.turnovers_per_game",
+          "ORB": "basketball.player.offensive_rebounds_per_game",
+          "FG%": "basketball.Field_Goal_Percentage",
+          "AST": "basketball.player.assists_per_game",
+          "FT": "basketball.player.free_throws_per_game",
+          "2PA": "basketball.player.2-point_field_goals_attempts_per_game",
+          "3P": "basketball.player.3-point_field_goals_per_game",
+          "3P%": "basketball.3Point_Field_Goal_Percentage",
+          "FGA": "basketball.player.field_goals_attempts_per_game",
+          "PTS": "basketball.Points",
+          "FTA": "basketball.player.three_throw_attempts_per_game",
+          "FT%": "basketball.player.free_throws_percentage",
+          "FG": "basketball.player.field_goals_per_game",
+          "Rk": "basketball.Rank",
+          "DRB": "basketball.Defensive_Rebounds",
+          "G": "basketball.player.games_played",
+          "2P": "basketball.player.2-point_field_goals_per_game",
+          "BLK": "basketball.Blocks",
+          "TRB": "basketball.player.rebounds_per_game",
+          "PF": "basketball.Personal_Fouls",
+          "3PA": "basketball.player.3-point_field_goals_attempts_per_game"
+      }
+  },
+  "per_game_stats_opponent": {
+      "textual_cols":{
+          "Team": null
+     },
+      "numerical_cols":{
+          "2P%": "basketball.2Point_Field_Goal_Percentage",
+          "MP": "basketball.player.minutes_per_game",
+          "STL": "basketball.player.steals_per_game",
+          "TOV": "basketball.player.turnovers_per_game",
+          "ORB": "basketball.player.offensive_rebounds_per_game",
+          "FG%": "basketball.Field_Goal_Percentage",
+          "AST": "basketball.player.assists_per_game",
+          "FT": "basketball.player.free_throws_per_game",
+          "2PA": "basketball.player.2-point_field_goals_attempts_per_game",
+          "3P": "basketball.player.3-point_field_goals_per_game",
+          "3P%": "basketball.3Point_Field_Goal_Percentage",
+          "FGA": "basketball.player.field_goals_attempts_per_game",
+          "PTS": "basketball.Points",
+          "FTA": "basketball.player.three_throw_attempts_per_game",
+          "FT%": "basketball.player.free_throws_percentage",
+          "FG": "basketball.player.field_goals_per_game",
+          "Rk": "basketball.Rank",
+          "DRB": "basketball.Defensive_Rebounds",
+          "G": "basketball.player.games_played",
+          "2P": "basketball.player.2-point_field_goals_per_game",
+          "BLK": "basketball.Blocks",
+          "TRB": "basketball.player.rebounds_per_game",
+          "PF": "basketball.Personal_Fouls",
+          "3PA": "basketball.player.3-point_field_goals_attempts_per_game"
+      }
+  },
+  "total_stats_team": {
+      "textual_cols":{
+          "Team": null
+      },
+      "numerical_cols":{
+          "2P%": "basketball.2Point_Field_Goal_Percentage",
+          "MP": "basketball.player.minutes_per_game",
+          "STL": "basketball.player.steals_per_game",
+          "TOV": "basketball.player.turnovers_per_game",
+          "ORB": "basketball.player.offensive_rebounds_per_game",
+          "FG%": "basketball.Field_Goal_Percentage",
+          "AST": "basketball.player.assists_per_game",
+          "FT": "basketball.player.free_throws_per_game",
+          "2PA": "basketball.player.2-point_field_goals_attempts_per_game",
+          "3P": "basketball.player.3-point_field_goals_per_game",
+          "3P%": "basketball.3Point_Field_Goal_Percentage",
+          "FGA": "basketball.player.field_goals_attempts_per_game",
+          "PTS": "basketball.Points",
+          "FTA": "basketball.player.three_throw_attempts_per_game",
+          "FT%": "basketball.player.free_throws_percentage",
+          "FG": "basketball.player.field_goals_per_game",
+          "Rk": "basketball.Rank",
+          "DRB": "basketball.Defensive_Rebounds",
+          "G": "basketball.player.games_played",
+          "2P": "basketball.player.2-point_field_goals_per_game",
+          "BLK": "basketball.Blocks",
+          "TRB": "basketball.player.rebounds_per_game",
+          "PF": "basketball.Personal_Fouls",
+          "3PA": "basketball.player.3-point_field_goals_attempts_per_game"
+      }
+  },
+  "total_stats_opponent": {
+      "textual_cols":{
+         "Team": null
+      },
+      "numerical_cols":{
+          "2P%": "basketball.2Point_Field_Goal_Percentage",
+          "MP":  "basketball.player.minutes_per_game",
+          "STL": "basketball.player.steals_per_game",
+          "TOV": "basketball.player.turnovers_per_game",
+          "ORB": "basketball.player.offensive_rebounds_per_game",
+          "FG%": "basketball.Field_Goal_Percentage",
+          "AST": "basketball.player.assists_per_game",
+          "FT": "basketball.player.free_throws_per_game",
+          "2PA": "basketball.player.2-point_field_goals_attempts_per_game",
+          "3P": "basketball.player.3-point_field_goals_per_game",
+          "3P%": "basketball.3Point_Field_Goal_Percentage",
+          "FGA": "basketball.player.field_goals_attempts_per_game",
+          "PTS": "basketball.Points",
+          "FTA": "basketball.player.three_throw_attempts_per_game",
+          "FT%": "basketball.player.free_throws_percentage",
+          "FG": "basketball.player.field_goals_per_game",
+          "Rk": "basketball.Rank",
+          "DRB": "basketball.Defensive_Rebounds",
+          "G": "basketball.player.games_played",
+          "2P": "basketball.player.2-point_field_goals_per_game",
+          "BLK": "basketball.Blocks",
+          "TRB": "basketball.player.rebounds_per_game",
+          "PF": "basketball.Personal_Fouls",
+          "3PA": "basketball.player.3-point_field_goals_attempts_per_game"
+      }
+  },
+  "per_100_poss_stats_team": {
+      "textual_cols":{
+          "Team": null
+      },
+      "numerical_cols":{
+          "2P%": "basketball.2Point_Field_Goal_Percentage",
+          "MP":  "basketball.player.minutes_per_game",
+          "STL": "basketball.player.steals_per_game",
+          "TOV": "basketball.player.turnovers_per_game",
+          "ORB": "basketball.player.offensive_rebounds_per_game",
+          "FG%": "basketball.Field_Goal_Percentage",
+          "AST": "basketball.player.assists_per_game",
+          "FT": "basketball.player.free_throws_per_game",
+          "2PA": "basketball.player.2-point_field_goals_attempts_per_game",
+          "3P": "basketball.player.3-point_field_goals_per_game",
+          "3P%": "basketball.3Point_Field_Goal_Percentage",
+          "FGA": "basketball.player.field_goals_attempts_per_game",
+          "PTS": "basketball.Points",
+          "FTA": "basketball.player.three_throw_attempts_per_game",
+          "FT%": "basketball.player.free_throws_percentage",
+          "FG": "basketball.player.field_goals_per_game",
+          "Rk": "basketball.Rank",
+          "DRB": "basketball.Defensive_Rebounds",
+          "G": "basketball.player.games_played",
+          "2P": "basketball.player.2-point_field_goals_per_game",
+          "BLK": "basketball.Blocks",
+          "TRB": "basketball.player.rebounds_per_game",
+          "PF": "basketball.Personal_Fouls",
+          "3PA": "basketball.player.3-point_field_goals_attempts_per_game"
+      }
+  },
+  "per_100_poss_stats_opponent": {
+      "textual_cols":{
+          "Team": null
+      },
+      "numerical_cols":{
+          "2P%": "basketball.2Point_Field_Goal_Percentage",
+          "MP":  "basketball.player.minutes_per_game",
+          "STL": "basketball.player.steals_per_game",
+          "TOV": "basketball.player.turnovers_per_game",
+          "ORB": "basketball.player.offensive_rebounds_per_game",
+          "FG%": "basketball.Field_Goal_Percentage",
+          "AST": "basketball.player.assists_per_game",
+          "FT": "basketball.player.free_throws_per_game",
+          "2PA": "basketball.player.2-point_field_goals_attempts_per_game",
+          "3P": "basketball.player.3-point_field_goals_per_game",
+          "3P%": "basketball.3Point_Field_Goal_Percentage",
+          "FGA": "basketball.player.field_goals_attempts_per_game",
+          "PTS": "basketball.Points",
+          "FTA": "basketball.player.three_throw_attempts_per_game",
+          "FT%": "basketball.player.free_throws_percentage",
+          "FG": "basketball.player.field_goals_per_game",
+          "Rk": "basketball.Rank",
+          "DRB": "basketball.Defensive_Rebounds",
+          "G": "basketball.player.games_played",
+          "2P": "basketball.player.2-point_field_goals_per_game",
+          "BLK": "basketball.Blocks",
+          "TRB": "basketball.player.rebounds_per_game",
+          "PF": "basketball.Personal_Fouls",
+          "3PA": "basketball.player.3-point_field_goals_attempts_per_game"
+      }
+  },
+  "advanced_stats_team": {
+      "textual_cols":{
+          "Team": null,
+          "Arena": null
+      },
+      "numerical_cols":{
+          "Age": "basketball.player.age",
+          "W": "basketball.Wins",
+          "L": "basketball.Losses",
+          "PW": "basketball.Pythagoreans_Wins",
+          "PL": "basketball.Pythagoreans_Losses",
+          "Rk": "basketball.Rank",
+          "MOV": "basketball.Margin_Of_Victory",
+          "SOS": "basketball.Strenght_Of_Schedule",
+          "SRS": "basketball.Simple_Rating_System",
+          "ORtg": "basketball.Offensive_Rating",
+          "DRtg": "basketball.Defensive_Rating",
+          "NRtg": "basketball.Net_Rating",
+          "Pace": "basketball.Pace_Factor",
+          "FTr": "basketball.Free_Throw_Attempt_Rate",
+          "3PAr": "basketball.3Point_Attempt_Rate",
+          "TS%": "basketball.True_Shooting_Percentage",
+          "eFG%": "basketball.Effective_Field_Goal_Percentage",
+          "TOV%": "basketball.Turnover_Percentage",
+          "ORB": "basketball.player.offensive_rebounds_per_game_percentage",
+          "FT/FGA": "basketball.Free_Throws_Per_Field_Goal_Attempt",
+          "eFG%2": "basketball.Opponent_Effective_Field_Goal_Percentage",
+          "TOV%2": "basketball.Opponent_Turnover_Percentage",
+          "DRB%": "basketball.Defensive_Rebound_Percentage",
+          "FT/FGA2": "basketball.Opponent_Free_Throws_Per_Field_Goal_Attempt",
+          "Attend.": null,
+          "Attend./G": null
+      }
+  },
+  "league_awards": {
+      "textual_cols":{
+          "Award": null,
+          "Winner": null
     }
+  },
+  "league_leaders_points": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_pointsPerGame": {
+
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_totalRebounds": {
+
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_reboundsPerGame": {
+
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_offensiveRebounds": {
+
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_defensiveRebounds": {
+    "2": null,
+    "Award": null,
+    "Winner": null,
+    "0": null,
+    "1": null
+  },
+  "league_leaders_assists": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_assistsPerGame": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_steals": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_stealsPerGame": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_blocks": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_blocksPerGame": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_fieldGoalPct": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_freeThrowPct": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_3pt_fieldGoalPct": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_2pt_fieldGoalPct": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_effective_fieldGoalPct": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_trueShootingPct": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_fieldGoals": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_fieldGoalsAttempts": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_2-Pt_Field_Goals": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_2-Pt_Field_Goals_Attempts": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_3-Pt_Field_Goals": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_3-Pt_Field_Goals_Attempts": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Field_Goals_Missed": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Free_Throws": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Free_Throws_Attempts": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Minutes_Played": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Minutes_Per_Game": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Turnovers": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Personal_Fouls": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Player_Efficiency_Rating": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Win_Shares": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Offensive_Win_Shares": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Defensive_Win_Shares": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Win_Shares_Per_48_Minutes": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Box_Plus_Minus":
+  {"1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Offensive_Box_Plus_Minus":  {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Defensive_Box_Plus_Minus": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Value_Over_Replacement_Player": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Offensive_Rating": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Defensive_Rating": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Usage_Pct": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Total_Rebound_Pct": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Offensive_Rebound_Pct": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Assist_Pct": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Defensive_Rebound": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Steal_PCt": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Block_Pct": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "league_leaders_Turnover_Pct": {
+    "1": null,
+    "2": null,
+    "0": null
+  },
+  "all_rookie": {
+    "0": null
+  },
+  "all_nba": {
+    "1": null,
+    "0": null
+  },
+  "all_defensive": {
+    "1": null,
+    "0": null
+  },
+  "all_star_game_rosters": {
+    "1": null,
+    "0": null
+  },
+  "standings": {
+      "textual_cols":{
+          "Team": "basketball.team.name"
+      },
+      "numerical_cols":{
+          "W/L%": "basketball_win_loss_percentage",
+          "GB": "basketball.games_behind",
+          "SRS": "basketball.Simple_Rating_System",
+          "W": "basketball.Wins",
+          "PS/G": "basketball.points_per_game",
+          "PA/G": "basketball.points_opponent_per_game",
+          "L": "basketball.Losses"
+      }
+},
+  "expanded_standing": {
+      "textual_cols":{
+        "Team": null
+      },
+      "numerical_cols":{
+          "Rk": "basketball.Rank",
+          "Overall": "basketball.Overall_W_L_Record",
+          "Home": "basketball.Record_In_Home_Games",
+          "Road": "basketball.Record_In_Road_Games",
+          "E": "basketball.Record_Versus_Eastern_Conference_Team",
+          "W": "basketball.Record_Versus_Western_Conference_Team",
+          "A": "basketball.Record_Versus_Atlantic_Division_Team",
+          "C": "basketball.Record_Versus_Central_Division_Team",
+          "M": "basketball.Record_Versus_Midwest_Division_Team",
+          "P": "basketball.Record_Versus_Pacific_Division_Team",
+          "Pre": "basketball.Records_Before_All_Star_Game",
+          "Post": "basketball.Records_After_All_Star_Game",
+          "<=3": "basketball.Record_In_Games_Decided_By_3_Or_Fewer_Points",
+          ">=10": "basketball.Record_In_Games_Decided_By_10_Or_more_Points",
+          "Oct": "basketball.Record_In_The_Month_October",
+          "Nov": "basketball.Record_In_The_Month_November",
+          "Dec": "basketball.Record_In_The_Month_December",
+          "Jan": "basketball.Record_In_The_Month_January",
+          "Feb": "basketball.Record_In_The_Month_February",
+          "Mar": "basketball.Record_In_The_Month_March"
+    }
+
+  },
+  "team_vs_team": {
+      "textual_cols":{
+          "Team": null
+      },
+      "numerical_cols":{
+        "Rk": "basketball.Rank",
+        "WSB": "basketball.Record_Versus_Washington_Bullets",
+        "NYK": "basketball.Record_Versus_New_York_Knicks",
+        "MIA": "basketball.Record_Versus_Miami_Heat",
+        "SDC": "basketball.Record_Versus_San_Diego_Clippers",
+        "BOS": "basketball.Record_Versus_Boston_Celtics",
+        "SAS": "basketball.Record_Versus_San_Antonio_Spurs",
+        "ORL": "basketball.Record_Versus_Orlando_Magic",
+        "GSW": "basketball.Record_Versus_Golden_State_Warriors",
+        "IND": "basketball.Record_Versus_Indiana_Pacers",
+        "LAC": "basketball.Record_Versus_Los_Angeles_Clippers",
+        "CHH": "basketball.Record_Versus_Charlotte_Hornets",
+        "KCK": "basketball.Record_Versus_Kansas_City_Kings",
+        "DAL": "basketball.Record_Versus_Dallas_Mavericks",
+        "POR": "basketball.Record_Versus_Portland_Trail_Blazers",
+        "DEN": "basketball.Record_Versus_Denver_Nuggets",
+        "NJN": "basketball.Record_Versus_New_Jersey_Nets",
+        "PHI": "basketball.Record_Versus_Philadelphia_76er",
+        "SAC": "basketball.Record_Versus_Sacramento_Kings",
+        "PHO": "basketball.Record_Versus_Phoenix_Suns",
+        "TOR": "basketball.Record_Versus_Toronto_Raptors",
+        "CHI": "basketball.Record_Versus_Chicago_Bulls",
+        "DET": "basketball.Record_Versus_Detroit_Pistons",
+        "LAL": "basketball.Record_Versus_Los_Angeles_Lakers",
+        "UTA": "basketball.Record_Versus_Utah_Jazz",
+        "CLE": "basketball.Record_Versus_Cleveland_Cavaliers",
+        "ATL": "basketball.Record_Versus_Atlanta_Hawks",
+        "MIL": "basketball.Record_Versus_Milwaukee_Bucks",
+        "MIN": "basketball.Record_Versus_Minnesota_Timberwolves",
+        "WAS": "basketball.Record_Versus_Washington_Wizards",
+        "VAN": "basketball.Record_Versus_Vancouver_Grizzlies",
+        "SEA": "basketball.Record_Versus_Seattle_SuperSonics",
+        "HOU": "basketball.Record_Versus_Houston_Rockets"
+      }
+  },
+  "player_stats": {
+      "textual_cols":{
+          "Player": "basketball.Player.Name",
+          "Pos": "basketball.Player.Position",
+          "Tm": "basketball.Team.Name"
+      },
+      "numerical_cols":{
+          "AST": "basketball.player.assists_per_game",
+          "GS": "basketball.player.games_started",
+          "2PA": "basketball.player.2-point_field_goals_attempts_per_game",
+          "3PA": "basketball.player.3-point_field_goals_attempts_per_game",
+          "2P": "basketball.player.2-point_field_goals_per_game",
+          "TOV": "basketball.player.turnovers_per_game",
+          "MP": "basketball.player.minutes_per_game",
+          "PF": "basketball.Personal_Fouls",
+          "FGA": "basketball.player.field_goals_attempts_per_game",
+          "Rk": "basketball.Rank",
+          "STL": "basketball.player.steals_per_game",
+          "PTS": "basketball.player.points_per_game",
+          "3P%": "basketball.player.3-point_field_goals_percentage",
+          "FG%": "basketball.player.field_goals_percentage",
+          "FTA": "basketball.player.three_throw_attempts_per_game",
+          "G": "basketball.player.games_played",
+          "2P%": "basketball.player.2-point_field_goals_percentage",
+          "eFG%": "basketball.player.effective_field_goals_percentage",
+          "FG": "basketball.player.field_goals_per_game",
+          "TRB": "basketball.player.rebounds_per_game",
+          "FT": "basketball.player.free_throws_per_game",
+          "ORB": "basketball.player.offensive_rebounds_per_game",
+          "DRB": "basketball.player.defensive_rebounds_per_game",
+          "BLK": "basketball.Blocks",
+          "3P": "basketball.player.3-point_field_goals_per_game",
+          "Age": "basketball.player.age",
+          "FT%": "basketball.player.free_throws_percentage"
+      }
+},
+  "coaches_stats": {
+      "textual_cols":{
+          "Coach": "basketball.coach.name",
+          "Tm": "basketball.Team.Name"
+  },
+      "numerical_cols":{
+          "W.5": "basketball.coach.playoff_total_wins",
+          "G.2": "basketball.coach.total_games_coached",
+          "W.3": "basketball.coach.playoffs_wins",
+          "W.4": "basketball.coach.playoff_franchise_wins",
+          "L.2": "basketball.coach.total_losses",
+          "G.5": "basketball.coach.playoff_total_games_coached",
+          "#.1": "basketball.coach.total_seasons",
+          "G.4": "basketball.coach.playoff_franchise_games_coached",
+          "#": "basketball.coach.franchise_sesaons",
+          "G.1": "basketball.coach.franchise_games_coached",
+          "G.3": "basketball.coach.playoffs_games_coached",
+          "W%": "basketball.coach.total_wins_percentage",
+          "\u00a0.1": null,
+          "\u00a0": null,
+          "W.2": "basketball.coach.total_wins",
+          "L.4": "basketball.coach.playoff_franchise_losses",
+          "\u00a0.2": null,
+          "L.5": "basketball.coach.playoff_total_losses",
+          "W": "basketball.Wins",
+          "G": "basketball.coach.season_games_coached",
+          "L.3": "basketball.coach.playoffs_losses",
+          "W.1": "basketball.coach.franchise_wins",
+          "L.1": "basketball.coach.franchise_losses",
+          "L": "basketball.Losses"
+      }
+  },
+  "Per_36_Minutes": {
+      "textual_cols":{
+          "Player": "basketball.Player.Name",
+          "Pos": "basketball.Player.Position",
+          "Tm": "basketball.Team.Name"
+      },
+      "numerical_cols":{
+          "AST": "basketball.player.assists_per_game",
+          "GS": "basketball.player.games_started",
+          "2PA": "basketball.player.2-point_field_goals_attempts_per_game",
+          "3PA": "basketball.player.3-point_field_goals_attempts_per_game",
+          "2P": "basketball.player.2-point_field_goals_per_game",
+          "TOV": "basketball.player.turnovers_per_game",
+          "MP": "basketball.player.minutes_per_game",
+          "PF": "basketball.Personal_Fouls",
+          "FGA": "basketball.player.field_goals_attempts_per_game",
+          "Rk": "basketball.Rank",
+          "STL": "basketball.player.steals_per_game",
+          "PTS": "basketball.player.points_per_game",
+          "3P%": "basketball.player.3-point_field_goals_percentage",
+          "FG%": "basketball.player.field_goals_percentage",
+          "FTA": "basketball.player.three_throw_attempts_per_game",
+          "G": "basketball.player.games_played",
+          "2P%": "basketball.player.2-point_field_goals_percentage",
+          "eFG%": "basketball.player.effective_field_goals_percentage",
+          "FG": "basketball.player.field_goals_per_game",
+          "TRB": "basketball.player.rebounds_per_game",
+          "FT": "basketball.player.free_throws_per_game",
+          "ORB": "basketball.player.offensive_rebounds_per_game",
+          "DRB": "basketball.player.defensive_rebounds_per_game",
+          "BLK": "basketball.Blocks",
+          "3P": "basketball.player.3-point_field_goals_per_game",
+          "Age": "basketball.player.age",
+          "FT%": "basketball.player.free_throws_percentage"
+      }
+  },
+  "Per_100_Poss": {
+      "textual_cols":{
+          "Player": "basketball.Player.Name",
+          "Pos": "basketball.Player.Position",
+          "Tm": "basketball.Team.Name"
+      },
+      "numerical_cols":{
+          "AST": "basketball.player.assists_per_game",
+          "GS": "basketball.player.games_started",
+          "2PA": "basketball.player.2-point_field_goals_attempts_per_game",
+          "3PA": "basketball.player.3-point_field_goals_attempts_per_game",
+          "2P": "basketball.player.2-point_field_goals_per_game",
+          "TOV": "basketball.player.turnovers_per_game",
+          "MP": "basketball.player.minutes_per_game",
+          "PF": "basketball.Personal_Fouls",
+          "FGA": "basketball.player.field_goals_attempts_per_game",
+          "Rk": "basketball.Rank",
+          "STL": "basketball.player.steals_per_game",
+          "PTS": "basketball.player.points_per_game",
+          "3P%": "basketball.player.3-point_field_goals_percentage",
+          "FG%": "basketball.player.field_goals_percentage",
+          "FTA": "basketball.player.three_throw_attempts_per_game",
+          "G": "basketball.player.games_played",
+          "2P%": "basketball.player.2-point_field_goals_percentage",
+          "eFG%": "basketball.player.effective_field_goals_percentage",
+          "FG": "basketball.player.field_goals_per_game",
+          "TRB": "basketball.player.rebounds_per_game",
+          "FT": "basketball.player.free_throws_per_game",
+          "ORB": "basketball.player.offensive_rebounds_per_game",
+          "DRB": "basketball.player.defensive_rebounds_per_game",
+          "BLK": "basketball.Blocks",
+          "3P": "basketball.player.3-point_field_goals_per_game",
+          "Age": "basketball.player.age",
+          "FT%": "basketball.player.free_throws_percentage",
+          "ORtg": "basketball.Offensive_Rating",
+          "DRtg": "basketball.Defensive_Rating"
+      }
+
+  },
+  "Advanced": {
+      "textual_cols":{
+          "Player": "basketball.Player.Name",
+          "Pos": "basketball.Player.Position",
+          "Tm": "basketball.Team.Name"
+      },
+      "numerical_cols":{
+          "2P%": "basketball.player.2-point_field_goals_percentage",
+          "USG%": "basketball.player.Usage_percentage",
+          "FTr": "basketball.Free_Throw_Attempt_Rate",
+          "STL%": "basketball.Steal_Percentage",
+          "VORP": "basketball.Value_over_replacement_player",
+          "DWS": "basketball.Defensive_Win_Shares",
+          "2P": "basketball.player.2-point_field_goals_per_game",
+          "BLK": "basketball.Blocks",
+          "MP": "basketball.player.minutes_per_game",
+          "TOV%": "basketball.Turnover_Percentage",
+          "DRB%": "basketball.Defensive_Rebound_Percentage",
+          "AST%": "basketball.player.Assists_Percentage",
+          "DBPM": "basketball.Defensive_Box_plus_minus",
+          "OWS": "basketball.Offensive_Win_Shares",
+          "BPM": "basketball.Box_plus_minus",
+          "Rk": "basketball.Rank",
+          "3PAr": "basketball.3Point_Attempt_Rate",
+          "TS%": "basketball.True_Shooting_Percentage",
+          "2PA": "basketball.player.2-point_field_goals_attempts_per_game",
+          "Age": "basketball.player.age",
+          "TRB%": "basketball.Total_Rebound_Percentage",
+          "WS/48": "basketball.Win_Shares_per_48_minutes",
+          "G": "basketball.player.games_played",
+          "BLK%": "basketball.Block_Percentage",
+          "PER": "basketball.player.efficiency_rating",
+          "OBPM": "basketball.Offensive_Box_plus_minus",
+          "AST": "basketball.player.assists_per_game",
+          "WS": "basketball.Win_Shares",
+          "ORB%": "basketball.Offensive_Rebound_Percentage"
+      }
+
+  },
+  "Adjusted_Shooting": {
+      "textual_cols":{
+          "Player": "basketball.Player.Name",
+          "Pos": "basketball.Player.Position",
+          "Team": "basketball.Team.Name"
+      },
+      "numerical_cols":{
+          "Rk": "basketball.Rank",
+          "Age": "basketball.player.age",
+          "G": "basketball.player.games_played",
+          "MP": "basketball.player.minutes_per_game",
+          "FG": "basketball.player.field_goals_per_game",
+          "2P": "basketball.player.2-point_field_goals_per_game",
+          "3P": "basketball.player.3-point_field_goals_per_game",
+          "eFG": "basketball.player.effective_field_goal",
+          "FT": "basketball.player.free_throws_per_game",
+          "TS": "basketball.player.true_shooting",
+          "FTr": "basketball.Free_Throw_Attempt_Rate",
+          "3PAr": "basketball.3Point_Attempt_Rate",
+          "FG+": "basketball.adjusted_FG+",
+          "2P+": "basketball.adjusted_2pt_FG+",
+          "3P+": "basketball.adjusted_3pt_FG+",
+          "eFG+": "basketball.adjusted_eFG+",
+          "FT+": "basketball.adjusted_FT+",
+          "FS+": "basketball.adjusted_FS+",
+          "FTr+": "basketball.adjusted_FTr+",
+          "3PAr+": "basketball.adjusted_3PAr+",
+          "FG Add":"basketball.points_added_by_FG_shooting",
+          "FS Add":"basketball.points_added_by_overall_shooting"
+      }
+  },
+  "Rookies": {
+      "textual_cols":{
+          "Player": "basketball.Player.Name",
+          "Debut": "basketball.Player.Debut"
+      },
+      "numerical_cols":{
+          "Rk": "basketball.Rank",
+          "Age": "basketball.player.age",
+          "Yrs": "basketball.player.Years",
+          "G": "basketball.player.games_played",
+          "MP": "basketball.player.minutes_per_game",
+          "FG": "basketball.player.field_goals_per_game",
+          "FGA": "basketball.player.field_goals_attempts_per_game",
+          "3P": "basketball.player.3-point_field_goals_per_game",
+          "3PA": "basketball.player.3-point_field_goals_attempts_per_game",
+          "FT": "basketball.player.free_throws_per_game",
+          "FTA": "basketball.player.three_throw_attempts_per_game",
+          "ORB": "basketball.player.offensive_rebounds_per_game",
+          "TRB": "basketball.player.rebounds_per_game",
+          "AST": "basketball.player.assists_per_game",
+          "STL": "basketball.player.steals_per_game",
+          "BLK": "basketball.Blocks",
+          "TOV": "basketball.player.turnovers_per_game",
+          "PF": "basketball.Personal_Fouls",
+          "PTS": "basketball.player.points_per_game",
+          "FG%": "basketball.Field_Goal_Percentage",
+          "3P%": "basketball.player.3-point_field_goals_percentage",
+          "FT%": "basketball.player.free_throws_percentage",
+          "MP2": "basketball.player.minutes_played",
+          "PTS2": "basketball.player.points",
+          "TRB2": "basketball.player.rebounds",
+          "AST2": "basketball.player.assists"
+      }
+  },
+  "62_Players": {
+      "textual_cols":{
+          "Player": "basketball.Player.Name"
+      },
+      "numerical_cols":{
+          "Rk": "basketball.Rank",
+          "Age": "basketball.player.age",
+          "Yrs": "basketball.player.Years",
+          "G": "basketball.player.games_played",
+          "MP": "basketball.player.minutes_per_game",
+          "FG": "basketball.player.field_goals_per_game",
+          "FGA": "basketball.player.field_goals_attempts_per_game",
+          "3P": "basketball.player.3-point_field_goals_per_game",
+          "3PA": "basketball.player.3-point_field_goals_attempts_per_game",
+          "FT": "basketball.player.free_throws_per_game",
+          "FTA": "basketball.player.three_throw_attempts_per_game",
+          "ORB": "basketball.player.offensive_rebounds_per_game",
+          "TRB": "basketball.player.rebounds_per_game",
+          "AST": "basketball.player.assists_per_game",
+          "STL": "basketball.player.steals_per_game",
+          "BLK": "basketball.Blocks",
+          "TOV": "basketball.player.turnovers_per_game",
+          "PF": "basketball.Personal_Fouls",
+          "PTS": "basketball.player.points_per_game",
+          "FG%": "basketball.Field_Goal_Percentage",
+          "3P%": "basketball.player.3-point_field_goals_percentage",
+          "FT%": "basketball.player.free_throws_percentage",
+          "MP2": "basketball.player.minutes_played",
+          "PTS2": "basketball.player.points",
+          "TRB2": "basketball.player.rebounds",
+          "AST2": "basketball.player.assists"
+      }
+},
+  "team_rating": {
+      "textual_cols":{
+          "Team": "basketball.Team.Name"
+      },
+      "numerical_cols": {
+          "Rk": "basketball.Rank",
+          "Conf": null,
+          "Div": null,
+          "W": "basketball.Wins",
+          "L": "basketball.Losses",
+          "W/L%": "basketball_win_loss_percentage",
+          "MOV": "basketball.Margin_Of_Victory",
+          "ORtg":"basketball.Offensive_Rating",
+          "DRtg": "basketball.Defensive_Rating",
+          "NRtg":"basketball.Net_Rating",
+          "MOV/A":"basketball.Adjusted_Margin_Of_Victory",
+          "ORtg/A":"basketball.Adjusted_Offensive_Rating",
+          "DRtg/a":"basketball.Adjusted_Defensive_Rating",
+          "NRtg/A": "basketball.Adjusted_Net_Rating"
+      }
+  },
+  "Eastern_Conference": {
+      "textual_cols":{
+          "5st": null,
+          "1st": null,
+          "3st": null,
+          "4st": null,
+          "2st": null,
+          "6st": null,
+          "7st": null,
+          "8st": null,
+          "9st": null,
+          "10st": null,
+          "11st": null
+      }
+  }
 }
