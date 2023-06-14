@@ -1,0 +1,1262 @@
+{
+  "all_players": {
+    "textual_cols": {
+      "FirstName": "hockey.player.first_name",
+      "Position": "hockey.player.position",
+      "LastName": "hockey.player.last_name",
+      "Team": "hockey.team.name",
+      "Status": "hockey.player.active_status",
+      "Catches": "hockey.player.catches",
+      "Shoots": "hockey.player.shoots",
+      "BirthDate": "timestamp",
+      "UsaTodayHeadshotNoBackgroundUrl": "url",
+      "FantasyDraftName": "hockey.player.name",
+      "InjuryStartDate": "timestamp",
+      "YahooName": "hockey.player.name",
+      "PhotoUrl": "url",
+      "BirthCity": "city",
+      "DepthChartPosition": "hockey.player.position",
+      "BirthState": "state",
+      "FanDuelName": "hockey.player.name",
+      "InjuryStatus": null,
+      "DraftKingsName": "hockey.player.name",
+      "UsaTodayHeadshotUpdated": "timestamp",
+      "UsaTodayHeadshotNoBackgroundUpdated": "timestamp",
+      "InjuryNotes": null,
+      "UsaTodayHeadshotUrl": "url",
+      "InjuryBodyPart": null
+    },
+    "numerical_cols": {
+      "RotoWirePlayerID": "hockey.player.id",
+      "TeamID": "hockey.team.id",
+      "UsaTodayPlayerID": "hockey.player.id",
+      "Jersey": "hockey.player.jersey_number",
+      "GlobalTeamID": "hockey.team.id",
+      "Height": "hockey.player.height",
+      "SportsDirectPlayerID": "hockey.player.id",
+      "PlayerID": "hockey.player.id",
+      "FanDuelPlayerID": "hockey.player.id",
+      "YahooPlayerID": "hockey.player.id",
+      "DraftKingsPlayerID": "hockey.player.id",
+      "FantasyAlarmPlayerID": "hockey.player.id",
+      "SportRadarPlayerID": "hockey.player.id",
+      "XmlTeamPlayerID": "hockey.player.id",
+      "StatsPlayerID": "hockey.player.id",
+      "FantasyDraftPlayerID": "hockey.player.id",
+      "Weight": "hockey.player.weight",
+      "DepthChartOrder": null,
+      "RotoworldPlayerID": "hockey.player.id"
+    }
+  },
+  "all_stadiums": {
+    "textual_cols": {
+      "Country": "country",
+      "City": "city",
+      "State": "state",
+      "Address": "address",
+      "Name": "hockey.stadium.name",
+      "Capacity": "hockey.stadium.capacity",
+      "Zip": "zip",
+      "Active": "hockey.stadium.active"
+    },
+    "numerical_cols": {
+      "StadiumID": "hockey.stadium.id",
+      "GeoLong": "longitude",
+      "GeoLat": "latitude"
+    }
+  },
+  "all_teams": {
+    "textual_cols": {
+      "Lg": "hockey.league",
+      "Franchise": "hockey.team.name"
+    },
+    "numerical_cols": {
+      "YrsPlyf": "hockey.team.playoff_appearances",
+      "Div": "hockey.team.total_division_wins",
+      "T": "hockey.team.total_ties",
+      "W": "hockey.team.total_wins",
+      "Yrs": "hockey.team.total_seasons",
+      "L": "hockey.team.total_losses",
+      "Champ": "hockey.team.championship_wins",
+      "Conf": "hockey.team.total_playoff_conference_wins",
+      "GP": "hockey.team.total_games_played",
+      "To": "year",
+      "From": "year",
+      "OL": "hockey.team.total_overtime_losses",
+      "StCup": "hockey.team.stanley_cup_wins",
+      "PTS": "hockey.team.total_points",
+      "PTS%": "hockey.team.points_percentage"
+    }
+  },
+  "playoff_player_goalie_stats": {
+    "textual_cols": {
+      "Player": "hockey.player.name",
+      "Tm": "hockey.team.name"
+    },
+    "numerical_cols": {
+      "SO": "hockey.player.shutouts",
+      "PIM": "hockey.player.penaltie_minutes",
+      "SV": "hockey.player.saves",
+      "Rk": "rank",
+      "G": "hockey.player.goals",
+      "SA": "hockey.player.shots_against",
+      "GA": "hockey.player.goals_against",
+      "GSAA": "hockey.player.goals_saved_above_average",
+      "GAA": "hockey.player.goals_against_average",
+      "GA%-": "hockey.player.ga_percentage",
+      "QS%": "hockey.player.quality_starts_percentage",
+      "MIN": "hockey.player.minutes",
+      "GS": "hockey.player.games_started",
+      "W": "hockey.player.wins",
+      "L": "hockey.player.losses",
+      "GP": "hockey.player.games_played",
+      "QS": "hockey.player.quality_starts",
+      "Age": "hockey.player.age",
+      "A": "hockey.player.assists",
+      "RBS": "hockey.player.really_bad_starts",
+      "GPS": "hockey.player.goalie_point_shares",
+      "SV%": "hockey.player.save_percentage",
+      "PTS": "hockey.player.points"
+    }
+  },
+  "playoff_player_stats": {
+    "textual_cols": {
+      "Player": "hockey.player.name",
+      "Tm": "hockey.team.name",
+      "Pos": "hockey.player.position"
+    },
+    "numerical_cols": {
+      "PIM": "hockey.player.penaltie_minutes",
+      "Rk": "rank",
+      "EV.1": "hockey.player.event_strength_assists",
+      "G": "hockey.player.goals",
+      "+/-": "hockey.player.plus_minus",
+      "EV": "hockey.player.event_strength_goals",
+      "FOL": "hockey.player.faceoff_losses",
+      "GW": "hockey.player.game_winning_goals",
+      "PP": "hockey.player.power_play_goals",
+      "FOW": "hockey.player.faceoff_wins",
+      "FO%": "hockey.player.faceoff_percentage",
+      "GP": "hockey.player.games_played",
+      "S": "hockey.player.short_on_goals",
+      "BLK": "hockey.player.blocks",
+      "Age": "hockey.player.age",
+      "A": "hockey.player.assists",
+      "PTS": "hockey.player.points",
+      "TOI": "hockey.player.time_on_ice",
+      "SH.1": "hockey.player.short_handed_assists",
+      "SH": "hockey.player.short_handed_goals",
+      "PP.1": "hockey.player.power_play_assists",
+      "S%": "hockey.player.shooting_percentage",
+      "HIT": "hockey.player.hits",
+      "ATOI": "hockey.player.average_time_on_ice"
+    }
+  },
+  "playoff_standings": {
+    "textual_cols": {
+      "Team": "hockey.team.name"
+    },
+    "numerical_cols": {
+      "T": "hockey.team.playoff_ties",
+      "OW": "hockey.team.playoff_overtime_wins",
+      "DIFF": "hockey.team.playoff_goal_diff",
+      "W": "hockey.team.playoff_wins",
+      "W-L%": "hockey.team.win_loss_percentage",
+      "Rk": "rank",
+      "L": "hockey.team.playoff_losses",
+      "G": "hockey.team.playoff_goals",
+      "GP": "hockey.team.playoff_games_played",
+      "GA": "hockey.team.playoff_goals_against",
+      "OL": "hockey.team.playoff_overtime_losses"
+    }
+  },
+  "season_player_goalie_stats": {
+    "textual_cols": {
+      "Player": "hockey.player.name",
+      "Tm": "hockey.team.name"
+    },
+    "numerical_cols": {
+      "SO": "hockey.player.shutouts",
+      "PIM": "hockey.player.penaltie_minutes",
+      "SV": "hockey.player.saves",
+      "Rk": "rank",
+      "G": "hockey.player.goals",
+      "SA": "hockey.player.shots_against",
+      "GA": "hockey.player.goals_against",
+      "GSAA": "hockey.player.goals_saved_above_average",
+      "GAA": "hockey.player.goals_against_average",
+      "GA%-": "hockey.player.ga_percentage",
+      "QS%": "hockey.player.quality_starts_percentage",
+      "MIN": "hockey.player.minutes",
+      "GS": "hockey.player.games_started",
+      "W": "hockey.player.wins",
+      "T/O": "hockey.player.ties_plus_overtime_losses",
+      "L": "hockey.player.losses",
+      "GP": "hockey.player.games_played",
+      "QS": "hockey.player.quality_starts",
+      "Age": "hockey.player.age",
+      "A": "hockey.player.assists",
+      "RBS": "hockey.player.really_bad_starts",
+      "GPS": "hockey.player.goalie_point_shares",
+      "SV%": "hockey.player.save_percentage",
+      "PTS": "hockey.player.points"
+    }
+  },
+  "season_player_stats": {
+    "textual_cols": {
+      "Player": "hockey.player.name",
+      "Pos": "hockey.player.position",
+      "Tm": "hockey.team.name"
+    },
+    "numerical_cols": {
+      "PIM": "hockey.player.penaltie_minutes",
+      "Rk": "rank",
+      "EV.1": "hockey.player.event_strength_assists",
+      "G": "hockey.player.goals",
+      "+/-": "hockey.player.plus_minus",
+      "EV": "hockey.player.event_strength_goals",
+      "FOL": "hockey.player.faceoff_losses",
+      "GW": "hockey.player.game_winning_goals",
+      "PP": "hockey.player.power_play_goals",
+      "FOW": "hockey.player.faceoff_wins",
+      "FO%": "hockey.player.faceoff_percentage",
+      "GP": "hockey.player.games_played",
+      "S": "hockey.player.short_on_goals",
+      "BLK": "hockey.player.blocks",
+      "Age": "hockey.player.age",
+      "A": "hockey.player.assists",
+      "PS": "hockey.player.point_shares",
+      "PTS": "hockey.player.points",
+      "TOI": "hockey.player.time_on_ice",
+      "SH.1": "hockey.player.short_handed_assists",
+      "SH": "hockey.player.short_handed_goals",
+      "PP.1": "hockey.player.power_play_assists",
+      "S%": "hockey.player.shooting_percentage",
+      "HIT": "hockey.player.hits",
+      "ATOI": "hockey.player.average_time_on_ice"
+    }
+  },
+  "season_standings": {
+    "textual_cols": {
+      "Unnamed: 0": "hockey.team.name"
+    },
+    "numerical_cols": {
+      "ROW": "hockey.team.wins_in_regulation",
+      "T": "hockey.team.ties",
+      "W": "hockey.team.wins",
+      "L": "hockey.team.losses",
+      "RPt%": "hockey.team.r_points_percentage",
+      "RgRec": "hockey.team.regulation_time_record",
+      "RgPt%": "hockey.team.rg_points_percentage",
+      "SRS": "hockey.team.simple_rating_system",
+      "GP": "hockey.team.games_played",
+      "GF": "hockey.team.goals_for",
+      "SOS": "hockey.team.strength_of_schedule",
+      "GA": "hockey.team.goals_against",
+      "OL": "hockey.team.overtime_losses",
+      "RW": "hockey.team.wins_in_regulation",
+      "PTS": "hockey.team.points",
+      "PTS%": "hockey.team.points_percentage"
+    }
+  },
+  "all_nhl_teams": {
+    "textual_cols": {
+      "Lg": "hockey.league",
+      "Franchise": "hockey.team.name"
+    },
+    "numerical_cols": {
+      "YrsPlyf": "hockey.team.playoff_appearances",
+      "Div": "hockey.team.total_division_wins",
+      "T": "hockey.team.total_ties",
+      "W": "hockey.team.total_wins",
+      "Yrs": "hockey.team.total_seasons",
+      "L": "hockey.team.total_losses",
+      "Champ": "hockey.team.championship_wins",
+      "Conf": "hockey.team.total_playoff_conference_wins",
+      "GP": "hockey.team.total_games_played",
+      "To": "year",
+      "From": "year",
+      "OL": "hockey.team.total_overtime_losses",
+      "StCup": "hockey.team.stanley_cup_wins",
+      "PTS": "hockey.team.total_points",
+      "PTS%": "hockey.team.points_percentage"
+    }
+  },
+  "nfl_WHA_and_Defunct_Franchise": {
+    "textual_cols": {
+      "Franchise": "hockey.team.name",
+      "Lg": "hockey.league"
+    },
+    "numerical_cols": {
+      "To": "year",
+      "From": "year",
+      "Yrs": "hockey.team.total_seasons",
+      "GP": "hockey.team.total_games_played",
+      "W": "hockey.team.total_wins",
+      "L": "hockey.team.total_losses",
+      "T": "hockey.team.total_ties",
+      "OL": "hockey.team.total_overtime_losses",
+      "StCup": "hockey.team.stanley_cup_wins",
+      "PTS": "hockey.team.total_points",
+      "PTS%": "hockey.team.points_percentage",
+      "YrsPlyf": "hockey.team.playoff_appearances",
+      "Div": "hockey.team.years_team_finished_first",
+      "Conf": "hockey.team.years_the_team_won_",
+      "Champ": "hockey.team.years_the_team_won_the_championship"
+    }
+  },
+  "nhl_player_stats": {
+    "textual_cols": {
+      "Player": "hockey.player.name",
+      "Pos": "hockey.player.position",
+      "Tm": "hockey.team.name"
+    },
+    "numerical_cols": {
+      "Age": "hockey.player.age",
+      "GP": "hockey.player.games_played",
+      "G": "hockey.player.goals",
+      "A": "hockey.player.assists",
+      "PTS": "hockey.player.points",
+      "+/-": "hockey.player.plus&minus",
+      "PIM": "hockey.player.penalties_in_minutes",
+      "PS": "hockey.player.point_shares",
+      "EV": "hockey.player.even_strength_goals",
+      "PP": "hockey.player.power_play_goals",
+      "SH": "hockey.player.short_handed_goals",
+      "GW": "hockey.player.game_winning_goals",
+      "EV": "hockey.player.even_strength_assists",
+      "PP": "hockey.player.power_play_assists",
+      "SH": "hockey.player.short_handed_assist",
+      "S": "hockey.player.shots_on_goals",
+      "S%%": "hockey.player.shooting_percentage",
+      "TOI": "hockey.player.time_on_ice",
+      "ATOI": "hockey.player.average_time_on_ice"
+    }
+  },
+  "nhl_season_standings_Clarence_Campbell_Conference_&_Prince_of_Wales_Conference": {
+    "numerical_cols": {
+      "GP": "hockey.teams.games_played",
+      "W": "hockey.team.wins",
+      "L": "hockey.team.wins",
+      "T": "hockey.team.losses",
+      "PTS": "hockey.team.ties",
+      "PTS%": "hockey.team.points_percentage",
+      "GF": "hockey.team.goals_for",
+      "SOS": "hockey.team.strength_of_schedule",
+      "GA": "hockey.team.goals_against",
+      "SRS": "hockey.team.simple_rating_system"
+    }
+  },
+  "nhl_season_standings_League_Playoff_Series": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null
+  },
+  "nhl_season_standings_League_Playoff_Series_final": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nhl_season_standings_League_Playoff_Series_semi_finals1": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nhl_season_standings_League_Playoff_Series_semi_finals2": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nhl_season_standings_League_Playoff_Series_quarter-finals1": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nhl_season_standings_League_Playoff_Series_quarter-finals2": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null
+  },
+  "nhl_season_standings_League_Playoff_Series_quarter-finals3": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null
+  },
+  "nhl_season_standings_League_Playoff_Series_quarter-finals4": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null
+  },
+  "nhl_season_standings_League_Playoff_Series_conference_PreliminaryRound1": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nhl_season_standings_League_Playoff_Series_conference_PreliminaryRound2": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nhl_season_standings_League_Playoff_Series_conference_PreliminaryRound3": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nhl_season_standings_League_Playoff_Series_conference_PreliminaryRound4": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nhl_season_standings_League_Playoff_Series_conference_PreliminaryRound5": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null
+  },
+  "nhl_season_standings_League_Playoff_Series_conference_PreliminaryRound6": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nhl_season_standings_League_Playoff_Series_conference_PreliminaryRound7": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null
+  },
+  "nhl_season_standings_League_Playoff_Series_conference_PreliminaryRound8": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nhl_teams_statics": {
+    "numerical_cols": {
+      "GP": "hockey.teams.games_played",
+      "W": "hockey.team.wins",
+      "L": "hockey.team.wins",
+      "T": "hockey.team.losses",
+      "PTS": "hockey.team.ties",
+      "PTS%": "hockey.team.points_percentage",
+      "GF": "hockey.team.goals_for",
+      "SOS": "hockey.team.strength_of_schedule",
+      "GA": "hockey.team.goals_against",
+      "SRS": "hockey.team.simple_rating_system",
+      "GF/G": "hockey.team.goals_for_per_game",
+      "GA/G": "hockey.team.goals_against_per_game",
+      "PP": "hockey.team.power_play_goals",
+      "PPO": "hockey.team.power_play_opportunities",
+      "PP%": "hockey.team.power_play_percentage",
+      "PPA": "hockey.team.power_play_goals_against",
+      "PPOA": "hockey.team.power_play_opportunities_against",
+      "PK%": "hockey.team.penalty_killing_percentage",
+      "SH": "hockey.team.short_handed_goals",
+      "SHA": "hockey.team.short_handed_goals_against",
+      "PIM/G": "hockey.team.penalties_in_minutes_per_game",
+      "oPIM/G": "hockey.team.opponent_penalties_in_minutes_per_game",
+      "S": "hockey.team_shots_on_goals",
+      "S%": "hockey.team_shooting_percentage",
+      "SA": "hockey.team_shots_against",
+      "SV%": "hockey.team_save_percentage",
+      "SO": "hockey.team_shutouts"
+    }
+  },
+  "nhl_league_awards": {
+    "textual_cols": {
+      "Award": "hockey.team.award",
+      "Winner": "hockey.team.winner"
+    }
+  },
+  "nhl_league_leaders_goals": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nhl_league_leaders_assists": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nhl_league_leaders_points": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nhl_league_leaders_goals_created": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nhl_league_leaders_plus_minus": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_league_leaders_penalties_in_minutes": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_Even_Strength_Goals": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_league_power_play_goals": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_league_shot_handed_goals": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_league_leaders_game_winning_goals": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_shots": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_shooting_percentage": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_hat_tricks": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_goals_per_game": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nhl_assists_per_game": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nhl_points_per_game": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nhl_goals_created_per_game": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_total_goals_on_ice_for": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_power_play_goals_on_ice_for": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_total_goals_on_ice_against": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_league_leaders_power_play_Goals_on_ice_Against": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_games_played_goalie": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_wins": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_losses": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_ties_plus_OTSO_losses": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_goals_against": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_shots_against": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_saves": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "save_percentage": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_goals_against_average": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_shutouts": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_minutes": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_goals_saved_above_average": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_goals_allowed_adjusted": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_offensive_point_shares": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_defensive_point_shares": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_goalie_point_shares": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nfl_point_shares": {
+    "0": null,
+    "1": null,
+    "2": null
+  },
+  "nhl_player_goalie_stats": {
+    "textual_cols": {
+      "Player": "hockey.player.name",
+      "TM": "hockey.player.team"
+    },
+    "numerical_cols": {
+      "Age": "hockey.player.age",
+      "GP": "hockey.player.games_played",
+      "GS": "hockey.player.games_started",
+      "W": "hockey.team.wins",
+      "L": "hockey.team.wins",
+      "T/O": "hockey.player.shootout_losses",
+      "GA": "hockey.player.goals_against",
+      "SA": "hockey.player.shots_against",
+      "SV": "hockey.player.saves",
+      "SV%": "hockey.player.save_percentage",
+      "GAA": "hockey.player.goals_against_average",
+      "SO": "hockey.player.shutouts",
+      "GPS": "hockey.player.goalie_point_shares",
+      "MIN": "hockey.player.minutes",
+      "QS": "hockey.player.quality_starts",
+      "QS%": "hockey.player.quality_starts_percentage",
+      "RBS": "hockey.player.really_bad_starts",
+      "GA%": "hockey.player.goals_against_percantage",
+      "GSAA": "hockey.player.goals_saved_above_average",
+      "G": "hockey.player.goals",
+      "A": "hockey.player.assists",
+      "PTS": "hockey.player.points",
+      "PIM": "hockey.player.penalties_in_minutes",
+      "Rk": "rank"
+    }
+  },
+  "nhl_playoff_player_stats": {
+    "textual_cols": {
+      "Player": "hockey.player.name",
+      "TM": "hockey.player.team"
+    },
+    "numerical_cols": {
+      "Rk": "rank",
+      "GP": "hockey.teams.games_played",
+      "Age": "hockey.player.age",
+      "G": "hockey.player.goals",
+      "A": "hockey.player.assists",
+      "PTS": "hockey.player.points",
+      "+/-": "hockey.player.plus&minus",
+      "PIM": "hockey.player.Penalties_in_minutes",
+      "EV": "hockey.player.even_strength_goals",
+      "PP": "hockey.player.power_play_goals",
+      "SH": "hockey.player.short_handed_goals",
+      "GW": "hockey.player.games_winning_goals",
+      "EV": "hockey.player.even_strength_assists",
+      "PP": "hockey.player.power_play_assists",
+      "SH": "hockey.player.short_handed_assists",
+      "S": "hockey.player.shots_on_goals",
+      "S%": "hockey.player.shopoting_percentage",
+      "TOI": "hockey.player.time_on_ice",
+      "ATOI": "hockey.player.average_time_on_ice"
+    }
+  },
+  "nhl_playoff_player_goalies_stats": {
+    "textual_cols": {
+      "Player": "hockey.player.name",
+      "TM": "hockey.player.team"
+    },
+    "numerical_cols": {
+      "Rk": "rank",
+      "GP": "hockey.teams.games_played",
+      "Age": "hockey.player.age",
+      "GS": "hockey.player.games_started",
+      "W": "hockey.team.wins",
+      "L": "hockey.team.wins",
+      "GA": "hockey.player.goals_against",
+      "SA": "hockey.player.shots_against",
+      "SV": "hockey.player.saves",
+      "SV%": "hockey.player.save_percentage",
+      "GAA": "hockey.player.goals_against_average",
+      "SO": "hockey.player.shutouts",
+      "GPS": "hockey.player.goalie_point_shares",
+      "MIN": "hockey.player.minutes",
+      "QS": "hockey.player.quality_starts",
+      "QS%": "hockey.player.quality_starts_percentage",
+      "RBS": "hockey.player.really_bad_starts",
+      "GA%": "hockey.player.goals_against_percantage",
+      "GSAA": "hockey.player.goals_saved_above_average",
+      "G": "hockey.player.goals",
+      "A": "hockey.player.assists",
+      "PTS": "hockey.player.points",
+      "PIM": "hockey.player.penalties_in_minutes"
+    }
+  },
+  "nhl_league_leaders_goals": {
+    "textual_cols": {
+      "Player": "hockey.player.name",
+      "TM": "hockey.player.team"
+    },
+    "numerical_cols": {
+      "GP": "hockey.teams.games_played",
+      "GS": "hockey.player.games_started",
+      "W": "hockey.team.wins",
+      "L": "hockey.team.wins",
+      "T": "hockey.team.losses",
+      "Rk": "rank",
+      "T/O": "hockey.player.shootout_losses",
+      "SV%L": "hockey.player.save_percentage",
+      "GA": "hockey.player.goals_against",
+      "SA": "hockey.player.shots_against",
+      "SV": "hockey.player.saves",
+      "SV%": "hockey.player.save_percentage",
+      "GAA": "hockey.player.goals_against_average",
+      "SO": "hockey.player.shutouts",
+      "GPS": "hockey.player.goalie_point_shares",
+      "MIN": "hockey.player.minutes",
+      "QS": "hockey.player.quality_starts",
+      "QS%": "hockey.player.quality_starts_percentage",
+      "RBS": "hockey.player.really_bad_starts",
+      "GA%": "hockey.player.goals_against_percantage",
+      "GSAA": "hockey.player.goals_saved_above_average",
+      "G": "hockey.player.goals",
+      "A": "hockey.player.assists",
+      "PTS": "hockey.player.points",
+      "PIM": "hockey.player.penalties_in_minutes"
+    }
+  },
+  "hat_tricks1": {
+    "textual_cols": {
+      "Player": "hockey.player.name",
+      "Team": "hockey.team.name",
+      "Opp": "opponent.team.name"
+    },
+    "numerical_cols": {
+      "Date": "timestamp",
+      "G": "hockey.player.goals",
+      "Score": "hockey.player.score"
+    }
+  },
+  "penalty_shots1": {
+    "textual_cols": {
+      "Player": "hockey.player.name",
+      "Team": "hockey.team.name",
+      "Opp": "opponent.team.name",
+      "G": "hockey.player.goal"
+    },
+    "numerical_cols": {
+      "Date": "timestamp",
+      "Score": "hockey.player.score"
+    }
+  },
+  "debuts": {
+    "textual_cols": {
+      "Name": "hockey.player.name",
+      "Pos": "hockey.player.position"
+    },
+    "numerical_cols": {
+      "Age": "hockey,player.age",
+      "Debute Date": "hockey.player.debute_date",
+      "Tm": "hockey.player.team",
+      "Birth Date": "timestamp",
+      "From": "timestamp",
+      "To": "timestamp",
+      "Pos": "hockey.player.position",
+      "GP": "hockey.player.games_played",
+      "G": "hockey.player.goals",
+      "A": "hockey.player.assists",
+      "PTS": "hockey.player.points",
+      "+/-": "hockey.player.plus&minus",
+      "PIM": "hockey.player.Penalties_in_minutes",
+      "GP": "hockey.player.total_games_played",
+      "W": "hockey.player.wins",
+      "L": "hockey.player.losses",
+      "T/O": "hockey.player.shootout_losses",
+      "SV%L": "hockey.player.save_percentage",
+      "GAA": "hockey.player.goals_against_average"
+    }
+  },
+  "final_season1": {
+    "textual_cols": {
+      "Name": "hockey.player.name",
+      "Pos": "hockey.player.position"
+    },
+    "numerical_cols": {
+      "Age": "hockey,player.age",
+      "Tm": "hockey.player.team",
+      "Birth Date": "timestamp",
+      "From": "timestamp",
+      "To": "timestamp",
+      "Pos": "hockey.player.position",
+      "GP": "hockey.player.games_played",
+      "G": "hockey.player.goals",
+      "A": "hockey.player.assists",
+      "PTS": "hockey.player.points",
+      "+/-": "hockey.player.plus&minus",
+      "PIM": "hockey.player.Penalties_in_minutes",
+      "GP": "hockey.player.total_games_played",
+      "W": "hockey.player.wins",
+      "L": "hockey.player.losses",
+      "T/O": "hockey.player.shootout_losses",
+      "SV%L": "hockey.player.save_percentage",
+      "GAA": "hockey.player.goals_against_average"
+    }
+  },
+  "births": {
+    "textual_cols": {
+      "Name": "hockey.player.name",
+      "Pos": "hockey.player.position"
+    },
+    "numerical_cols": {
+      "Birth Date": "timestamp",
+      "Death Age": "Null",
+      "Age at Death": "hockey.player.age",
+      "From": "timestamp",
+      "To": "timestamp",
+      "G": "hockey.player.goals",
+      "A": "hockey.player.assists",
+      "PTS": "hockey.player.points",
+      "+/-": "hockey.player.plus&minus",
+      "PIM": "hockey.player.Penalties_in_minutes",
+      "W": "hockey.player.wins",
+      "L": "hockey.player.losses",
+      "T/O": "hockey.player.shootout_losses",
+      "SV%L": "hockey.player.save_percentage",
+      "GAA": "hockey.player.goals_against_average"
+    }
+  },
+  "deaths": {
+    "textual_cols": {
+      "Name": "hockey.player.name",
+      "Pos": "hockey.player.position"
+    },
+    "numerical_cols": {
+      "Birth Date": "timestamp",
+      "Death Age": "hockey.player.death_date",
+      "Age at Death": "hockey.player.age_at_death",
+      "From": "timestamp",
+      "To": "timestamp",
+      "G": "hockey.player.goals",
+      "A": "hockey.player.assists",
+      "PTS": "hockey.player.points",
+      "+/-": "hockey.player.plus&minus",
+      "PIM": "hockey.player.Penalties_in_minutes",
+      "W": "hockey.player.wins",
+      "L": "hockey.player.losses",
+      "T/O": "hockey.player.shootout_losses",
+      "SV%L": "hockey.player.save_percentage",
+      "GAA": "hockey.player.goals_against_average"
+    }
+  },
+  "nfl_league_playoff_series": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null
+  },
+  "nfl_league_playoff_series_Conference_Finals": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null
+  },
+  "nfl_league_playoff_series_Conference_Finals2": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null
+  },
+  "nfl_league_playoff_series_division_finals": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nfl_league_playoff_series_division_finals2": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null
+  },
+  "nfl_league_playoff_series_division_finals3": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nfl_league_playoff_series_division_finals4": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nfl_league_playoff_series_division_semi_finals1": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nfl_league_playoff_series_division_semi_finals2": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nfl_league_playoff_series_division_semi_finals3": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nfl_league_playoff_series_division_semi_finals4": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nfl_league_playoff_series_division_semi_finals5": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nfl_league_playoff_series_division_semi_finals6": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nfl_league_playoff_series_division_semi_finals7": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nfl_league_playoff_series_division_semi_finals8": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null,
+    "5": null,
+    "6": null
+  },
+  "nfl_playoff_leaders_teams_statics": {
+    "textual_cols": {
+      "Team": "hockey.player.team"
+    },
+    "numerical_cols": {
+      "Rk": "rank",
+      "GP": "hockey.player.games_played",
+      "W": "hockey.player.wins",
+      "L": "hockey.player.losses",
+      "T": "hockey.player.ties",
+      "OW": "hockey.player.shutouts_wins",
+      "OL": "hockey.player.shutout_losses",
+      "DIFF": "hockey.player.goal_differential",
+      "W-L%": "hockey.player.win_loss_percentage",
+      "G": "hockey.player.goals",
+      "GA": "hockey.player.goals_against"
+    },
+    "nfl_playoff_leaders_overtime_goals": {
+      "textual_cols": {
+        "Location": "hockey.location",
+        "Name": "hockey,player.name",
+        "Team": "hockey.player.team",
+        "Opponent": "hockey.player.opponent"
+      },
+      "numerical_cols": {
+        "Date": "timestamp",
+        "Final Score": "hockey.team.final_score",
+        "OTs": "hockey.ots",
+        "OT Time Elapsed": "hockey.OT_Time_Elapsed"
+      }
+    },
+    "nfl_playoff_leaders_goals": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_goals_assists": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_games_points": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_goals_created": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_plus-minus": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_penalties_in_minutes": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_even_strength_for_goals": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_saves_power_play_goals": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_short_handed_goals": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_game_winning_goals": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_shots": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_shooting_percentage": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_hat_ticks": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_goals_per_game": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_assists_per_game": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_points_per_game": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_goals_created_per_game": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_games_played_goalie": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_wins": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_losses": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_goals_against": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_shots_against": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_saves": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_save_percentage": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_goals_against_average": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "nfl_playoff_leaders_shutouts": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+
+    "nfl_playoff_leaders_minutes": {
+      "0": null,
+      "1": null,
+      "2": null
+    }
+  }
+}
+
+
+
+
+
+
