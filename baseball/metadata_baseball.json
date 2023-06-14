@@ -1,0 +1,1129 @@
+  {
+  "mlb_All_Time_Manager_Register" :{
+  "textual_cols": {
+    "Player/manager": "baseball.player.player_manager",
+    "Mgr": "baseball.player.mgr",
+    "Unnamed 22": "baseball.player.as_player"
+  }
+  },
+  "numerical_cols": {
+    "Rk": "rank",
+    "Yrs": "baseball.player.experience",
+    "From": "baseball.player.first_year",
+    "To": "baseball.player.last_year",
+    "W": "baseball.player.wins",
+    "L": "baseball.player.losses",
+    "W-L%": "baseball.player.win_los_percentage",
+    "Ties": "baseball.player.ties",
+    "G>.500": "baseball.player.games_over_500",
+    "G": "baseball.player.games_played",
+    "Wpost": "baseball_player.postseason_wins",
+    "Lpost": "baseball_player.postseason_losses",
+    "W-L%post": "baseball.player.win_los_percentage",
+    "BestFin": "baseball.player.best_finish",
+    "WrstFin": "baseball.player.worst_finish",
+    "AvRk": "baseball.player.average_finish_in_division",
+    "Ejectiond": "baseball.player.ejections",
+    "Playof App": "baseball.player.playoff_appearance",
+    "WSwon": "baseball.player.world_series_wins",
+    "PennWOn": "baseball.player.pennants_won",
+    "ASS": "baseball.player.all_stars_games_managed",
+    "Player/manager": "baseball.player.player_manager"
+
+  },
+
+"mlb_active_franchises": {
+  "textual_cols": {
+  "Franchise": "baseball.team.franchise"
+                  },
+
+  "numerical_cols": {
+  "From": "baseball.team.first_year",
+  "To": "baseball.team.last_year",
+  "W": "baseball.team.wins",
+  "L": "baseball.team.losses",
+  "W-L%": "baseball.team.win_los_percentage",
+  "Ties": "baseball.team.ties",
+  "G>.500": "baseball.team.games_over_500",
+  "Divs": "baseball.team.division_won",
+  "Pnnts": "baseball.team.pennants_won",
+  "WS": "baseball.team.world_series_titles",
+  "Playoffs": "baseball.team.playoffs",
+  "HOF#": "baseball.team.hall_of_fame",
+  "R": "baseball.team.runs_scored",
+  "AB": "baseball.team.ata_bats",
+  "H": "baseball.team.hit",
+  "HR": "baseball.team.hits_allowed",
+  "BA": "baseball.team.at_bats",
+  "RA": "baseball.team.runs_allowed",
+  "ERA": "baseball.team.er_ip"
+                    }
+                    },
+
+
+"mlb_inactive_franchises": {
+  "textual_cols": {
+  "Franchise": "baseball.team.franchise"
+                  },
+
+    "numerical_cols": {
+      "From": "baseball.team.first_year",
+      "To": "baseball.team.last_year",
+      "W": "baseball.team.wins",
+      "L": "baseball.team.losses",
+      "W-L%": "baseball.team.win_los_percentage",
+      "Ties": "baseball.team.ties",
+      "G>.500": "baseball.team.games_over_500",
+      "Divs": "baseball.team.division_won",
+      "Pnnts": "baseball.team.pennants_won",
+      "WS": "baseball.team.world_series_titles",
+      "Playoffs": "baseball.team.playoffs",
+      "HOF#": "baseball.team.hall_of_fame",
+      "R": "baseball.team.runs_scored",
+      "AB": "baseball.team.ata_bats",
+      "H": "baseball.team.hit",
+      "HR": "baseball.team.hits_allowed",
+      "BA": "baseball.team.at_bats",
+      "RA": "baseball.team.runs_allowed",
+      "ERA": "baseball.team.er_ip"
+    }
+                      },
+
+  "mlb_national_association_franchises": {
+  "textual_cols": {
+  "Franchise": "baseball.team.franchise"
+  },
+
+  "numerical_cols": {
+    "From": "baseball.team.first_year",
+    "To": "baseball.team.last_year",
+    "W": "baseball.team.wins",
+    "L": "baseball.team.losses",
+    "W-L%": "baseball.team.win_los_percentage",
+    "Ties": "baseball.team.ties",
+    "G>.500": "baseball.team.games_over_500",
+    "Divs": "baseball.team.division_won",
+    "Pnnts": "baseball.team.pennants_won",
+    "WS": "baseball.team.world_series_titles",
+    "Playoffs": "baseball.team.playoffs",
+    "HOF#": "baseball.team.hall_of_fame",
+    "R": "baseball.team.runs_scored",
+    "AB": "baseball.team.at_bats",
+    "H": "baseball.team.hit",
+    "HR": "baseball.team.hits_allowed",
+    "BA": "baseball.team.at_bats",
+    "RA": "baseball.team.runs_allowed",
+    "ERA": "baseball.team.er_ip"
+  }
+  },
+
+  "mlb_season_team_batting_stats": {
+  "textual_cols": {
+  "Tm": "baseball.team.team"
+  },
+
+  "numerical_cols": {
+    "#Bat": "baseball.team_number_of_players_used_in_game",
+    "BatAge": "baseball.team.batters_average_age",
+    "R/G": "baseball.team.runs_scored_per_game",
+    "G": "baseball.team.games_played_or_pitched",
+    "PA": "baseball.team.plate_appearence",
+    "AB": "baseball.team.at_bats",
+    "H": "baseball.team.hit",
+    "HR": "baseball.team.hits_allowed",
+    "2B": "baseball.team.doubles_hit",
+    "3B": "baseball.team.triple_hit",
+    "RBI": "baseball.team.runs_batt_in",
+    "SB": "baseball.team.stolen_bases",
+    "CS": "baseball.team.caught_stealing",
+    "BB": "baseball.team.walks",
+    "SO": "baseball.team.strikeouts",
+    "BA": "baseball.team.hits_at_bats",
+    "OBP": "baseball.team.OBP",
+    "SLG": "baseball.team.SLG",
+    "OPS": "baseball.team.OBS",
+    "OPS+": "baseball.team.OPS+",
+    "TB": "baseball.team.total_bases",
+    "GDP": "baseball.team.double_plays_grounded_into",
+    "HBP": "baseball.team.times_hit_by_pitch",
+    "SH": "baseball.team.sacrifice_hits",
+    "SF": "baseball.team.sacrifice_files",
+    "LOB": "baseball.team.runners_left_on_base"
+  }
+  },
+
+  "mlb_player_standing_batting": {
+  "textual_cols": {
+  "Name": "baseball.player.name",
+  "Tm": "baseball.player.team",
+  "Pos Summary": "baseball.player.pos_summary"
+  },
+  "numerical_cols": {
+    "Rk": "rank",
+    "Age": "baseball.player.age",
+    "Lg": "baseball.player.league",
+    "G": "baseball.player.games_played",
+    "PA": "baseball.player.plate_appearence",
+    "AB": "baseball.player.at_bats",
+    "R": "baseball.player.runs_scored",
+    "H": "baseball.player.hits_allowed",
+    "HR": "baseball.player.hits_allowed",
+    "2B": "baseball.player.doubles_hit",
+    "3B": "baseball.player.triple_hit",
+    "RBI": "baseball.player.runs_batt_in",
+    "SB": "baseball.player.stolen_bases",
+    "CS": "baseball.player.caught_stealing",
+    "BB": "baseball.player.walks",
+    "SO": "baseball.player.strikeouts",
+    "BA": "baseball.player.hits_at_bats",
+    "OBP": "baseball.player.OBP",
+    "SLG": "baseball.player.SLG",
+    "OPS": "baseball.player.OBS",
+    "OPS+": "baseball.player.OPS+",
+    "TB": "baseball.player.total_bases",
+    "GDP": "baseball.player.double_plays_grounded_into",
+    "HBP": "baseball.player.times_hit_by_pitch",
+    "SH": "baseball.player.sacrifice_hits",
+    "SF": "baseball.player.sacrifice_files",
+    "IBB": "baseball.player.international_bases_on_balls",
+    "Pos Summary": "baseball.player.pos_summary"
+  }
+  },
+  "mlb_season_team_pitching_stats": {
+  "textual_cols": {
+  "Tm": "baseball.team.team"
+  },
+  "numerical_cols": {
+    "#P": "baseball.team.number_of_pitchers_used_in_games",
+    "PAge": "baseball.team.pitcher's_average_age",
+    "RA/G": "baseball.team.runs_allowed_per_game",
+    "W": "baseball.team.wins",
+    "L": "baseball.teams.losses",
+    "W-L%": "baseball.team.win_losses_percentage",
+    "ERA": "baseball.team.ERA",
+    "G": "baseball.team.games_played",
+    "GS": "baseball.team.games_started",
+    "GF": "baseball.team.games_finished",
+    "CG": "baseball.team.complete_games",
+    "tSho": "baseball.team.shutouts_by_team",
+    "cSho": "baseball.team.shutouts",
+    "SV": "baseball.team.saved",
+    "IP": "baseball.team.innings_pitched",
+    "H": "baseball.team.hits_allowed",
+    "R": "baseball.team.runs_scored",
+    "ER": "baseball.team.earned_runs",
+    "HR": "baseball.team.home_runs",
+    "BB": "baseball.team.bases_on_balls",
+    "IBB": "baseball.team.international_bases_on_balls",
+    "SO": "baseball.team.strikeouts",
+    "HBP": "baseball.team.hit_by_a_pitch",
+    "BK": "baseball.team.balks",
+    "WP": "baseball.team.wild_pitches",
+    "BF": "baseball.team.batters_faced",
+    "ERA+": "baseball.team.era+",
+    "FIP": "baseball.team.indep_pitching",
+    "WHIP": "baseball.team.whip",
+    "H9": "baseball.team.h9",
+    "HR9": "baseball.team.hr9",
+    "BB9": "baseball.team.bb9",
+    "SO9": "baseball.team.so9",
+    "SO/W": "baseball.team.so/w",
+    "LOB": "baseball.team.runners_left_on_base"
+  }
+  },
+  "mlb_player_standing_pitching": {
+  "textual_cols": {
+  "Tm": "baseball.player.team",
+  "Name": "baseball.player.name"
+
+  },
+  "numerical_cols": {
+    "Rk": "rank",
+    "Age": "baseball.player.age",
+    "W": "baseball.team.wins",
+    "L": "baseball.team.losses",
+    "W-L%": "baseball.team.win_los_percentage",
+    "ERA": "baseball.team.er_ip",
+    "G": "baseball.player.games_played",
+    "GS": "baseball.player.games_started",
+    "GF": "baseball.player.games_finished",
+    "CG": "baseball.player.complete_game",
+    "SHO": "baseball.player.shutouts",
+    "SV": "baseball.player.saved",
+    "IP": "baseball.team.innings_pitched",
+    "H": "baseball.player.hits",
+    "R": "baseball.player.runs_scored",
+    "ER": "baseball.player.earned_runs",
+    "HR": "baseball.player.homes_runs_hit",
+    "BB": "baseball.player.bases_on_balls",
+    "IBB": "baseball.player.international_bases_on_balls",
+    "SO": "baseball.player.strikeouts",
+    "HBP": "baseball.player.hit_by_pitch",
+    "BK": "baseball.player.balks",
+    "WP": "baseball.player.wild_pitches",
+    "BD": "baseball.player.batters_faced",
+    "ERA+": "baseball.player.era+",
+    "FIP": "baseball.player.fielding_independent_pitching",
+    "WHIP": "baseball.player.HWIP",
+    "H9": "baseball.player.H9",
+    "HR9": "baseball.player.HR9",
+    "BB9": "baseball.player.BB9",
+    "SO9": "baseball.player.SO9",
+    "SO/W": "baseball.playerSO/W"
+  }
+  },
+  "mlb_season_draft_player_bios": {
+  "textual_cols": {
+  "Name": "baseball.player.name",
+  "Tm": "baseball.player.team",
+  "Birthplace": "baseball.player.birthplace",
+  "Draft/signing": "baseball.player.draft_signing",
+  "Schools": "baseball.player.schools",
+  "High School": " baseball.player.high_school",
+  "Given Name": "baseball.player.given_name"
+  },
+  "numerical_cols": {
+    "Rk": "rank",
+    "Age": "baseball.player.age",
+    "Debut": "baseball.player.debut",
+    "Last Game": "baseball.player.last_game",
+    "Pos": "baseball.player position",
+    "WAr": "baseball.player.wins_above_replacement",
+    "Ht": "baseball.player.height",
+    "Wt": "baseball.player.weight",
+    "B": "baseball.player.batting_side",
+    "T": "baseball.payer.throwing_hand",
+    "Birthdate": "timestamp"
+  }
+  },
+  "mlb_batting": {
+  "textual_cols": {
+  "Name": "baseball.player.age"
+  },
+  "numerical_cols": {
+  "Rk": "rank",
+  "Yrs": "baseball.player.experience",
+  "From": "baseball.player.first_year",
+  "To": "baseball.player.last_year",
+  "ASG": "baseball.player.all_star_game_selections",
+  "WAR/pos": "baseball.player.wins_above_average_replacement_for_pos_players",
+  "G": "baseball.player.games_played",
+  "PA": "baseball.player.play_appearance",
+  "AB": "baseball.player.at_bats",
+  "R": "baseball.player.runs_scored",
+  "H": "baseball.player.hits",
+  "2B": "baseball.player.2B",
+  "3B": "baseball.player.3B",
+  "HR": "baseball.player.home_runs",
+  "RBI": "baseball.player.runs_butt_it",
+  "SB": "baseball.player.stolen_bases",
+  "CS": "baseball.player.caught_stealing",
+  "BB": "baseball.player.bases_on_balls",
+  "SO": "baseball.player.strikeouts",
+  "BA": "baseball.player.hits_at_bats",
+  "OBP": "baseball.player.OBP",
+  "SLG": "baseball.player.SLG",
+  "OPS": "baseball.player.OPS",
+  "Debut": "baseball.player.debut",
+  "Age": "baseball.player.age"
+}
+  },
+  "mlb_pitching": {
+  "textual_cols": {
+  "Name": "baseball.player.age"
+  },
+  "numerical_cols": {
+    "Rk": "rank",
+    "Yrs": "baseball.player.experience",
+    "From": "baseball.player.first_year",
+    "To": "baseball.player.last_year",
+    "ASG": "baseball.player.all_star_game_selections",
+    "WAR": "baseball.player.wins_above_average_replacement",
+    "W": "baseball.player.wins",
+    "L": "baseball.player.losses",
+    "W-L%": "baseball.player.win_loss_percentage",
+    "ERA": "baseball.player.ERA",
+    "G": "baseball.player.games_played",
+    "GS": "baseball.player.games_started",
+    "GF": "baseball.player.games_finishes",
+    "CG": "baseball.player.complete_games",
+    "SHO": "baseball.player.shutouts",
+    "SV": "baseball.player.saves",
+    "IP": "baseball.player.innings_pitched",
+    "H": "baseball.player.hits",
+    "R": "baseball.player.runs_scored",
+    "ER": "baseball.player.earned_runs",
+    "HR": "baseball.player.home_runs",
+    "BB": "baseball.player.bases_on_balls",
+    "IBB": "baseball.player.international_bases_on_balls",
+    "SO": "baseball.player.strikeouts",
+    "HBP": "baseball.player.times_hit_by_a_pitch",
+    "BK": "baseball.player.balks",
+    "WP": "baseball.player.wild_pitches",
+    "BF": "baseball.player.batters_faced",
+    "WHIP": "baseball.player.WHIP",
+    "Debut": "baseball.player.debut",
+    "Age": "baseball.player.age"
+  }
+    },
+
+    "postseason4": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "postseason6": {
+      "0": null,
+      "1": null,
+      "2": null
+    },
+    "east_center_west_division1": {
+      "textual_cols": {
+        "Tm": "baseball.team.team"
+      },
+      "numerical_cols": {
+        "W": "baseball.team.wins",
+        "L": "baseball.team.losses",
+        "W-L%": "baseball.team.win_losses_perc",
+        "GB": "baseball.team.games_back_of_division"
+      }
+    },
+    "east_center_west_division2": {
+      "textual_cols": {
+        "Tm": "baseball.team.team"
+      },
+      "numerical_cols": {
+        "W": "baseball.team.wins",
+        "L": "baseball.team.losses",
+        "W-L%": "baseball.team.win_losses_perc",
+        "GB": "baseball.team.games_back_of_division"
+      }
+    },
+    "east_center_west_division3": {
+      "textual_cols": {
+        "Tm": "baseball.team.team"
+      },
+      "numerical_cols": {
+        "W": "baseball.team.wins",
+        "L": "baseball.team.losses",
+        "W-L%": "baseball.team.win_losses_perc",
+        "GB": "baseball.team.games_back_of_division"
+      }
+    },
+    "east_center_west_division4": {
+      "textual_cols": {
+        "Tm": "baseball.team.team"
+      },
+      "numerical_cols": {
+        "W": "baseball.team.wins",
+        "L": "baseball.team.losses",
+        "W-L%": "baseball.team.win_losses_perc",
+        "GB": "baseball.team.games_back_of_division"
+
+    },
+    "east_center_west_division5": {
+      "textual_cols": {
+        "Tm": "baseball.team.team"
+      },
+      "numerical_cols": {
+        "W": "baseball.team.wins",
+        "L": "baseball.team.losses",
+        "W-L%": "baseball.team.win_losses_perc",
+        "GB": "baseball.team.games_back_of_division"
+
+    },
+    "Major_League_Pages1": {
+      "textual_cols": {
+        "Tm": "baseball.league.team"
+      }
+    }
+  },
+  "numerical_cols": {
+    "Rk": "rank",
+    "W": "baseball.league.wins",
+    "L": "baseball.league.losses",
+    "W-L%": "baseball.league.win_losses_percentage",
+    "R": "baseball.league.runs_scored",
+    "RA": "baseball.league.runs_allowed",
+    "Rdiff": "baseball.league.run_differential",
+    "SOS": "baseball.league.strength_of_scedule",
+    "SRS": "baseball.league.simple_rating_system",
+    "pythWL": "baseball.league.pythagorean_win_loss",
+    "Luck": "baseball.league.luck",
+    "vEast": "baseball.league.vEast",
+    "vCent": "baseball.league.vCent",
+    "vWest": "baseball.league.vWest",
+    "Inter": "baseball.league.inter",
+    "Home": "baseball.league.home",
+    "Road": "baseball.league.road",
+    "ExInn": "baseball.league.exinn",
+    "1Run": "baseball.league.1Run",
+    "vRHP": "baseball.league.vRHP",
+    "vLHP": "baseball.league.vLHP",
+    "≥.500": "baseball.league.≥.500",
+    "<.500": "baseball.league.<.500"
+  }
+  },
+  "east_west_division1": {
+  "textual_cols": {
+    "Tm": "baseball.team.team"
+  },
+  "numerical_cols": {
+    "W": "baseball.team.wins",
+    "L": "baseball.team.losses",
+    "W-L%": "baseball.team.win_losses_perc",
+    "GB": "baseball.team.games_back_of_division"
+  }
+  },
+  "east_west_division2": {
+  "textual_cols": {
+    "Tm": "baseball.teamt.team"
+  },
+  "numerical_cols": {
+    "W": "baseball.team.wins",
+    "L": "baseball.team.losses",
+    "W-L%": "baseball.team.win_losses_perc",
+    "GB": "baseball.team.games_back_of_division"
+  }
+  },
+  "east_west_division3": {
+  "textual_cols": {
+    "Tm": "baseball.team.team"
+  },
+  "numerical_cols": {
+    "W": "baseball.team.wins",
+    "L": "baseball.team.losses",
+    "W-L%": "baseball.team.win_losses_perc",
+    "GB": "baseball.team.games_back_of_division"
+  }
+  },
+  "east_west_division4": {
+  "textual_cols": {
+    "Tm": "baseball.team.team"
+  },
+  "numerical_cols": {
+    "W": "baseball.team.wins",
+    "L": "baseball.team.losses",
+    "W-L%": "baseball.team.win_losses_perc",
+    "GB": "baseball.team.games_back_of_division"
+  }
+  },
+  "Major_League_Pages2": {
+  "textual_cols": {
+    "Tm": "baseball.league.team"
+  },
+
+  "numerical_cols": {
+  "Rk": "rank",
+  "W": "baseball.league.wins",
+  "L": "baseball.league.losses",
+  "W-L%": "baseball.league.win_losses_percentage",
+  "R": "baseball.league.runs_scored",
+  "RA": "baseball.league.runs_allowed",
+  "Rdiff": "baseball.league.run_differential",
+  "SOS": "baseball.league.strength_of_scedule",
+  "SRS": "baseball.league.simple_rating_system",
+  "pythWL": "baseball.league.pythagorean_win_loss",
+  "Luck": "baseball.league.luck",
+  "vEast": "baseball.league.vEast",
+  "vCent": "baseball.league.vCent",
+  "vWest": "baseball.league.vWest",
+  "Inter": "baseball.league.inter",
+  "Home": "baseball.league.home",
+  "Road": "baseball.league.road",
+  "ExInn": "baseball.league.exinn",
+  "1Run": "baseball.league.1Run",
+  "vRHP": "baseball.league.vRHP",
+  "vLHP": "baseball.league.vLHP",
+  "≥.500": "baseball.league.≥.500",
+  "<.500": "baseball.league.<.500"
+  }
+  },
+  "Team_Baserunning_Misc": {
+  "textual_cols": {
+  "Tm": "baseball.team.team"
+  }
+  },
+  "numerical_cols": {
+  "R/G": "baseball.team.runs_scored_per_game",
+  "ROE": "baseball.team.reached_on_error",
+  "XI": "baseball.team.catcher_interference",
+  "RS%": "baseball.team_run_scoring_percentage",
+  "SBO": "baseball.team.stolen_base_opport",
+  "SB": "baseball.team.stolen_bases",
+  "CS": "baseball.team.caught_stealing",
+  "SB%": "baseball.team.stolen_base_percent",
+  "SB2": "baseball.team.steals_of_2nd_base",
+  "CS2": "baseball.team.caught_stealing_2nd_base",
+  "SB3": "baseball.team.steals_of_3rd_base",
+  "CS3": "baseball.team.caught_stealing_3rd_base",
+  "SBH": "baseball.team.caught_stealing_home",
+  "PO": "baseball.team.pickoffs",
+  "PCS": "baseball.team.pickoff_caught_stealing",
+  "OOB": "baseball.team.outs_on_base",
+  "OOB1": "baseball.team.outs_on_base1",
+  "OOB2": "baseball.team.outs_on_base2",
+  "OOB3": "baseball.team.outs_on_base3",
+  "OOBHm":"baseball.team.outs_on_base_home",
+  "BT": "baseball.team.bases_taken",
+  "XBT%": "baseball.team.extra_bases_taken_perce",
+  "1stS": "baseball.team.on_first",
+  "1stS2": "baseball.team.on_first_reach_second",
+  "1stS3": "baseball.team.on_first_reach_third",
+  "1stD": "baseball.team.on_first_double_hit",
+  "1stD3": "baseball.team.on_first_double_hit_reach_third",
+  "1stDh": "baseball.team.on_first_a_double_is_hit_and_runner_scores",
+  "2nsS": "baseball.team.on_second_when_a_single_hit",
+  "2ndS3": "baseball.team.on_second_when_a_single_hit_reach_third",
+  "2ndSH": "baseball.team.on_second_when_a_single_hit_runner_scores"
+  },
+
+  "team_player_value_batters": {
+  "textual_cols": {
+  "Tm": "baseball.player.team"
+  }
+  },
+  "numerical_cols": {
+  "G": "baseball.player.goals_pitches",
+  "PA": "baseball.player.plate_appearance",
+  "Rbat": "baseball.player.runs_batting",
+  "Rbbaser": "baseball.player.runs_from_baserrunning",
+  "Rdp": "baseball.player.runs_grounded_into_double_plays",
+  "Rfield": "baseball.player.runs_from_fielding",
+  "Rpos": "baseball.player.runs_from_positional_scarcity",
+  "RAA": "baseball.player.runs_better_than_avg",
+  "WAA": "baseball.player.wins_above_avg",
+  "Rrep": "baseball.player.runs_from_repl_level",
+  "RAR": "baseball.player.rnus_above_repl_level",
+  "WAR": "baseball.player.wins_above-replacement",
+  "waaWL%": "baseball.player.win_loss_%",
+  "162WL%": "baseball.player.avg_team_season",
+  "oWAR": "baseball.player.offensive_wins_above__repl",
+  "dWAR": "baseball.player.dafansive_wins_above_repl",
+  "oRAR": "baseball.player.offensive_runs_above_replacement",
+  "Salary": "baseball.player.salary"
+  },
+  "player_cumulative_batting": {
+  "textual_cols": {
+  "Name": "baseball.player.name"
+  }
+  },
+  "numerical_cols": {
+  "Rk": "rank",
+  "Age": "baseball.player.age",
+  "Yrs": "baseball.player._years_in_major_league",
+  "G": "baseball.player.games_played",
+  "PA": "baseball.player.plate_appearance",
+  "AB": "baseball.player.at_bats",
+  "R": "baseball.player.run_scored",
+  "H": "baseball.player.hits",
+  "2B": "baseball.player.double_hits",
+  "3B": "baseball.player.triples_hits",
+  "HR": "baseball.player.home-runs",
+  "RBI": "baseball.player.runs_battled_in",
+  "SB": "baseball.player.stolen_bases",
+  "CS": "baseball.player.caught_stealing",
+  "BB": "baseball.player.basses_on_ball",
+  "SO": "baseball.player.strikeouts",
+  "BA": "baseball.player.hits_at_bats",
+  "OBP": "baseball.player.OBP",
+  "SLG": "baseball.player.SLG",
+  "OPS": "baseball.player.OBS",
+  "OPS+": "baseball.player.ops+",
+  "TB": "baseball.player.total_bases",
+  "GDP": "baseball.player.double_play_grounded",
+  "HBP": "baseball.player.times_hit_by_pitch",
+  "SH": "baseball.player.sacrifice_hits",
+  "SF": "baseball.player.sacrifice_flies",
+  "IBB": "baseball.player.intern_bases_on_balls"
+  },
+
+  "team_win_probability": {
+  "textual_cols": {
+  "Tm": "baseball.team.team"
+  }
+  },
+  "numerical_cols": {
+  "R/G": "baseball.team.runs_scored_per_game",
+  "BtRuns": "baseball.team.adjusted_batting_runs",
+  "btWins": "baseball.team.adjusted_batting_wins",
+  "Plays": "baseball.team.plays",
+  "WPA": "baseball.team.win_probabil_added_for_offensive_player",
+  "WPA+": "baseball.team.win_probabil_added",
+  "WPA-": "baseball.player.win_probabil_substrac",
+  "aLi": "baseball.team.average_leverage_index",
+  "WPS/LI": "baseball.team.situational_wins",
+  "Clutch": "baseball.team.WPA_Clutch",
+  "cWPA": "baseball.team.championship_probab_added_for_offensive_player",
+  "cWPA+": "baseball.team.championship_probab_added",
+  "cWPA-": "baseball.team.championship_probab_subtrac",
+  "acLi": "baseball.teamaverage_championship_laver_index",
+  "cClutch": "baseball.team.cWPA_Clutch",
+  "RE24": "baseball.team.base_ot_runs_added",
+  "REW": "baseball.team.base_out_wins_added",
+  "boLi": "baseball.team.base_out_laverage",
+  "RE24/boLI": "baseball.team.situational_runs",
+  "PHlev": "baseball.team.pinch_hit_leverage_index",
+  "AB": "baseball.team.pinch_hit_at_bats"
+  },
+  "player_win_probability": {
+  "textual_cols": {
+  "Tm": "baseball.player.team",
+  "name": "baseball.player.name"
+  }
+  },
+  "numerical_cols": {
+  "RK": "rank",
+  "Age": "baseball.player.age",
+  "PA": "baseball.player.plate_appearance",
+  "BtRUns": "baseball.player.adjusted_batting_runs",
+  "BtWins": "baseball.player.adjusted_batting_wins,",
+  "Plays": "baseball.player.plays_incl_in_WPA",
+  "WPA": "baseball.player.win_probab_added_for_offensive_player",
+  "WPA+": "baseball.player.win_probab_added",
+  "WPA-": "baseball.player_win_probab_subtracted",
+  "aLI": "baseball.player.average_leverage_index",
+  "WPA/LI": "baseball.player.situational_wins",
+  "Clutch": "baseball.player.WPA_clutch",
+  "cWPA": "baseball.player.championship_win_probab_added_for_offnsive_player",
+  "cWPA+": "baseball.player.championship_win_probab_added",
+  "cWPA-": "baseball.player.championship_win_probab_subtracted",
+  "acLI": "baseball.plyer.average_championship_leverage_index",
+  "cClutch": "baseball.player.cWPA_clutch",
+  "REW": "baseball.player.base_out_wins_added",
+  "boLi": "baseball.player.base_out_laverage",
+  "RE24/boLI": "baseball.player.situational_runs",
+  "PHlev": "baseball.player.pinch_hit_leverage_index",
+  "AB": "baseball.player.pinch_hit_at_bats"
+  },
+
+  "Team_Position_Performance_by_Wins_Above_Average": {
+  "textual_cols": {
+  "Total": "baseball.team.total",
+  "All P": "baseball.team.both_pitching_batting",
+  "SP": "baseball.team.SP",
+  "RP": "baseball.team.RP",
+  "Non-P": "baseball.team.Non_p",
+  "C": "baseball.team.c",
+  "1B": "baseball.team.1B",
+  "2B": "baseball.team.2B",
+  "3B": "baseball.team.3b",
+  "SS": "baseball.team.SS",
+  "LF": "baseball.team.LF",
+  "CF": "baseball.team.CF",
+  "RF": "baseball.team.RF",
+  "OF(ALL)": "baseball.teamOFF(ALL)",
+  "DH": "baseball.team.DH",
+  "PH": "baseball.team.PH"
+  }
+  },
+  "numerical_cols": {
+  "Rk": "rank",
+  "All P": "baseball.team.both_pitching_batting",
+  "SP": "baseball.team.SP",
+  "RP": "baseball.team.RP",
+  "Non-P": "baseball.team.Non_p",
+  "C": "baseball.team.c",
+  "1B": "baseball.team.1B",
+  "2B": "baseball.team.2B",
+  "3B": "baseball.team.3b",
+  "SS": "baseball.team.SS",
+  "LF": "baseball.team.LF",
+  "CF": "baseball.team.CF",
+  "RF": "baseball.team.RF",
+  "OF(ALL)": "baseball.teamOFF(ALL)",
+  "DH": "baseball.team.DH",
+  "PH": "baseball.team.PH"
+
+  },
+
+  "team_batting_ratios": {
+  "textual_cols": {
+  "Tm": "baseball.team.team"
+  },
+
+  "numerical_cols": {
+  "R/G": "baseball.team.runs_scored_per_game",
+  "HR%": "baseball.team.home_run_percentage",
+  "SO%": "baseball.team.strikeout_percentage",
+  "BB%": "baseball.team.bease_on_balls_percentage",
+  "XBH%": "baseball.team.extra_base_hit_percentage",
+  "X/H%": "baseball.team.percentage_of_all_hits_fo_extra_bases",
+  "SO/W": "baseball.team.SO/W_SO/BB",
+  "AB/SO": "baseball.team.at_bats_per_strikeout",
+  "AB/HR": "baseball.team.at_bats_per_home_run",
+  "AB/RBI": "baseball.team.at_bats_per_run_batted_it",
+  "GB/FB": "baseball.team.ground_ball_to_fly_ball_ratio",
+  "GO/AO":"baseball.team.ground_outs_to_air_outs",
+  "IP%": "baseball.team.balls_in_player_percentage",
+  "LD%": "baseball.team.Line_Drive_%",
+  "HR/FB": "baseball.team.percentage_of_fly_balls_home_runs",
+  "IF/FB": "basebaall.teamperc_fly_balls_on_the_infield"
+  },
+  "player_batting_ratios":{
+  "textual_cols": {
+  "Name": "baseball.player.name",
+  "Tm": "baseball.player.team"
+  },
+
+  "numerical_cols": {
+  "Rk": "rank",
+  "Age": "baseball.player.age",
+  "PA": "baseball.player.plate_appearance",
+  "HR%": "baseball.player.home_run_percent",
+  "SO%": "baseball.player.strikeout_percentage",
+  "BB%": "baseball.player.base_on_balls_percent",
+  "XBH%": "baseball.player.extra_base_hit_percent",
+  "X/H%": "baseball.player.percentage_of_all_hits_extra",
+  "SO/W": "baseball.player.SO/W",
+  "AB/SO": "baseball.playerat_bats_per_strikeput",
+  "AB/HR": "baseball.player.at_bats_per_home_run",
+  "AB/RBI": "baseball.player.at_bats_per_run_batted_in",
+  "GB/FB": "baseball.player.ground_ball_to_fly_ball_ratio",
+  "GO/AO": "baseball.player.ground_outs_to_air_outs",
+  "IP%": "baseball.player.balls_in_play_percentage",
+  "LD%": "baseball.player.line_drive_percent",
+  "HR/FB": "baseball.player.percentage_of_fly_balls_that_were_home_runs",
+  "IF/FB": "baseball.player.percent_of_fly_balls_on_the_infield"
+  },
+
+  "player_starting_pitching":{
+  "textual_cols": {
+  "Name": "baseball.player.name",
+  "Tm": "baseball.player.team"
+  },
+
+  "numerical_cols": {
+  "Rk": "rank",
+  "IP": "baseball.player.innings_pitched",
+  "G": "baseball.player.games_played",
+  "GS": "baseball.player.games_started",
+  "Wgs": "baseball.player.wins_in_games_started",
+  "Lgs": "baseball.player.losses_in_games_started",
+  "ND": "baseball.player.no_decisions_in_games_started",
+  "Wchp": "baseball.player.cheap_wins",
+  "Ltuf": "baseball.player.tough_losses",
+  "Wtm": "baseball.player.team_wins",
+  "Ltm": "baseball.player.losses",
+  "tmW-L%": "baseball.player.win_loss_percent",
+  "Wlst": "baseball.player.wins_lost",
+  "Lsv": "baseball.player.losses_saved",
+  "CG": "baseball.player.complete_game",
+  "SHO": "baseball.player.shutouts",
+  "QS": "baseball.player.quality_start",
+  "QS%": "baseball.player.quality_start_%",
+  "GmSca": "baseball.player.average_game_score",
+  "Best": "baseball.player.best_score_game",
+  "Wrst": "baseball.player.worst_game",
+  "BQR": "baseball.player.bequeathed_runner",
+  "BQS": "baseball.player.bequeathed_runner_score",
+  "sDR": "baseball.player.short_days_rest",
+  "IDR": "baseball.player.long_day_rest",
+  "RS/GS":"baseball.player.run_support_per_game",
+  "RS/IP": "baseball.player.run_support_per_innings",
+  "IP/GS": "baseball.player.innings_pitched_per_game",
+  "Pit/GS": "baseball.player.pitches_per_game_started",
+  "<80": "baseball.player.GS<80",
+  "80-99": "baseball.player.GS_with80-99",
+  "100-119": "baseball.player.GS_with100-119",
+  "≥120": "baseball.player.GS_morethan120",
+  "Max": "baseball.player.GS_with_MAX_pitches"
+  },
+
+  "team_starting_pitching":{
+  "textual_cols": {
+  "Tm": "baseball.team.team"
+  },
+
+  "numerical_cols": {
+  "G": "baseball.team.games_played",
+  "GS": "baseball.team.games_started",
+  "Wgs": "baseball.team.wins_in_games_started",
+  "Lgs": "baseball.team.losses_in_games_started",
+  "ND": "baseball.team.no_decisions_in_games_started",
+  "Wchp": "baseball.team.cheap_wins",
+  "Ltuf": "baseball.team.tough_losses",
+  "Wtm": "baseball.team.team_wins",
+  "Ltm": "baseball.team.losses",
+  "tmW-L%": "baseball.team.win_loss_percent",
+  "Wlst": "baseball.team.wins_lost",
+  "Lsv": "baseball.team.losses_saved",
+  "CG": "baseball.team.complete_game",
+  "SHO": "baseball.team.shutouts",
+  "QS": "baseball.team.quality_start",
+  "QS%": "baseball.team.quality_start_%",
+  "GmSca": "baseball.team.average_game_score",
+  "Best": "baseball.team.best_score_game",
+  "Wrst": "baseball.team.worst_game",
+  "BQR": "baseball.team.bequeathed_runner",
+  "BQS": "baseball.team.bequeathed_runner_score",
+  "sDR": "baseball.team.short_days_rest",
+  "IDR": "baseball.team.long_day_rest",
+  "RS/GS":"baseball.team.run_support_per_game",
+  "RS/IP": "baseball.team.run_support_per_innings",
+  "IP/GS": "baseball.team.innings_pitched_per_game",
+  "Pit/GS": "baseball.team.pitches_per_game_started",
+  "<80": "baseball.team.GS<80",
+  "80-99": "baseball.team.GS_with80-99",
+  "100-119": "baseball.team.GS_with100-119",
+  "≥120": "baseball.team.GS_morethan120",
+  "Max": "baseball.team.GS_with_MAX_pitches"
+  },
+
+  "league_player_pitching":{
+  "textual_cols": {
+    "Tm": "baseball.player.team",
+    "Name": "baseball.player.name",
+    "Lg": "baseball.player.league",
+    "Lev": "baseball.player.classification_of_league",
+    "Aff": "baseball.player.affiliation"
+  },
+  "numerical_cols": {
+    "Rk": "rank",
+    "Age": "baseball.player.age",
+    "W": "baseball.player.wins",
+    "L": "baseball.player.losses",
+    "W-L%": "baseball.player.win_loss_percent",
+    "ERA": "baseball.player.er_ip",
+    "RA9": "baseball.player.run_average*9",
+    "G": "baseball.player.games_played",
+    "GS": "baseball.player.games_started",
+    "GF": "baseball.player.games_finished",
+    "CG": "baseball.player.complete_games",
+    "SHO": "baseball.player.hutouts",
+    "Sv": "baseball.player.saves",
+    "IP": "baseball.player.innings_pitched",
+    "H": "baseball.player.hits_allowed",
+    "R": "baseball.player.runs_scored",
+    "ER": "baseball.player.earned_runs",
+    "HR": "baseball.player.home_runs",
+    "BB": "baseball.player.bases_on_balls",
+    "IBB": "baseball.player.international_bases_on_balls",
+    "SO": "baseball.player.strikeouts",
+    "HBP": "baseball.player.hit_by_a_pitch",
+    "BK": "baseball.player.balks",
+    "WP": "baseball.player.wild_pitches",
+    "BF": "baseball.player.batters_faced",
+    "WHIP": "baseball.player.WHIP",
+    "H9": "baseball.player.H9",
+    "HR9": "baseball.player.HR9",
+    "BB9":"baseball.player.BB9",
+    "SO9": "baseball.player.SO9",
+    "SO/W": "baseball.player.SO/W"
+  },
+  "cumulutive_pitching": {
+    "textual_cols": {
+      "Name": "baseball.player.name"
+    },
+    "numerical_cols": {
+      "Rk": "rank",
+      "Yrs": "baseball.player.experience",
+      "Age": "baseball.player.age",
+      "W": "baseball.player.wins",
+      "L": "baseball.player.losses",
+      "W-L%": "baseball.player.win_loss_percentage",
+      "ERA": "baseball.player.er_ip*9",
+      "G": "baseball.player.games_played",
+      "GS": "baseball.player.games_started",
+      "GF": "baseball.player.games_finishes",
+      "CG": "baseball.player.complete_games",
+      "SHO": "baseball.player_shutouts",
+      "SV": "baseball.player.saves",
+      "IP": "baseball.player.innings_pitches",
+      "H": "baseball.player.hits",
+      "R": "baseball.player.runs_scored",
+      "ER": "baseball.played.earned_runs",
+      "HR": "baseball.player.homes_runs_hit",
+      "BB": "baseball.player.basses_on_balls",
+      "IBB": "baseball.player.international_bases_on_balls",
+      "SO": "baseball.player.strikeouts",
+      "HBP": "baseball.player.times_hit_by_pitch",
+      "WP": "baseball.player.wold_pitches",
+      "BF": "baseball.player.batters_faced",
+      "ERA+": "baseball.player.ERA+",
+      "WHIP": "baseball.player.WHIP",
+      "H9": "baseball.player.H9",
+      "HR9": "baseball.player.HR9",
+      "BB9": "baseball.player.BB9",
+      "SO9": "baseball.player.SO9",
+      "SO/W": "baseball.player.SO/W",
+      "ERA+": "baseball.player.ERA+",
+      "ERA+": "baseball.player.ERA+"
+    },
+"player_neutralized_pitching": {
+  "textual_cols": {
+    "Name": "baseball.player.name"
+  },
+  "numerical_cols": {
+    "Rk": "rank",
+    "Age": "baseball.player.age",
+    "W": "baseball.player.wins",
+    "L": "baseball.player.losses",
+    "W-L%": "baseball.player.win_loss_percentage",
+    "ERA": "baseball.player.er_ip*9",
+    "IP": "baseball.player.innings_pitches",
+    "H": "baseball.player.hits",
+    "R": "baseball.player.runs_scored",
+    "ER": "baseball.played.earned_runs",
+    "HR": "baseball.player.homes_runs_hit",
+    "BB": "baseball.player.basses_on_balls",
+    "SO": "baseball.player.strikeouts",
+    "HBP": "baseball.player.times_hit_by_pitch",
+    "WHIP": "baseball.player.WHIP",
+    "H9": "baseball.player.H9",
+    "HR9": "baseball.player.HR9",
+    "BB9": "baseball.player.BB9",
+    "SO9": "baseball.player.SO9",
+    "SO/W": "baseball.player.SO/W",
+    "Gact": "baseball.player.games_actual"
+  },
+  "team_pitching_ratios": {
+    "textual_cols": {
+    "Tm": "baseball.team.team"
+    },
+    "numerical_cols": {
+    "RA/G": "baseball.team.runs_allowed_per_game",
+    "Ptn%": "baseball.team.percentage_of_PA",
+    "HR%": "baseball.team.home-run_percentage",
+    "SO%": "baseball.team.strikeout_percentage",
+    "BB%": "baseball.team.base_on_ball_percentage",
+    "SO-BB%": "baseball.team.strikeout_base_on_balls_percentage",
+    "XBH%": "baseball.team.percentage_of_all_hits_for_extra_bases",
+    "GB/FB": "baseball.team.ground_ball_to_fly_ball_ratio",
+    "GO/AO": "baseball.team.ground_outs_air_outs",
+    "IP%": "baseball.team.balls_in_play_percentage",
+    "LD%": "baseball.team.line_drive_percentage",
+    "HR/FB": "baseball.team.percentage_of_fly_balls_home_runs",
+    "IF/FB": "baseball.team.percentage_of_fly_balls_were_infield",
+    "Opp": "baseball.team.opportunity_grounded",
+    "DP": "baseball.team.grounded_into_double_play",
+    "%": "baseball.team.double_play_rate",
+    "PAu": "baseball.team.plate_appearance"
+    }
+  },
+  "player_pitching_ratios": {
+    "textual_cols": {
+    "Name": "baseball.player.name"
+    },
+    "numerical_cols": {
+    "Rk": "rank",
+    "Age": "baseball.player.age",
+    "IP": "baseball.player.innings_pitched",
+    "Ptn%": "baseball.player.percentage_of_PA",
+    "HR%": "baseball.player.home-run_percentage",
+    "SO%": "baseball.player.strikeout_percentage",
+    "BB%": "baseball.player.base_on_ball_percentage",
+    "SO-BB%": "baseball.player.strikeout_base_on_balls_percentage",
+    "XBH%": "baseball.player.percentage_of_all_hits_for_extra_bases",
+    "X/H%": "baseball.player.percentage_all_hits_extra_bases",
+    "GB/FB": "baseball.player.ground_ball_to_fly_ball_ratio",
+    "GO/AO": "baseball.player.ground_outs_air_outs",
+    "IP%": "baseball.player.balls_in_play_percentage",
+    "LD%": "baseball.player.line_drive_percentage",
+    "HR/FB": "baseball.player.percentage_of_fly_balls_home_runs",
+    "IF/FB": "baseball.player.percentage_of_fly_balls_were_infield",
+    "Opp": "baseball.player.opportunity_grounded",
+    "DP": "baseball.player.grounded_into_double_play",
+    "%": "baseball.player.double_play_rate",
+    "PAu": "baseball.player.plate_appearance"
+    }
+  },
+  "team_base_situation": {
+    "textual_cols": {
+    "Tm": "baseball.team.team"
+    },
+    "numerical_cols": {
+      "RA/G": "baseball.team.runs_allowed_per_game",
+      "PA": "baseball.team.play_appearance",
+      "H": "baseball.team.all_hits",
+      "Inf": "baseball.team.infield_hits",
+      "Bnt": "baseball.team.buns_hits",
+      "All": "baseball.team.home_run_total",
+      "GS": "baseball.team.grand_slam_home_runs",
+      "GSo": "baseball.team.grand_slam_opportunities",
+      "vRH": "baseball.team.home_runs_off_right_handers",
+      "vLH": "baseball.team.home_runs_off_left_handers",
+      "Hm": "baseball.team.home_runs_at_home",
+      "Rd": "baseball.team.home_runs_on_the_road",
+      "<2,3B": "baseball.team.PAs_less_than_two_out_runner_on_third",
+      "Scr": "baseball.team.PAs_less_than_two_out_runner_on_third_runner_scored",
+      "SO": "baseball.team.PAs_less_two_ot_runner_on_third_pitcher_struck_out_batter",
+      "%": "baseball.team.PAs_less_than_two_out_runner_on_third",
+      "ROE": "baseball.team.reached_on_error",
+      "WP": "baseball.team.wild_pitchers",
+      "PB": "baseball.team.passed_balls",
+      "SBO": "baseball.team.stolen_base_opportunities",
+      "SB": "baseball.team.stolen_bases",
+      "CS": "baseball.team.caught_stealing",
+      "SB%": "baseball.team.stolen_base_percentage",
+      "SB2": "baseball.team.steals_of_2nd_Base",
+      "CS2": "baseball.team.caught_stealing_2nd_Base",
+      "SB3": "baseball.team.steals_of_3nd_Base",
+      "CS3": "baseball.team.caught_stealing_3nd_Base",
+      "SBH": "baseball.team.steals_of_home",
+      "CSH": "baseball.team.caught_stealing_home",
+      "PO": "baseball.team.pickoffs",
+      "PCS": "baseball.team.pickoff_caught_stealing",
+      "BT": "baseball.team.bases_taken",
+      "PAu": "baseball.team.plate_appearances"
+    }
+  },
+  "player_base_situation": {
+    "textual_cols": {
+        "Tm": "baseball.player.team",
+      "Name": "baseball.player.name"
+    },
+    "numerical_cols": {
+      "Rk": "rank",
+      "Age": "baseball.player.age",
+      "IP": "baseball.player.innins_pitched",
+      "PA": "baseball.player.plate_appearance",
+      "H": "baseball.player.all_hits",
+      "Inf": "baseball.player.infield_hits",
+      "Bnt": "baseball.player.buns_hits",
+      "All": "baseball.player.home_run_total",
+      "GS": "baseball.player.grand_slam_home_runs",
+      "GSo": "baseball.player.grand_slam_opportunities",
+      "vRH": "baseball.player.home_runs_off_right_handers",
+      "vLH": "baseball.player.home_runs_off_left_handers",
+      "Hm": "baseball.player.home_runs_at_home",
+      "Rd": "baseball.player.home_runs_on_the_road",
+      "<2,3B": "baseball.player.PAs_less_than_two_out_runner_on_third",
+      "Scr": "baseball.player.PAs_less_than_two_out_runner_on_third_runner_scored",
+      "SO": "baseball.player.PAs_less_two_ot_runner_on_third_pitcher_struck_out_batter",
+      "%": "baseball.player.PAs_less_than_two_out_runner_on_third",
+      "ROE": "baseball.player.reached_on_error",
+      "WP": "baseball.player.wild_pitchers",
+      "PB": "baseball.player.passed_balls",
+      "SBO": "baseball.player.stolen_base_opportunities",
+      "SB": "baseball.player.stolen_bases",
+      "CS": "baseball.player.caught_stealing",
+      "SB%": "baseball.player.stolen_base_percentage",
+      "SB2": "baseball.player.steals_of_2nd_Base",
+      "CS2": "baseball.player.caught_stealing_2nd_Base",
+      "SB3": "baseball.player.steals_of_3nd_Base",
+      "CS3": "baseball.player.caught_stealing_3nd_Base",
+      "SBH": "baseball.player.steals_of_home",
+      "CSH": "baseball.player.caught_stealing_home",
+      "PO": "baseball.player.pickoffs",
+      "PCS": "baseball.player.pickoff_caught_stealing",
+      "BT": "baseball.player.bases_taken",
+      "PAu": "baseball.player.plate_appearances"
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
