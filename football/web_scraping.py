@@ -1,10 +1,8 @@
-import requests
-from bs4 import BeautifulSoup
-from selenium.webdriver.common.by import By
 import pandas as pd
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+import time
 
 
 def web_table_to_dataframe(web_table):
@@ -81,7 +79,13 @@ def get_player_receiving_stats(year:int, driver):
     result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/receiving.htm")
     if driver.find_element(By.ID, "modal-container").is_displayed(): # check if pop up visible
-        WebDriverWait(driver,1000).until(EC.element_to_be_clickable((By.CLASS_NAME, "closer"))).click() # close pop up
+        try:
+            WebDriverWait(driver,1000).until(EC.element_to_be_clickable((By.CLASS_NAME, "css-47sehv"))).click() # close privacy
+            time.sleep(3)
+            WebDriverWait(driver,1000).until(EC.element_to_be_clickable((By.CLASS_NAME, "closer"))).click() # close pop up
+        except Exception as e:
+            print("closing pop up window was not possible")
+            print(e)
     try:
 
         tables = driver.find_elements(By.TAG_NAME, "table")
@@ -132,7 +136,7 @@ def get_player_defense_stats(year:int, driver):
         print("not possible")
         pass
 
-    return check_tables(result)
+    return result
 
 def check_tables(result):
     if type(result) == list:
