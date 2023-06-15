@@ -1,21 +1,5 @@
-import requests
-from bs4 import BeautifulSoup
 from selenium.webdriver.common.by import By
 import pandas as pd
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-import pandas as pd
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-import re
-import time
-
-options = webdriver.ChromeOptions()
-options.add_argument('headless')
-
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
-
 
 def web_table_to_dataframe(web_table):
     """
@@ -69,27 +53,18 @@ def check_tables(result):
         new_result = result.loc[result[columns[0]] != columns[0]]
     return new_result
 
-
-def get_volleyball_league_scores(year):
+def get_volleyball_league_scores(year, driver):
     url = f'https://www.volleyball-bundesliga.de/cms/home/1_bundesliga_maenner/archiv/statistikrankings/saison_{year}_{year + 1 - 2000}.xhtml'
     driver.get(url)
-    time.sleep(5)
     try:
-        html = driver.page_source
+        tables = driver.find_elements(By.TAG_NAME, "table")
 
-        soup = BeautifulSoup(html, 'html.parser')
-        tables = soup.find_all('table')
+        for table in tables:
+            html = table.get_attribute("outerHTML")
+            df = pd.read_html(html)[0]
 
-        for i, table in enumerate(tables):
-            h1_tag = table.find_previous('h1')
-            title = re.sub(r'[^\w\s-]', '', h1_tag.text.strip())
-            title = title.lower()
-            df = pd.read_html(str(table))[0]
-            df = check_tables(df)
-            filename = f'{title.replace(" ", "_").replace("  ", "_")}.csv'
-            df.to_csv(filename, index=False)
-
-    except:
+    except Exception as e:
         print("not possible")
+        print(e)
         pass
-# %%
+    return df
