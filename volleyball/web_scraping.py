@@ -37,19 +37,22 @@ def web_table_to_dataframe(web_table):
 
 
 def check_tables(result):
-    if type(result) == list:
+    if type(result) == list: #result can be single df or a list of df
         new_result = []
         for table in range(len(result)):
-            if result[table].iloc[0].to_string().startswith('Unnamed'):
-                result[table].columns = result[table].columns.droplevel(0)
+            if result[table].columns.nlevels > 1: # are there more than one header level?
+                n_level = result[table].columns.nlevels-1
+                for index in range(n_level):
+                    result[table].columns = result[table].columns.droplevel(0) # remove first header until only one is left
             columns = list(result[table].columns)
-            # new_result.append(result[table][result[table].Rk.str.contains(columns[0]) is False])
             new_result.append(result[table].loc[result[table][columns[0]] != columns[0]])
+            # are headers repeated as rows? Remove these
     else:
-        if result.iloc[0].to_string().startswith('Unnamed'):  # check if multiple headers
-            result.columns = result.columns.droplevel(0)  # drop first layer
+        if result.columns.nlevels > 1:
+            n_level = result.columns.nlevels-1
+            for index in range(n_level):
+                result.columns = result.columns.droplevel(0) # drop first layer
         columns = list(result.columns)
-        # new_result = result[result.Rk.str.contains(columns[0]) is False] # delete rows that are like header
         new_result = result.loc[result[columns[0]] != columns[0]]
     return new_result
 

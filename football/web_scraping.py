@@ -5,7 +5,25 @@ from selenium.webdriver.common.by import By
 import time
 
 
-def web_table_to_dataframe(web_table):
+
+def close_popups(driver):
+    """
+    This function closes disruptive pop ups
+    Args:
+        driver: the driver the user needs
+
+    Returns:
+        None
+    """
+    try:
+        WebDriverWait(driver,1000).until(EC.element_to_be_clickable((By.CLASS_NAME, "css-47sehv"))).click() # close privacy pop up
+        time.sleep(3)
+        WebDriverWait(driver,1000).until(EC.element_to_be_clickable((By.CLASS_NAME, "closer"))).click() # close pop up
+    except Exception as e:
+        print(e)
+    pass
+
+def web_table_to_dataframe(web_table): # remove?
     """
     This function turns a html table into a pandas dataframe. 
     thead is used as column names of the dataframe and all rows under tbody are going into the dataframe rows.
@@ -42,6 +60,8 @@ def web_table_to_dataframe(web_table):
 def get_player_passing_stats(year:int, driver):
     result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/passing.htm")
+    if driver.find_element(By.ID, "modal-container").is_displayed():
+        close_popups(driver)
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
         df = None
@@ -60,6 +80,8 @@ def get_player_passing_stats(year:int, driver):
 def get_player_rushing_stats(year:int, driver):
     result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/rushing.htm")
+    if driver.find_element(By.ID, "modal-container").is_displayed():
+        close_popups(driver)
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
         df = None
@@ -78,16 +100,10 @@ def get_player_rushing_stats(year:int, driver):
 def get_player_receiving_stats(year:int, driver):
     result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/receiving.htm")
-    if driver.find_element(By.ID, "modal-container").is_displayed(): # check if pop up visible
-        try:
-            WebDriverWait(driver,1000).until(EC.element_to_be_clickable((By.CLASS_NAME, "css-47sehv"))).click() # close privacy
-            time.sleep(3)
-            WebDriverWait(driver,1000).until(EC.element_to_be_clickable((By.CLASS_NAME, "closer"))).click() # close pop up
-        except Exception as e:
-            print("closing pop up window was not possible")
-            print(e)
-    try:
 
+    if driver.find_element(By.ID, "modal-container").is_displayed():
+        close_popups(driver)
+    try:
         tables = driver.find_elements(By.TAG_NAME, "table")
         df = None
 
@@ -105,6 +121,8 @@ def get_player_receiving_stats(year:int, driver):
 def get_player_scrimmage_stats(year:int, driver):
     result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/scrimmage.htm")
+    if driver.find_element(By.ID, "modal-container").is_displayed():
+        close_popups(driver)
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
         df = None
@@ -123,6 +141,8 @@ def get_player_scrimmage_stats(year:int, driver):
 def get_player_defense_stats(year:int, driver):
     result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/defense.htm")
+    if driver.find_element(By.ID, "modal-container").is_displayed():
+        close_popups(driver)
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
         df = None
@@ -136,28 +156,33 @@ def get_player_defense_stats(year:int, driver):
         print("not possible")
         pass
 
-    return result
+    return check_tables(result)
 
 def check_tables(result):
-    if type(result) == list:
+    if type(result) == list: #result can be single df or a list of df
         new_result = []
         for table in range(len(result)):
-            if result[table].iloc[0].to_string().startswith('Unnamed'):
-                result[table].columns = result[table].columns.droplevel(0)
+            if result[table].columns.nlevels > 1: # are there more than one header level?
+                n_level = result[table].columns.nlevels-1
+                for index in range(n_level):
+                    result[table].columns = result[table].columns.droplevel(0) # remove first header until only one is left
             columns = list(result[table].columns)
-            #new_result.append(result[table][result[table].Rk.str.contains(columns[0]) is False])
             new_result.append(result[table].loc[result[table][columns[0]] != columns[0]])
+            # are headers repeated as rows? Remove these
     else:
-        if result.iloc[0].to_string().startswith('Unnamed'): # check if multiple headers
-            result.columns = result.columns.droplevel(0) # drop first layer
+        if result.columns.nlevels > 1:
+            n_level = result.columns.nlevels-1
+            for index in range(n_level):
+                result.columns = result.columns.droplevel(0) # drop first layer
         columns = list(result.columns)
-        #new_result = result[result.Rk.str.contains(columns[0]) is False] # delete rows that are like header
         new_result = result.loc[result[columns[0]] != columns[0]]
     return new_result
 
 def get_player_kicking_stats(year:int, driver):
     result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/kicking.htm")
+    if driver.find_element(By.ID, "modal-container").is_displayed():
+        close_popups(driver)
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
         df = None
@@ -176,6 +201,8 @@ def get_player_kicking_stats(year:int, driver):
 def get_player_punting_stats(year:int, driver):
     result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/punting.htm")
+    if driver.find_element(By.ID, "modal-container").is_displayed():
+        close_popups(driver)
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
         df = None
@@ -194,6 +221,8 @@ def get_player_punting_stats(year:int, driver):
 def get_player_return_stats(year:int, driver):
     result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/returns.htm")
+    if driver.find_element(By.ID, "modal-container").is_displayed():
+        close_popups(driver)
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
         df = None
@@ -212,6 +241,8 @@ def get_player_return_stats(year:int, driver):
 def get_player_scoring_stats(year:int, driver):
     result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/scoring.htm")
+    if driver.find_element(By.ID, "modal-container").is_displayed():
+        close_popups(driver)
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
         df = None
@@ -230,6 +261,8 @@ def get_player_scoring_stats(year:int, driver):
 def get_all_nfl_teams(driver):
     result = None
     driver.get(f"https://www.pro-football-reference.com/teams/")
+    if driver.find_element(By.ID, "modal-container").is_displayed():
+        close_popups(driver)
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
 
@@ -249,6 +282,8 @@ def get_all_nfl_teams(driver):
 def get_all_stadiums(driver):
     result = None
     driver.get(f"https://www.pro-football-reference.com/stadiums/")
+    if driver.find_element(By.ID, "modal-container").is_displayed():
+        close_popups(driver)
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
         df = None
@@ -267,6 +302,8 @@ def get_all_stadiums(driver):
 def get_team_defense_stats(year:int, driver):
     result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/opp.htm")
+    if driver.find_element(By.ID, "modal-container").is_displayed():
+        close_popups(driver)
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
 
@@ -286,6 +323,8 @@ def get_team_defense_stats(year:int, driver):
 def get_team_season_standings(year:int, driver):
     result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/")
+    if driver.find_element(By.ID, "modal-container").is_displayed():
+        close_popups(driver)
     try:
         tables = driver.find_elements(By.TAG_NAME, "table")
 
