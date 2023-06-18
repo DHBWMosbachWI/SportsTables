@@ -113,7 +113,7 @@ def get_player_season_stats(season, current_season, league_id,
 
 
 def get_player_season_stats2(season, current_season, league_id,
-                             league_stats_name, driver):
+                             league_stats_name, driver, year):
     teams_urls = get_soccer_teams_url(season, current_season, league_id, league_stats_name)
 
     dataframes = []
@@ -127,23 +127,29 @@ def get_player_season_stats2(season, current_season, league_id,
         dataframes.append(web_table_to_dataframe(soup("table")[0]))
 
     df = pd.concat(dataframes, ignore_index=True)
-    return check_tables(df)
+    df = check_tables(df)
+    name = f'soccer_{league_stats_name}_player_stats_{year}.csv'
+    df.to_csv(name, index=False)
+    print(f'Saved {name}')
 
 
 def check_tables(result):
-    if type(result) == list:
+    if type(result) == list: #result can be single df or a list of df
         new_result = []
         for table in range(len(result)):
-            if result[table].iloc[0].to_string().startswith('Unnamed'):
-                result[table].columns = result[table].columns.droplevel(0)
+            if result[table].columns.nlevels > 1: # are there more than one header level?
+                n_level = result[table].columns.nlevels-1
+                for index in range(n_level):
+                    result[table].columns = result[table].columns.droplevel(0) # remove first header until only one is left
             columns = list(result[table].columns)
-            # new_result.append(result[table][result[table].Rk.str.contains(columns[0]) is False])
             new_result.append(result[table].loc[result[table][columns[0]] != columns[0]])
+            # are headers repeated as rows? Remove these
     else:
-        if result.iloc[0].to_string().startswith('Unnamed'):  # check if multiple headers
-            result.columns = result.columns.droplevel(0)  # drop first layer
+        if result.columns.nlevels > 1:
+            n_level = result.columns.nlevels-1
+            for index in range(n_level):
+                result.columns = result.columns.droplevel(0) # drop first layer
         columns = list(result.columns)
-        # new_result = result[result.Rk.str.contains(columns[0]) is False] # delete rows that are like header
         new_result = result.loc[result[columns[0]] != columns[0]]
     return new_result
 
@@ -173,11 +179,12 @@ def get_soccer_league_season_standings(league, year, driver):
             if table_id is not None:
                 df = pd.read_html(str(table))[0]
                 df = check_tables(df)
-                name = f'{league}_{table_id}_{year}.csv'
+                name = f'soccer_{league}_{table_id}_{year}.csv'
                 df.to_csv(name, index=False)
                 print(f'Saved {name}')
-    except:
-        print("Not possible")
+    except Exception as e:
+        print("not possible")
+        print(e)
         pass
 
 def get_soccer_league_scores(league, year, driver):
@@ -205,12 +212,13 @@ def get_soccer_league_scores(league, year, driver):
             if table_id is not None:
                 df = pd.read_html(str(table))[0]
                 df = check_tables(df)
-                name = f'{league}_{table_id}_{year}.csv'
-                df.to_csv(name, index=False)
-                print(f'Saved {name}')
+                filename = f'soccer_{league}_{table_id}_{year}.csv'
+                df.to_csv(filename, index=False)
+                print(f'Saved {filename}')
 
-    except:
+    except Exception as e:
         print("not possible")
+        print(e)
         pass
 
 # %%
