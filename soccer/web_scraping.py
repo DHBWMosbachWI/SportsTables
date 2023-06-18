@@ -2,13 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import pandas as pd
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-
-options = webdriver.ChromeOptions()
-options.add_argument('headless')
-
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 
 
 def web_table_to_dataframe(web_table):
@@ -86,8 +79,8 @@ def get_team_season_stats(season: int, current_season: int, league_id: int = 20,
     return df
 
 
-def get_player_season_stats(season: int, current_season: int, league_id: int = 20,
-                            league_stats_name: str = "Bundesliga-Stats"):
+def get_player_season_stats(season, current_season, league_id,
+                            league_stats_name, driver):
     teams_urls = get_soccer_teams_url(season, current_season, league_id, league_stats_name)
 
     tables_dict = {}
@@ -119,8 +112,8 @@ def get_player_season_stats(season: int, current_season: int, league_id: int = 2
     return df
 
 
-def get_player_season_stats2(season: int, current_season: int, league_id: int = 20,
-                             league_stats_name: str = "Bundesliga-Stats"):
+def get_player_season_stats2(season, current_season, league_id,
+                             league_stats_name, driver):
     teams_urls = get_soccer_teams_url(season, current_season, league_id, league_stats_name)
 
     dataframes = []
@@ -155,7 +148,7 @@ def check_tables(result):
     return new_result
 
 
-def get_soccer_league_season_standings(league, year):
+def get_soccer_league_season_standings(league, year, driver):
     if league == 'premier_league':
         url = f'https://fbref.com/en/comps/9/{year}-{year+1}/{year}-{year+1}-Premier-League-Stats'
     elif league == 'ligue_1':
@@ -187,7 +180,7 @@ def get_soccer_league_season_standings(league, year):
         print("Not possible")
         pass
 
-def get_soccer_league_scores(league, year):
+def get_soccer_league_scores(league, year, driver):
     if league == 'premier_league':
         url = f'https://fbref.com/en/comps/9/{year}-{year+1}/schedule/{year}-{year+1}-Premier-League-Scores-and-Fixtures'
     elif league == 'ligue_1':
