@@ -1,0 +1,971 @@
+{
+  "cev_cup_men_blocker_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Unnamed: 0": "rank",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "('#' - '=') / Tot": "volleyball.player.number",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Block Efficiency %": "volleyball.player.block_efficiency",
+      "Set Average": "volleyball.player.set_average"
+    }
+  },
+  "cev_cup_men_receiver_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Unnamed: 0": "rank",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Number of Receptions": "volleyball.player.number_of_receptions",
+      "Perfect Receptions": "volleyball.player.perfect_receptions",
+      "('#' - '=') / Tot Skills": "volleyball.player.number",
+      "Reception Efficiency": "volleyball.player.reception_efficiency",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Block Efficiency %": "volleyball.player.block_efficiency",
+      "Set Average": "volleyball.player.set_average"
+    }
+  },
+  "cev_cup_men_scorer_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Unnamed: 0": "rank",
+      "Points": "volleyball.player.points",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Block Efficiency %": "volleyball.player.block_efficiency",
+      "Set Average": "volleyball.player.set_average"
+    }
+  },
+  "cev_cup_men_server_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Unnamed: 0": "rank",
+      "('#' - '=') / Tot Skills": "volleyball.player.number",
+      "Points": "volleyball.player.points",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Serve Efficiency": "volleyball.player.serve_efficiency",
+      "Set Average": "volleyball.player.set_average",
+      "Ace": "volleyball.player.ace"
+    }
+  },
+  "cev_cup_men_setter_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Unnamed: 0": "rank",
+      "('#' - '=') / TOT": "volleyball.player.number",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Setter Efficiency": "volleyball.player.setter_efficiency"
+    }
+  },
+  "cev_cup_men_spiker_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Killing Spikes": "volleyball.player.killing_spikes",
+      "Killing Sike %": "volleyball.player.killing_spike_percent",
+      "Unnamed: 0": "rank",
+      "('#' - '=') / Tot": "volleyball.player.number",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Spike Efficiency": "volleyball.player.spike_efficiency",
+      "Set Average": "volleyball.player.set_average"
+    }
+  },
+  "cev_cup_men_team_standings": {
+    "textual_cols": {
+      "Unnamed: 2": null,
+      "Unnamed: 3": null
+    },
+    "numerical_cols": {
+      "Unnamed: 1": null,
+      "Unnamed: 4": null,
+      "Unnamed: 0": null
+    }
+  },
+  "cev_cup_men_team_stats": {
+    "textual_cols": {
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Blk": "volleyball.player.blk",
+      "Effic..1": "volleyball.player.efficiency",
+      "Won": "volleyball.player.won",
+      "Exc. %": "volleyball.player.executed",
+      "Err.2": "volleyball.player.err",
+      "Tot.3": "volleyball.player.tot",
+      "Pts": "volleyball.points",
+      "Effic.": "volleyball.player.efficiency",
+      "Sets": "volleyball.player.sets",
+      "Err.1": "volleyball.player.err",
+      "Net": "volleyball.player.net",
+      "Exc..1": "volleyball.player.executed",
+      "Point per Set": "volleyball.player.point_per_set",
+      "Exc.%": "volleyball.player.exc_percent",
+      "Exc.": "volleyball.player.exc",
+      "Tot.2": "volleyball.player.tot2",
+      "BP": "volleyball.player.bp",
+      "Tot": "volleyball.player.tot",
+      "Effic..2": "volleyball.player.efficiency",
+      "Matches": "volleyball.player.matches",
+      "Err": "volleyball.player.err",
+      "Tot.1": "volleyball.player.tot1",
+      "Ace": "volleyball.player.ace",
+      "Ace per Set": "volleyball.player.ace_per_set",
+      "Neg.": "volleyball.player.neg"
+    }
+  },
+  "cev_cup_women_blocker_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Unnamed: 0": "rank",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "('#' - '=') / Tot": "volleyball.player.number",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Block Efficiency %": "volleyball.player.block_efficiency",
+      "Set Average": "volleyball.player.set_average"
+    }
+  },
+  "cev_cup_women_receiver_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Unnamed: 0": "rank",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Number of Receptions": "volleyball.player.number_of_receptions",
+      "Perfect Receptions": "volleyball.player.perfect_receptions",
+      "('#' - '=') / Tot Skills": "volleyball.player.number",
+      "Reception Efficiency": "volleyball.player.reception_efficiency",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Block Efficiency %": "volleyball.player.block_efficiency",
+      "Set Average": "volleyball.player.set_average"
+    }
+  },
+  "cev_cup_women_scorer_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Unnamed: 0": "rank",
+      "Points": "volleyball.player.points",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Block Efficiency %": "volleyball.player.block_efficiency",
+      "Set Average": "volleyball.player.set_average"
+    }
+  },
+  "cev_cup_women_server_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Unnamed: 0": "rank",
+      "('#' - '=') / Tot Skills": "volleyball.player.number",
+      "Points": "volleyball.player.points",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Serve Efficiency": "volleyball.player.serve_efficiency",
+      "Set Average": "volleyball.player.set_average",
+      "Ace": "volleyball.player.ace"
+    }
+  },
+  "cev_cup_women_setter_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Unnamed: 0": "rank",
+      "('#' - '=') / TOT": "volleyball.player.number",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Setter Efficiency": "volleyball.player.setter_efficiency"
+    }
+  },
+  "cev_cup_women_spiker_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Killing Spikes": "volleyball.player.killing_spikes",
+      "Killing Sike %": "volleyball.player.killing_spike_percent",
+      "Unnamed: 0": "rank",
+      "('#' - '=') / Tot": "volleyball.player.number",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Spike Efficiency": "volleyball.player.spike_efficiency",
+      "Set Average": "volleyball.player.set_average"
+    }
+  },
+  "cev_cup_women_team_standings": {
+    "textual_cols": {
+      "Unnamed: 2": null,
+      "Unnamed: 3": null
+    },
+    "numerical_cols": {
+      "Unnamed: 1": null,
+      "Unnamed: 4": null,
+      "Unnamed: 0": null
+    }
+  },
+  "cev_cup_women_team_stats": {
+    "textual_cols": {
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Blk": "volleyball.player.blk",
+      "Effic..1": "volleyball.player.efficiency",
+      "Won": "volleyball.player.won",
+      "Exc. %": "volleyball.player.executed",
+      "Err.2": "volleyball.player.err",
+      "Tot.3": "volleyball.player.tot",
+      "Pts": "volleyball.points",
+      "Effic.": "volleyball.player.efficiency",
+      "Sets": "volleyball.player.sets",
+      "Err.1": "volleyball.player.err",
+      "Net": "volleyball.player.net",
+      "Exc..1": "volleyball.player.executed",
+      "Point per Set": "volleyball.player.point_per_set",
+      "Exc.%": "volleyball.player.exc_percent",
+      "Exc.": "volleyball.player.exc",
+      "Tot.2": "volleyball.player.tot2",
+      "BP": "volleyball.player.bp",
+      "Tot": "volleyball.player.tot",
+      "Effic..2": "volleyball.player.efficiency",
+      "Matches": "volleyball.player.matches",
+      "Err": "volleyball.player.err",
+      "Tot.1": "volleyball.player.tot1",
+      "Ace": "volleyball.player.ace",
+      "Ace per Set": "volleyball.player.ace_per_set",
+      "Neg.": "volleyball.player.neg"
+    }
+  },
+  "championsleague_men_blocker_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Unnamed: 0": "rank",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "('#' - '=') / Tot": "volleyball.player.number",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Block Efficiency %": "volleyball.player.block_efficiency",
+      "Set Average": "volleyball.player.set_average"
+    }
+  },
+  "championsleague_men_receiver_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Unnamed: 0": "rank",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Number of Receptions": "volleyball.player.number_of_receptions",
+      "Perfect Receptions": "volleyball.player.perfect_receptions",
+      "('#' - '=') / Tot Skills": "volleyball.player.number",
+      "Reception Efficiency": "volleyball.player.reception_efficiency",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Block Efficiency %": "volleyball.player.block_efficiency",
+      "Set Average": "volleyball.player.set_average"
+    }
+  },
+  "championsleague_men_scorer_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Unnamed: 0": "rank",
+      "Points": "volleyball.player.points",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Block Efficiency %": "volleyball.player.block_efficiency",
+      "Set Average": "volleyball.player.set_average"
+    }
+  },
+  "championsleague_men_server_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Unnamed: 0": "rank",
+      "('#' - '=') / Tot Skills": "volleyball.player.number",
+      "Points": "volleyball.player.points",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Serve Efficiency": "volleyball.player.serve_efficiency",
+      "Set Average": "volleyball.player.set_average",
+      "Ace": "volleyball.player.ace"
+    }
+  },
+  "championsleague_men_setter_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Unnamed: 0": "rank",
+      "('#' - '=') / TOT": "volleyball.player.number",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Setter Efficiency": "volleyball.player.setter_efficiency"
+    }
+  },
+  "championsleague_men_spiker_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Killing Spikes": "volleyball.player.killing_spikes",
+      "Killing Sike %": "volleyball.player.killing_spike_percent",
+      "Unnamed: 0": "rank",
+      "('#' - '=') / Tot": "volleyball.player.number",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Spike Efficiency": "volleyball.player.spike_efficiency",
+      "Set Average": "volleyball.player.set_average"
+    }
+  },
+  "championsleague_men_team_standings": {
+    "textual_cols": {
+      "Unnamed: 2": null,
+      "Unnamed: 3": null
+    },
+    "numerical_cols": {
+      "Unnamed: 1": null,
+      "Unnamed: 4": null,
+      "Unnamed: 0": null
+    }
+  },
+  "championsleague_men_team_stats": {
+    "textual_cols": {
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Blk": "volleyball.player.blk",
+      "Effic..1": "volleyball.player.efficiency",
+      "Won": "volleyball.player.won",
+      "Exc. %": "volleyball.player.executed",
+      "Err.2": "volleyball.player.err",
+      "Tot.3": "volleyball.player.tot",
+      "Pts": "volleyball.points",
+      "Effic.": "volleyball.player.efficiency",
+      "Sets": "volleyball.player.sets",
+      "Err.1": "volleyball.player.err",
+      "Net": "volleyball.player.net",
+      "Exc..1": "volleyball.player.executed",
+      "Point per Set": "volleyball.player.point_per_set",
+      "Exc.%": "volleyball.player.exc_percent",
+      "Exc.": "volleyball.player.exc",
+      "Tot.2": "volleyball.player.tot2",
+      "BP": "volleyball.player.bp",
+      "Tot": "volleyball.player.tot",
+      "Effic..2": "volleyball.player.efficiency",
+      "Matches": "volleyball.player.matches",
+      "Err": "volleyball.player.err",
+      "Tot.1": "volleyball.player.tot1",
+      "Ace": "volleyball.player.ace",
+      "Ace per Set": "volleyball.player.ace_per_set",
+      "Neg.": "volleyball.player.neg"
+    }
+  },
+  "championsleague_women_blocker_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Unnamed: 0": "rank",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "('#' - '=') / Tot": "volleyball.player.number",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Block Efficiency %": "volleyball.player.block_efficiency",
+      "Set Average": "volleyball.player.set_average"
+    }
+  },
+  "championsleague_women_receiver_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Unnamed: 0": "rank",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Number of Receptions": "volleyball.player.number_of_receptions",
+      "Perfect Receptions": "volleyball.player.perfect_receptions",
+      "('#' - '=') / Tot Skills": "volleyball.player.number",
+      "Reception Efficiency": "volleyball.player.reception_efficiency",
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Block Efficiency %": "volleyball.player.block_efficiency",
+      "Set Average": "volleyball.player.set_average"
+    }
+  },
+  "championsleague_women_scorer_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Unnamed: 0": "rank",
+      "Points": "volleyball.player.points",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Block Efficiency %": "volleyball.player.block_efficiency",
+      "Set Average": "volleyball.player.set_average"
+    }
+  },
+  "championsleague_women_server_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Unnamed: 0": "rank",
+      "('#' - '=') / Tot Skills": "volleyball.player.number",
+      "Points": "volleyball.player.points",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Serve Efficiency": "volleyball.player.serve_efficiency",
+      "Set Average": "volleyball.player.set_average",
+      "Ace": "volleyball.player.ace"
+    }
+  },
+  "championsleague_women_setter_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Killing Blocks": "volleyball.player.killing_blocks",
+      "Unnamed: 0": "rank",
+      "('#' - '=') / TOT": "volleyball.player.number",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Setter Efficiency": "volleyball.player.setter_efficiency"
+    }
+  },
+  "championsleague_women_spiker_ranking": {
+    "textual_cols": {
+      "Player": "volleyball.player.name",
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Killing Spikes": "volleyball.player.killing_spikes",
+      "Killing Sike %": "volleyball.player.killing_spike_percent",
+      "Unnamed: 0": "rank",
+      "('#' - '=') / Tot": "volleyball.player.number",
+      "Played Match (Set)": "volleyball.player.played_match",
+      "Spike Efficiency": "volleyball.player.spike_efficiency",
+      "Set Average": "volleyball.player.set_average"
+    }
+  },
+  "championsleague_women_team_standings": {
+    "textual_cols": {
+      "Unnamed: 2": null,
+      "Unnamed: 3": null
+    },
+    "numerical_cols": {
+      "Unnamed: 1": null,
+      "Unnamed: 4": null,
+      "Unnamed: 0": null
+    }
+  },
+  "championsleague_women_team_stats": {
+    "textual_cols": {
+      "Team": "volleyball.team.name"
+    },
+    "numerical_cols": {
+      "Blk": "volleyball.player.blk",
+      "Effic..1": "volleyball.player.efficiency",
+      "Won": "volleyball.player.won",
+      "Exc. %": "volleyball.player.executed",
+      "Err.2": "volleyball.player.err",
+      "Tot.3": "volleyball.player.tot",
+      "Pts": "volleyball.points",
+      "Effic.": "volleyball.player.efficiency",
+      "Sets": "volleyball.player.sets",
+      "Err.1": "volleyball.player.err",
+      "Net": "volleyball.player.net",
+      "Exc..1": "volleyball.player.executed",
+      "Point per Set": "volleyball.player.point_per_set",
+      "Exc.%": "volleyball.player.exc_percent",
+      "Exc.": "volleyball.player.exc",
+      "Tot.2": "volleyball.player.tot2",
+      "BP": "volleyball.player.bp",
+      "Tot": "volleyball.player.tot",
+      "Effic..2": "volleyball.player.efficiency",
+      "Matches": "volleyball.player.matches",
+      "Err": "volleyball.player.err",
+      "Tot.1": "volleyball.player.tot1",
+      "Ace": "volleyball.player.ace",
+      "Ace per Set": "volleyball.player.ace_per_set",
+      "Neg.": "volleyball.player.neg"
+    }
+  },
+  "einzelranking__1_bundesliga_frauen_playoff_saison": {
+    "textual_cols": {
+      "MannschaftFiltern nach Mannschaft": "volleyball.team.name",
+      "NameFiltern nach Name": "volleyball.player.name",
+      "PositionFiltern nach Position": "volleyball.player.position",
+      "NATFiltern nach NAT": "volleyball.player.nation"
+    },
+    "numerical_cols": {
+      "Quote Aufschl\u00e4ge mit Wirkung  Quote Aufschl\u00e4ge mit Wirkung": "volleyball.player.serves",
+      "Unnamed: 1": null,
+      "Anzahl Spiele  Anzahl Spiele": "volleyball.player.matches",
+      "Fehler gesamt  Fehler gesamt": "volleyball.player.mistakes",
+      "Aufschlagpunkte": "volleyball.player.points",
+      "Aufschl\u00e4ge  Aufschl\u00e4ge": "volleyball.player.serves",
+      "Anzahl S\u00e4tze  Anzahl S\u00e4tze": "volleyball.player.serves",
+      "Punkte gesamt  Punkte gesamt": "volleyball.player.points",
+      "Quote Aufschlagpunkte  Quote Aufschlagpunkte": "volleyball.player.points_percentage",
+      "Punkte pro Satz  Punkte pro Satz": "volleyball.player.points_per_game_set",
+      "Aufschlagpunkte pro Satz  Aufschlagpunkte pro Satz": "volleyball.player.points_per_game_set",
+      "Top-Scorer": "volleyball.player.top_scorer",
+      "Unnamed: 0": "volleyball.player.position"
+    }
+  },
+  "einzelranking__1_bundesliga_frauen_saison": {
+    "textual_cols": {
+      "MannschaftFiltern nach Mannschaft": "volleyball.team.name",
+      "NameFiltern nach Name": "volleyball.player.name",
+      "PositionFiltern nach Position": "volleyball.player.position",
+      "NATFiltern nach NAT": "volleyball.player.nation"
+    },
+    "numerical_cols": {
+      "Quote Aufschl\u00e4ge mit Wirkung  Quote Aufschl\u00e4ge mit Wirkung": "volleyball.player.serves",
+      "Unnamed: 1": null,
+      "Anzahl Spiele  Anzahl Spiele": "volleyball.player.matches",
+      "Fehler gesamt  Fehler gesamt": "volleyball.player.mistakes",
+      "Aufschlagpunkte": "volleyball.player.points",
+      "Aufschl\u00e4ge  Aufschl\u00e4ge": "volleyball.player.serves",
+      "Anzahl S\u00e4tze  Anzahl S\u00e4tze": "volleyball.player.serves",
+      "Punkte gesamt  Punkte gesamt": "volleyball.player.points",
+      "Quote Aufschlagpunkte  Quote Aufschlagpunkte": "volleyball.player.points_percentage",
+      "Punkte pro Satz  Punkte pro Satz": "volleyball.player.points_per_game_set",
+      "Aufschlagpunkte pro Satz  Aufschlagpunkte pro Satz": "volleyball.player.points_per_game_set",
+      "Top-Scorer": "volleyball.player.top_scorer",
+      "Unnamed: 0": "volleyball.player.position"
+    },
+    "einzelranking__1_bundesliga_m\u00e4nner_playoff_saison": {
+      "textual_cols": {
+        "MannschaftFiltern nach Mannschaft": "volleyball.team.name",
+        "NameFiltern nach Name": "volleyball.player.name",
+        "PositionFiltern nach Position": "volleyball.player.position",
+        "NATFiltern nach NAT": "volleyball.player.nation"
+      },
+      "numerical_cols": {
+        "Quote Aufschl\u00e4ge mit Wirkung  Quote Aufschl\u00e4ge mit Wirkung": "volleyball.player.serves",
+        "Unnamed: 1": null,
+        "Anzahl Spiele  Anzahl Spiele": "volleyball.player.matches",
+        "Fehler gesamt  Fehler gesamt": "volleyball.player.mistakes",
+        "Aufschlagpunkte": "volleyball.player.points",
+        "Aufschl\u00e4ge  Aufschl\u00e4ge": "volleyball.player.serves",
+        "Anzahl S\u00e4tze  Anzahl S\u00e4tze": "volleyball.player.serves",
+        "Punkte gesamt  Punkte gesamt": "volleyball.player.points",
+        "Quote Aufschlagpunkte  Quote Aufschlagpunkte": "volleyball.player.points_percentage",
+        "Punkte pro Satz  Punkte pro Satz": "volleyball.player.points_per_game_set",
+        "Aufschlagpunkte pro Satz  Aufschlagpunkte pro Satz": "volleyball.player.points_per_game_set",
+        "Top-Scorer": "volleyball.player.top_scorer",
+        "Unnamed: 0": "volleyball.player.position"
+      }
+    },
+    "einzelranking__1_bundesliga_m\u00e4nner_saison": {
+      "textual_cols": {
+        "MannschaftFiltern nach Mannschaft": "volleyball.team.name",
+        "NameFiltern nach Name": "volleyball.player.name",
+        "PositionFiltern nach Position": "volleyball.player.position",
+        "NATFiltern nach NAT": "volleyball.player.nation"
+      },
+      "numerical_cols": {
+        "Quote Aufschl\u00e4ge mit Wirkung  Quote Aufschl\u00e4ge mit Wirkung": "volleyball.player.serves",
+        "Unnamed: 1": null,
+        "Anzahl Spiele  Anzahl Spiele": "volleyball.player.matches",
+        "Fehler gesamt  Fehler gesamt": "volleyball.player.mistakes",
+        "Aufschlagpunkte": "volleyball.player.points",
+        "Aufschl\u00e4ge  Aufschl\u00e4ge": "volleyball.player.serves",
+        "Anzahl S\u00e4tze  Anzahl S\u00e4tze": "volleyball.player.serves",
+        "Punkte gesamt  Punkte gesamt": "volleyball.player.points",
+        "Quote Aufschlagpunkte  Quote Aufschlagpunkte": "volleyball.player.points_percentage",
+        "Punkte pro Satz  Punkte pro Satz": "volleyball.player.points_per_game_set",
+        "Aufschlagpunkte pro Satz  Aufschlagpunkte pro Satz": "volleyball.player.points_per_game_set",
+        "Top-Scorer": "volleyball.player.top_scorer",
+        "Unnamed: 0": "volleyball.player.position"
+      }
+    },
+    "golden_league_men_blocker_ranking": {
+      "textual_cols": {
+        "Player": "volleyball.player.name",
+        "Team": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Unnamed: 0": "rank",
+        "Played Match (Set)": "volleyball.player.played_match",
+        "('#' - '=') / Tot": "volleyball.player.number",
+        "Killing Blocks": "volleyball.player.killing_blocks",
+        "Block Efficiency %": "volleyball.player.block_efficiency",
+        "Set Average": "volleyball.player.set_average"
+      }
+    },
+    "golden_league_men_receiver_ranking": {
+      "textual_cols": {
+        "Player": "volleyball.player.name",
+        "Team": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Unnamed: 0": "rank",
+        "Played Match (Set)": "volleyball.player.played_match",
+        "Number of Receptions": "volleyball.player.number_of_receptions",
+        "Perfect Receptions": "volleyball.player.perfect_receptions",
+        "('#' - '=') / Tot Skills": "volleyball.player.number",
+        "Reception Efficiency": "volleyball.player.reception_efficiency",
+        "Killing Blocks": "volleyball.player.killing_blocks",
+        "Block Efficiency %": "volleyball.player.block_efficiency",
+        "Set Average": "volleyball.player.set_average"
+      }
+    },
+    "golden_league_men_scorer_ranking": {
+      "textual_cols": {
+        "Player": "volleyball.player.name",
+        "Team": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Unnamed: 0": "rank",
+        "Points": "volleyball.player.points",
+        "Played Match (Set)": "volleyball.player.played_match",
+        "Killing Blocks": "volleyball.player.killing_blocks",
+        "Block Efficiency %": "volleyball.player.block_efficiency",
+        "Set Average": "volleyball.player.set_average"
+      }
+    },
+    "golden_league_men_server_ranking": {
+      "textual_cols": {
+        "Player": "volleyball.player.name",
+        "Team": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Killing Blocks": "volleyball.player.killing_blocks",
+        "Unnamed: 0": "rank",
+        "('#' - '=') / Tot Skills": "volleyball.player.number",
+        "Points": "volleyball.player.points",
+        "Played Match (Set)": "volleyball.player.played_match",
+        "Killing Blocks": "volleyball.player.killing_blocks",
+        "Serve Efficiency": "volleyball.player.serve_efficiency",
+        "Set Average": "volleyball.player.set_average",
+        "Ace": "volleyball.player.ace"
+      }
+    },
+    "golden_league_men_setter_ranking": {
+      "textual_cols": {
+        "Player": "volleyball.player.name",
+        "Team": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Killing Blocks": "volleyball.player.killing_blocks",
+        "Unnamed: 0": "rank",
+        "('#' - '=') / TOT": "volleyball.player.number",
+        "Played Match (Set)": "volleyball.player.played_match",
+        "Killing Blocks": "volleyball.player.killing_blocks",
+        "Setter Efficiency": "volleyball.player.setter_efficiency"
+      }
+    },
+    "golden_league_men_spiker_ranking": {
+      "textual_cols": {
+        "Player": "volleyball.player.name",
+        "Team": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Killing Spikes": "volleyball.player.killing_spikes",
+        "Killing Sike %": "volleyball.player.killing_spike_percent",
+        "Unnamed: 0": "rank",
+        "('#' - '=') / Tot": "volleyball.player.number",
+        "Played Match (Set)": "volleyball.player.played_match",
+        "Spike Efficiency": "volleyball.player.spike_efficiency",
+        "Set Average": "volleyball.player.set_average"
+      }
+    },
+    "golden_league_men_team_standings": {
+      "textual_cols": {
+        "Unnamed: 2": null,
+        "Unnamed: 3": null
+      },
+      "numerical_cols": {
+        "Unnamed: 1": null,
+        "Unnamed: 4": null,
+        "Unnamed: 0": null
+      }
+    },
+    "golden_league_men_team_stats": {
+      "textual_cols": {
+        "Team": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Blk": "volleyball.player.blk",
+        "Effic..1": "volleyball.player.efficiency",
+        "Won": "volleyball.player.won",
+        "Exc. %": "volleyball.player.executed",
+        "Err.2": "volleyball.player.err",
+        "Tot.3": "volleyball.player.tot",
+        "Pts": "volleyball.points",
+        "Effic.": "volleyball.player.efficiency",
+        "Sets": "volleyball.player.sets",
+        "Err.1": "volleyball.player.err",
+        "Net": "volleyball.player.net",
+        "Exc..1": "volleyball.player.executed",
+        "Point per Set": "volleyball.player.point_per_set",
+        "Exc.%": "volleyball.player.exc_percent",
+        "Exc.": "volleyball.player.exc",
+        "Tot.2": "volleyball.player.tot2",
+        "BP": "volleyball.player.bp",
+        "Tot": "volleyball.player.tot",
+        "Effic..2": "volleyball.player.efficiency",
+        "Matches": "volleyball.player.matches",
+        "Err": "volleyball.player.err",
+        "Tot.1": "volleyball.player.tot1",
+        "Ace": "volleyball.player.ace",
+        "Ace per Set": "volleyball.player.ace_per_set",
+        "Neg.": "volleyball.player.neg"
+      }
+    },
+    "golden_league_women_blocker_ranking": {
+      "textual_cols": {
+        "Player": "volleyball.player.name",
+        "Team": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Unnamed: 0": "rank",
+        "Played Match (Set)": "volleyball.player.played_match",
+        "('#' - '=') / Tot": "volleyball.player.number",
+        "Killing Blocks": "volleyball.player.killing_blocks",
+        "Block Efficiency %": "volleyball.player.block_efficiency",
+        "Set Average": "volleyball.player.set_average"
+      }
+    },
+    "golden_league_women_receiver_ranking": {
+      "textual_cols": {
+        "Player": "volleyball.player.name",
+        "Team": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Unnamed: 0": "rank",
+        "Played Match (Set)": "volleyball.player.played_match",
+        "Number of Receptions": "volleyball.player.number_of_receptions",
+        "Perfect Receptions": "volleyball.player.perfect_receptions",
+        "('#' - '=') / Tot Skills": "volleyball.player.number",
+        "Reception Efficiency": "volleyball.player.reception_efficiency",
+        "Killing Blocks": "volleyball.player.killing_blocks",
+        "Block Efficiency %": "volleyball.player.block_efficiency",
+        "Set Average": "volleyball.player.set_average"
+      }
+    },
+    "golden_league_women_scorer_ranking": {
+      "textual_cols": {
+        "Player": "volleyball.player.name",
+        "Team": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Unnamed: 0": "rank",
+        "Points": "volleyball.player.points",
+        "Played Match (Set)": "volleyball.player.played_match",
+        "Killing Blocks": "volleyball.player.killing_blocks",
+        "Block Efficiency %": "volleyball.player.block_efficiency",
+        "Set Average": "volleyball.player.set_average"
+      }
+    },
+    "golden_league_women_server_ranking": {
+      "textual_cols": {
+        "Player": "volleyball.player.name",
+        "Team": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Killing Blocks": "volleyball.player.killing_blocks",
+        "Unnamed: 0": "rank",
+        "('#' - '=') / Tot Skills": "volleyball.player.number",
+        "Points": "volleyball.player.points",
+        "Played Match (Set)": "volleyball.player.played_match",
+        "Killing Blocks": "volleyball.player.killing_blocks",
+        "Serve Efficiency": "volleyball.player.serve_efficiency",
+        "Set Average": "volleyball.player.set_average",
+        "Ace": "volleyball.player.ace"
+      }
+    },
+    "golden_league_women_setter_ranking": {
+      "textual_cols": {
+        "Player": "volleyball.player.name",
+        "Team": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Killing Blocks": "volleyball.player.killing_blocks",
+        "Unnamed: 0": "rank",
+        "('#' - '=') / TOT": "volleyball.player.number",
+        "Played Match (Set)": "volleyball.player.played_match",
+        "Killing Blocks": "volleyball.player.killing_blocks",
+        "Setter Efficiency": "volleyball.player.setter_efficiency"
+      }
+    },
+    "golden_league_women_spiker_ranking": {
+      "textual_cols": {
+        "Player": "volleyball.player.name",
+        "Team": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Killing Spikes": "volleyball.player.killing_spikes",
+        "Killing Sike %": "volleyball.player.killing_spike_percent",
+        "Unnamed: 0": "rank",
+        "('#' - '=') / Tot": "volleyball.player.number",
+        "Played Match (Set)": "volleyball.player.played_match",
+        "Spike Efficiency": "volleyball.player.spike_efficiency",
+        "Set Average": "volleyball.player.set_average"
+      }
+    },
+    "golden_league_women_team_standings": {
+      "textual_cols": {
+        "Unnamed: 2": null,
+        "Unnamed: 3": null
+      },
+      "numerical_cols": {
+        "Unnamed: 1": null,
+        "Unnamed: 4": null,
+        "Unnamed: 0": null
+      }
+    },
+    "golden_league_women_team_stats": {
+      "textual_cols": {
+        "Team": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Blk": "volleyball.player.blk",
+        "Effic..1": "volleyball.player.efficiency",
+        "Won": "volleyball.player.won",
+        "Exc. %": "volleyball.player.executed",
+        "Err.2": "volleyball.player.err",
+        "Tot.3": "volleyball.player.tot",
+        "Pts": "volleyball.points",
+        "Effic.": "volleyball.player.efficiency",
+        "Sets": "volleyball.player.sets",
+        "Err.1": "volleyball.player.err",
+        "Net": "volleyball.player.net",
+        "Exc..1": "volleyball.player.executed",
+        "Point per Set": "volleyball.player.point_per_set",
+        "Exc.%": "volleyball.player.exc_percent",
+        "Exc.": "volleyball.player.exc",
+        "Tot.2": "volleyball.player.tot2",
+        "BP": "volleyball.player.bp",
+        "Tot": "volleyball.player.tot",
+        "Effic..2": "volleyball.player.efficiency",
+        "Matches": "volleyball.player.matches",
+        "Err": "volleyball.player.err",
+        "Tot.1": "volleyball.player.tot1",
+        "Ace": "volleyball.player.ace",
+        "Ace per Set": "volleyball.player.ace_per_set",
+        "Neg.": "volleyball.player.neg"
+      }
+    },
+    "teamranking__1_bundesliga_frauen_playoff_saison": {
+      "textual_cols": {
+        "MannschaftFiltern nach Mannschaft": "volleyball.team.name",
+        "NameFiltern nach Name": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Quote Aufschl\u00e4ge mit Wirkung  Quote Aufschl\u00e4ge mit Wirkung": "volleyball.team.serves",
+        "Unnamed: 1": null,
+        "Anzahl Spiele  Anzahl Spiele": "volleyball.team.matches",
+        "Aufschlagpunkte": "volleyball.team.points",
+        "Aufschl\u00e4ge  Aufschl\u00e4ge": "volleyball.team.serves",
+        "Anzahl S\u00e4tze  Anzahl S\u00e4tze": "volleyball.player.serves",
+        "Punkte gesamt  Punkte gesamt": "volleyball.player.points",
+        "Quote Aufschlagpunkte  Quote Aufschlagpunkte": "volleyball.player.points_percentage",
+        "Aufschlagpunkte pro Satz  Aufschlagpunkte pro Satz": "volleyball.player.points_per_game_set",
+        "Unnamed: 0": "volleyball.player.position"
+      }
+    },
+    "teamranking__1_bundesliga_frauen_saison": {
+      "textual_cols": {
+        "MannschaftFiltern nach Mannschaft": "volleyball.team.name",
+        "NameFiltern nach Name": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Quote Aufschl\u00e4ge mit Wirkung  Quote Aufschl\u00e4ge mit Wirkung": "volleyball.team.serves",
+        "Unnamed: 1": null,
+        "Anzahl Spiele  Anzahl Spiele": "volleyball.team.matches",
+        "Aufschlagpunkte": "volleyball.team.points",
+        "Aufschl\u00e4ge  Aufschl\u00e4ge": "volleyball.team.serves",
+        "Anzahl S\u00e4tze  Anzahl S\u00e4tze": "volleyball.player.serves",
+        "Punkte gesamt  Punkte gesamt": "volleyball.player.points",
+        "Quote Aufschlagpunkte  Quote Aufschlagpunkte": "volleyball.player.points_percentage",
+        "Aufschlagpunkte pro Satz  Aufschlagpunkte pro Satz": "volleyball.player.points_per_game_set",
+        "Unnamed: 0": "volleyball.player.position"
+      }
+    },
+    "teamranking__1_bundesliga_m\u00e4nner_playoff_saison": {
+      "textual_cols": {
+        "MannschaftFiltern nach Mannschaft": "volleyball.team.name",
+        "NameFiltern nach Name": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Quote Aufschl\u00e4ge mit Wirkung  Quote Aufschl\u00e4ge mit Wirkung": "volleyball.team.serves",
+        "Unnamed: 1": null,
+        "Anzahl Spiele  Anzahl Spiele": "volleyball.team.matches",
+        "Aufschlagpunkte": "volleyball.team.points",
+        "Aufschl\u00e4ge  Aufschl\u00e4ge": "volleyball.team.serves",
+        "Anzahl S\u00e4tze  Anzahl S\u00e4tze": "volleyball.player.serves",
+        "Punkte gesamt  Punkte gesamt": "volleyball.player.points",
+        "Quote Aufschlagpunkte  Quote Aufschlagpunkte": "volleyball.player.points_percentage",
+        "Aufschlagpunkte pro Satz  Aufschlagpunkte pro Satz": "volleyball.player.points_per_game_set",
+        "Unnamed: 0": "volleyball.player.position"
+      }
+    },
+    "teamranking__1_bundesliga_m\u00e4nner_saison": {
+      "textual_cols": {
+        "MannschaftFiltern nach Mannschaft": "volleyball.team.name",
+        "NameFiltern nach Name": "volleyball.team.name"
+      },
+      "numerical_cols": {
+        "Quote Aufschl\u00e4ge mit Wirkung  Quote Aufschl\u00e4ge mit Wirkung": "volleyball.team.serves",
+        "Unnamed: 1": null,
+        "Anzahl Spiele  Anzahl Spiele": "volleyball.team.matches",
+        "Aufschlagpunkte": "volleyball.team.points",
+        "Aufschl\u00e4ge  Aufschl\u00e4ge": "volleyball.team.serves",
+        "Anzahl S\u00e4tze  Anzahl S\u00e4tze": "volleyball.player.serves",
+        "Punkte gesamt  Punkte gesamt": "volleyball.player.points",
+        "Quote Aufschlagpunkte  Quote Aufschlagpunkte": "volleyball.player.points_percentage",
+        "Aufschlagpunkte pro Satz  Aufschlagpunkte pro Satz": "volleyball.player.points_per_game_set",
+        "Unnamed: 0": "volleyball.player.position"
+      }
+    }
+  }
+}
