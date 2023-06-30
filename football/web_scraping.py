@@ -263,17 +263,17 @@ def get_all_nfl_teams(driver):
     driver.get(f"https://www.pro-football-reference.com/teams/")
     if driver.find_element(By.ID, "modal-container").is_displayed():
         close_popups(driver)
+    dfs = []
     try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
+        for title in ['teams_active', 'teams_inactive']:
+            tables = driver.find_elements(By.ID, title)
+            for table in tables:
+                html = table.get_attribute("outerHTML")
+                df = pd.read_html(html)[0]
+                dfs.append(df)
 
-        dfs = []
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-            dfs.append(df)
-
-        result = dfs
-    except:
+            result = dfs
+    except Exception:
         print("not possible")
         pass
 
