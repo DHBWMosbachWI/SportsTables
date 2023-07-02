@@ -1,3 +1,6 @@
+import os
+from os.path import join
+
 import pandas as pd
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -5,10 +8,17 @@ from selenium.webdriver.common.by import By
 import time
 
 
+def safe_csv(df, filename):
+    try:
+        df.to_csv(join(os.environ["SportsTables"], "football", filename), index=False)
+        print(f'Saved {filename}')
+    except Exception as e:
+        print('could not safe csv file')
+        print(e)
 
 def close_popups(driver):
     """
-    This function closes disruptive pop ups
+    This function closes disruptive pop up's
     Args:
         driver: the driver the user needs
 
@@ -17,7 +27,7 @@ def close_popups(driver):
     """
     try:
         WebDriverWait(driver,1000).until(EC.element_to_be_clickable((By.CLASS_NAME, "css-47sehv"))).click() # close privacy pop up
-        time.sleep(3)
+        time.sleep(5)
         WebDriverWait(driver,1000).until(EC.element_to_be_clickable((By.CLASS_NAME, "closer"))).click() # close pop up
     except Exception as e:
         print(e)
@@ -58,105 +68,80 @@ def web_table_to_dataframe(web_table): # remove?
     return df
 
 def get_player_passing_stats(year:int, driver):
-    result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/passing.htm")
     if driver.find_element(By.ID, "modal-container").is_displayed():
         close_popups(driver)
     try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        df = None
-
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-
-        result = df
-    except:
+        table = driver.find_element(By.ID, "passing")
+        html = table.get_attribute("outerHTML")
+        df = check_tables(pd.read_html(html)[0])
+        filename = f'nfl_season_player_passing_stats_{year}.csv'
+        safe_csv(df, filename)
+    except Exception as e:
         print("not possible")
+        print(e)
         pass
 
-    return check_tables(result) # returns dataframe
-
 def get_player_rushing_stats(year:int, driver):
-    result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/rushing.htm")
     if driver.find_element(By.ID, "modal-container").is_displayed():
         close_popups(driver)
     try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        df = None
-
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-
-        result = df
-    except:
+        table = driver.find_element(By.ID, "rushing")
+        html = table.get_attribute("outerHTML")
+        df = check_tables(pd.read_html(html)[0])
+        filename = f'nfl_season_player_rushing_stats_{year}.csv'
+        safe_csv(df, filename)
+    except Exception as e:
         print("not possible")
+        print(e)
         pass
 
-    return check_tables(result)
-
 def get_player_receiving_stats(year:int, driver):
-    result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/receiving.htm")
 
     if driver.find_element(By.ID, "modal-container").is_displayed():
         close_popups(driver)
     try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        df = None
-
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-
-        result = df
-    except:
+        table = driver.find_element(By.ID, "receiving")
+        html = table.get_attribute("outerHTML")
+        df = check_tables(pd.read_html(html)[0])
+        filename = f'nfl_season_player_receiving_stats_{year}.csv'
+        safe_csv(df, filename)
+    except Exception as e:
         print("not possible")
+        print(e)
         pass
 
-    return check_tables(result)
-
 def get_player_scrimmage_stats(year:int, driver):
-    result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/scrimmage.htm")
     if driver.find_element(By.ID, "modal-container").is_displayed():
         close_popups(driver)
     try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        df = None
-
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-
-        result = df
-    except:
+        table = driver.find_element(By.ID, "receiving_and_rushing")
+        html = table.get_attribute("outerHTML")
+        df = check_tables(pd.read_html(html)[0])
+        filename = f'nfl_season_player_scrimmage_stats_{year}.csv'
+        safe_csv(df, filename)
+    except Exception as e:
         print("not possible")
+        print(e)
         pass
 
-    return check_tables(result)
-
 def get_player_defense_stats(year:int, driver):
-    result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/defense.htm")
     if driver.find_element(By.ID, "modal-container").is_displayed():
         close_popups(driver)
     try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        df = None
-
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-
-        result = df
-    except:
+        table = driver.find_element(By.ID, "defense")
+        html = table.get_attribute("outerHTML")
+        df = check_tables(pd.read_html(html)[0])
+        filename = f'nfl_season_player_defense_stats_{year}.csv'
+        safe_csv(df, filename)
+    except Exception as e:
         print("not possible")
+        print(e)
         pass
-
-    return check_tables(result)
 
 def check_tables(result):
     if type(result) == list: #result can be single df or a list of df
@@ -179,164 +164,144 @@ def check_tables(result):
     return new_result
 
 def get_player_kicking_stats(year:int, driver):
-    result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/kicking.htm")
     if driver.find_element(By.ID, "modal-container").is_displayed():
         close_popups(driver)
     try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        df = None
-
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-
-        result = df
-    except:
+        table = driver.find_element(By.ID, "kicking")
+        html = table.get_attribute("outerHTML")
+        df = check_tables(pd.read_html(html)[0])
+        filename = f'nfl_season_player_kicking_stats_{year}.csv'
+        safe_csv(df, filename)
+    except Exception as e:
         print("not possible")
+        print(e)
         pass
 
-    return check_tables(result)
-
 def get_player_punting_stats(year:int, driver):
-    result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/punting.htm")
     if driver.find_element(By.ID, "modal-container").is_displayed():
         close_popups(driver)
     try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        df = None
-
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-
-        result = df
-    except:
+        table = driver.find_element(By.ID, "punting")
+        html = table.get_attribute("outerHTML")
+        df = check_tables(pd.read_html(html)[0])
+        filename = f'nfl_season_player_punting_stats_{year}.csv'
+        safe_csv(df, filename)
+    except Exception as e:
         print("not possible")
+        print(e)
         pass
 
-    return check_tables(result)
-
 def get_player_return_stats(year:int, driver):
-    result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/returns.htm")
     if driver.find_element(By.ID, "modal-container").is_displayed():
         close_popups(driver)
     try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        df = None
-
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-
-        result = df
-    except:
+        table = driver.find_element(By.ID, "returns")
+        html = table.get_attribute("outerHTML")
+        df = check_tables(pd.read_html(html)[0])
+        filename = f'nfl_season_player_return_stats_{year}.csv'
+        safe_csv(df, filename)
+    except Exception as e:
         print("not possible")
+        print(e)
         pass
 
-    return check_tables(result)
-
 def get_player_scoring_stats(year:int, driver):
-    result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/scoring.htm")
     if driver.find_element(By.ID, "modal-container").is_displayed():
         close_popups(driver)
     try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        df = None
-
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-
-        result = df
-    except:
+        table = driver.find_element(By.ID, "scoring")
+        html = table.get_attribute("outerHTML")
+        df = check_tables(pd.read_html(html)[0])
+        filename = f'nfl_season_player_scoring_stats_{year}.csv'
+        safe_csv(df, filename)
+    except Exception as e:
         print("not possible")
+        print(e)
         pass
 
-    return check_tables(result)
-
 def get_all_nfl_teams(driver):
-    result = None
     driver.get(f"https://www.pro-football-reference.com/teams/")
     if driver.find_element(By.ID, "modal-container").is_displayed():
         close_popups(driver)
-    dfs = []
     try:
         for title in ['teams_active', 'teams_inactive']:
-            tables = driver.find_elements(By.ID, title)
-            for table in tables:
-                html = table.get_attribute("outerHTML")
-                df = pd.read_html(html)[0]
-                dfs.append(df)
-
-            result = dfs
-    except Exception:
+            table = driver.find_element(By.ID, title) # find by tag table doesn't work
+            html = table.get_attribute("outerHTML")
+            df = check_tables(pd.read_html(html)[0])
+            filename = f'nfl_all_{title}_franchises.csv'
+            safe_csv(df, filename)
+    except Exception as e:
         print("not possible")
+        print(e)
         pass
 
-    return check_tables(result)  # returns list of dataframes due to multiple tables being used in given url
-
 def get_all_stadiums(driver):
-    result = None
     driver.get(f"https://www.pro-football-reference.com/stadiums/")
     if driver.find_element(By.ID, "modal-container").is_displayed():
         close_popups(driver)
     try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-        df = None
-
-        for table in tables:
-            html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-
-        result = df
-    except:
+        table = driver.find_element(By.ID, "stadiums")
+        html = table.get_attribute("outerHTML")
+        df = check_tables(pd.read_html(html)[0])
+        filename = f'nfl_all_stadiums.csv'
+        safe_csv(df, filename)
+    except Exception as e:
         print("not possible")
+        print(e)
         pass
 
-    return check_tables(result)
-
 def get_team_defense_stats(year:int, driver):
-    result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/opp.htm")
     if driver.find_element(By.ID, "modal-container").is_displayed():
         close_popups(driver)
     try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-
-        dfs = []
-        for table in tables:
+        for title in ['team_stats', 'passing', 'rushing', 'returns', 'kicking', 'punting', 'team_scoring', 'team_conversions']:
+            table = driver.find_element(By.ID, title)
             html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-            dfs.append(df)
-
-        result = dfs
-    except:
+            df = check_tables(pd.read_html(html)[0])
+            # corrections of title
+            if title == 'team_stats':
+                title = 'defense'
+            if title.startswith('team'):
+                title = title.split('_')[1]
+            if title in ['returns', 'kicking', 'punting', 'conversions']:
+                title = f'{title}_against'
+            if title in ['passing', 'rushing', 'scoring']:
+                title = f'{title}_defense'
+            filename = f'nfl_season_team_{title}_stats_{year}.csv'
+            safe_csv(df, filename)
+    except Exception as e:
         print("not possible")
+        print(e)
         pass
 
-    return check_tables(result)
-
 def get_team_season_standings(year:int, driver):
-    result = None
     driver.get(f"https://www.pro-football-reference.com/years/{year}/")
     if driver.find_element(By.ID, "modal-container").is_displayed():
         close_popups(driver)
     try:
-        tables = driver.find_elements(By.TAG_NAME, "table")
-
-        dfs = []
-        for table in tables:
+        for title in ['AFC', 'NFC', 'playoff_results', 'team_stats', 'passing', 'rushing', 'returns', 'kicking',
+                      'punting', 'team_scoring', 'team_conversions']:
+            table = driver.find_element(By.ID, title)
             html = table.get_attribute("outerHTML")
-            df = pd.read_html(html)[0]
-            dfs.append(df)
-
-        result = dfs
-    except:
+            df = check_tables(pd.read_html(html)[0])
+            # corrections of title
+            if title == 'team_stats':
+                title = 'offense'
+            if title.startswith('team'):
+                title = title.split('_')[1]
+            if title in ['passing', 'rushing', 'scoring']:
+                title = f'{title}_offense'
+            if title in ['AFC', 'NFC']:
+                filename = f'nfl_season_team_{title.lower()}_standings_{year}.csv'
+            else:
+                filename = f'nfl_season_team_{title}_stats_{year}.csv'
+            safe_csv(df, filename)
+    except Exception as e:
         print("not possible")
+        print(e)
         pass
-
-    return check_tables(result)
