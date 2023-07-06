@@ -2,10 +2,7 @@ import os
 from os.path import join
 
 import pandas as pd
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-import time
 
 
 def safe_csv(df, filename):
@@ -15,23 +12,6 @@ def safe_csv(df, filename):
     except Exception as e:
         print('could not safe csv file')
         print(e)
-
-def close_popups(driver):
-    """
-    This function closes disruptive pop up's
-    Args:
-        driver: the driver the user needs
-
-    Returns:
-        None
-    """
-    try:
-        WebDriverWait(driver,1000).until(EC.element_to_be_clickable((By.CLASS_NAME, "css-47sehv"))).click() # close privacy pop up
-        time.sleep(5)
-        WebDriverWait(driver,1000).until(EC.element_to_be_clickable((By.CLASS_NAME, "closer"))).click() # close pop up
-    except Exception as e:
-        print(e)
-    pass
 
 def web_table_to_dataframe(web_table): # remove?
     """
@@ -69,8 +49,6 @@ def web_table_to_dataframe(web_table): # remove?
 
 def get_player_passing_stats(year:int, driver):
     driver.get(f"https://www.pro-football-reference.com/years/{year}/passing.htm")
-    if driver.find_element(By.ID, "modal-container").is_displayed():
-        close_popups(driver)
     try:
         table = driver.find_element(By.ID, "passing")
         html = table.get_attribute("outerHTML")
@@ -84,8 +62,6 @@ def get_player_passing_stats(year:int, driver):
 
 def get_player_rushing_stats(year:int, driver):
     driver.get(f"https://www.pro-football-reference.com/years/{year}/rushing.htm")
-    if driver.find_element(By.ID, "modal-container").is_displayed():
-        close_popups(driver)
     try:
         table = driver.find_element(By.ID, "rushing")
         html = table.get_attribute("outerHTML")
@@ -99,9 +75,6 @@ def get_player_rushing_stats(year:int, driver):
 
 def get_player_receiving_stats(year:int, driver):
     driver.get(f"https://www.pro-football-reference.com/years/{year}/receiving.htm")
-
-    if driver.find_element(By.ID, "modal-container").is_displayed():
-        close_popups(driver)
     try:
         table = driver.find_element(By.ID, "receiving")
         html = table.get_attribute("outerHTML")
@@ -115,8 +88,6 @@ def get_player_receiving_stats(year:int, driver):
 
 def get_player_scrimmage_stats(year:int, driver):
     driver.get(f"https://www.pro-football-reference.com/years/{year}/scrimmage.htm")
-    if driver.find_element(By.ID, "modal-container").is_displayed():
-        close_popups(driver)
     try:
         table = driver.find_element(By.ID, "receiving_and_rushing")
         html = table.get_attribute("outerHTML")
@@ -130,8 +101,6 @@ def get_player_scrimmage_stats(year:int, driver):
 
 def get_player_defense_stats(year:int, driver):
     driver.get(f"https://www.pro-football-reference.com/years/{year}/defense.htm")
-    if driver.find_element(By.ID, "modal-container").is_displayed():
-        close_popups(driver)
     try:
         table = driver.find_element(By.ID, "defense")
         html = table.get_attribute("outerHTML")
@@ -165,8 +134,6 @@ def check_tables(result):
 
 def get_player_kicking_stats(year:int, driver):
     driver.get(f"https://www.pro-football-reference.com/years/{year}/kicking.htm")
-    if driver.find_element(By.ID, "modal-container").is_displayed():
-        close_popups(driver)
     try:
         table = driver.find_element(By.ID, "kicking")
         html = table.get_attribute("outerHTML")
@@ -180,8 +147,6 @@ def get_player_kicking_stats(year:int, driver):
 
 def get_player_punting_stats(year:int, driver):
     driver.get(f"https://www.pro-football-reference.com/years/{year}/punting.htm")
-    if driver.find_element(By.ID, "modal-container").is_displayed():
-        close_popups(driver)
     try:
         table = driver.find_element(By.ID, "punting")
         html = table.get_attribute("outerHTML")
@@ -195,8 +160,6 @@ def get_player_punting_stats(year:int, driver):
 
 def get_player_return_stats(year:int, driver):
     driver.get(f"https://www.pro-football-reference.com/years/{year}/returns.htm")
-    if driver.find_element(By.ID, "modal-container").is_displayed():
-        close_popups(driver)
     try:
         table = driver.find_element(By.ID, "returns")
         html = table.get_attribute("outerHTML")
@@ -210,8 +173,6 @@ def get_player_return_stats(year:int, driver):
 
 def get_player_scoring_stats(year:int, driver):
     driver.get(f"https://www.pro-football-reference.com/years/{year}/scoring.htm")
-    if driver.find_element(By.ID, "modal-container").is_displayed():
-        close_popups(driver)
     try:
         table = driver.find_element(By.ID, "scoring")
         html = table.get_attribute("outerHTML")
@@ -225,8 +186,6 @@ def get_player_scoring_stats(year:int, driver):
 
 def get_all_nfl_teams(driver):
     driver.get(f"https://www.pro-football-reference.com/teams/")
-    if driver.find_element(By.ID, "modal-container").is_displayed():
-        close_popups(driver)
     try:
         for title in ['teams_active', 'teams_inactive']:
             table = driver.find_element(By.ID, title) # find by tag table doesn't work
@@ -241,8 +200,6 @@ def get_all_nfl_teams(driver):
 
 def get_all_stadiums(driver):
     driver.get(f"https://www.pro-football-reference.com/stadiums/")
-    if driver.find_element(By.ID, "modal-container").is_displayed():
-        close_popups(driver)
     try:
         table = driver.find_element(By.ID, "stadiums")
         html = table.get_attribute("outerHTML")
@@ -256,8 +213,6 @@ def get_all_stadiums(driver):
 
 def get_team_defense_stats(year:int, driver):
     driver.get(f"https://www.pro-football-reference.com/years/{year}/opp.htm")
-    if driver.find_element(By.ID, "modal-container").is_displayed():
-        close_popups(driver)
     try:
         for title in ['team_stats', 'passing', 'rushing', 'returns', 'kicking', 'punting', 'team_scoring', 'team_conversions']:
             table = driver.find_element(By.ID, title)
@@ -281,8 +236,6 @@ def get_team_defense_stats(year:int, driver):
 
 def get_team_season_standings(year:int, driver):
     driver.get(f"https://www.pro-football-reference.com/years/{year}/")
-    if driver.find_element(By.ID, "modal-container").is_displayed():
-        close_popups(driver)
     try:
         for title in ['AFC', 'NFC', 'playoff_results', 'team_stats', 'passing', 'rushing', 'returns', 'kicking',
                       'punting', 'team_scoring', 'team_conversions']:
