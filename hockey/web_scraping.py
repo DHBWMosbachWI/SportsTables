@@ -40,6 +40,23 @@ def web_table_to_dataframe(web_table):
     df = pd.DataFrame(content_data, columns=table_header)
     return df
 
+def check_tables(result):
+    if type(result) == list:
+        new_result = []
+        for table in range(len(result)):
+            if result[table].iloc[0].to_string().startswith('Unnamed'):
+                result[table].columns = result[table].columns.droplevel(0)
+            columns = list(result[table].columns)
+            #new_result.append(result[table][result[table].Rk.str.contains(columns[0]) is False])
+            new_result.append(result[table].loc[result[table][columns[0]] != columns[0]])
+    else:
+        if result.iloc[0].to_string().startswith('Unnamed'): # check if multiple headers
+            result.columns = result.columns.droplevel(0) # drop first layer
+        columns = list(result.columns)
+        #new_result = result[result.Rk.str.contains(columns[0]) is False] # delete rows that are like header
+        new_result = result.loc[result[columns[0]] != columns[0]]
+    return new_result
+
 def get_nhl_season_standings(year:int, driver): #zwei ersten tabellen zusammengefügt
 
     result = None
@@ -99,7 +116,7 @@ def get_nhl_hat_tricks(year:int, driver):
         print("not possible")
         pass
 
-    return result # returns dataframe
+    return check_tables(result) # returns dataframe
 def get_nhl_penalty_shots(year:int, driver):
     ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
       soup = BeautifulSoup(response.content, "html.parser")
@@ -123,7 +140,7 @@ def get_nhl_penalty_shots(year:int, driver):
         print("not possible")
         pass
 
-    return result # returns dataframe
+    return check_tables(result) # returns dataframe
 
 def get_nhl_debuts(year:int, driver):
     ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
@@ -146,7 +163,7 @@ def get_nhl_debuts(year:int, driver):
         print("not possible")
         pass
 
-    return result # returns dataframe
+    return check_tables(result) # returns dataframe
 
 def get_nhl_final_season(year:int, driver):
     ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
@@ -169,7 +186,7 @@ def get_nhl_final_season(year:int, driver):
         print("not possible")
         pass
 
-    return result
+    return check_tables(result)
 
 def get_nhl_births(year:int, driver):
     ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
@@ -193,7 +210,7 @@ def get_nhl_births(year:int, driver):
         print("not possible")
         pass
 
-    return result
+    return check_tables(result)
 
 def get_nhl_deaths(year:int, driver):
     ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
@@ -216,7 +233,7 @@ def get_nhl_deaths(year:int, driver):
         print("not possible")
         pass
 
-    return result # returns dataframe
+    return check_tables(result) # returns dataframe
 #added
 def get_all_nhl_teams(driver):
 
@@ -240,7 +257,7 @@ def get_all_nhl_teams(driver):
         print("not possible")
         pass
 
-    return result # returns dataframe
+    return check_tables(result) # returns dataframe
 
 def get_nhl_player_stats(year:int, driver):
     ''' response = requests.get(f"https://www.hockey-reference.com/leagues/NHL_{year}_skaters.html")
@@ -312,7 +329,7 @@ def get_nhl_playoff_standings(year:int, driver):
             df = pd.read_html(html)
             dfs.append(df[0])
     result = dfs
-    return result
+    return check_tables(result)
 
 def get_nhl_playoff_player_stats(year:int, driver):
     '''response = requests.get(f"https://www.hockey-reference.com/playoffs/NHL_{year}_skaters.html")
@@ -336,7 +353,7 @@ def get_nhl_playoff_player_stats(year:int, driver):
         print("not possible")
         pass
 
-    return result
+    return check_tables(result)
 def get_nhl_playoff_player_goalies_stats(year:int, driver):
     '''response = requests.get(f"https://www.hockey-reference.com/playoffs/NHL_{year}_goalies.html")
       soup = BeautifulSoup(response.content, "html.parser")
@@ -358,7 +375,7 @@ def get_nhl_playoff_player_goalies_stats(year:int, driver):
         print("not possible")
         pass
 
-    return result
+    return check_tables(result)
 
   #%%
 
